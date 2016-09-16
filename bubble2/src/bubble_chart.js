@@ -9,6 +9,7 @@
  *
  */
 function bubbleChart() {
+
   // Constants for sizing
   var width = 940;
   var height = 600;
@@ -96,8 +97,8 @@ function bubbleChart() {
     var myNodes = rawData.map(function (d) {
       return {
         id: d.id,
-        radius: radiusScale(+d.instock),
-        value: d.instock,
+        radius: radiusScale(+d.value),
+        value: d.value,
         name: d.country,
         group: d.region,
         year: d.year,
@@ -126,10 +127,13 @@ function bubbleChart() {
    * a d3 loading function like d3.csv.
    */
   var chart = function chart(selector, rawData) {
-    // Use the max instock in the data as the max in the scale's domain
-    // note we have to ensure the instock is a number by converting it
+    d3.select(selector).select("svg").remove();
+    // Use the max value in the data as the max in the scale's domain
+    // note we have to ensure the value is a number by converting it
     // with `+`.
-    var maxAmount = d3.max(rawData, function (d) { return +d.instock; });
+    // 
+
+    var maxAmount = d3.max(rawData, function (d) { return +d.value; });
     radiusScale.domain([0, maxAmount]);
 
     nodes = createNodes(rawData);
@@ -320,7 +324,6 @@ function bubbleChart() {
     }
   };
 
-
   // return the chart function from closure.
   return chart;
 }
@@ -336,12 +339,10 @@ var myBubbleChart = bubbleChart();
  * Function called once data is loaded from CSV.
  * Calls bubble chart function to display inside #vis div.
  */
-function display(error, data) {
+function displayIn(error, data) {
   if (error) {
     console.log(error);
   }
-
-  console.log(data);
 
   myBubbleChart('#vis', data);
 }
@@ -354,7 +355,7 @@ function setupButtons() {
     .selectAll('.button')
     .on('click', function () {
       // Remove active class from all buttons
-      d3.selectAll('.button').classed('active', false);
+      d3.selectAll('#type .button').classed('active', false);
       // Find the button just clicked
       var button = d3.select(this);
 
@@ -367,6 +368,37 @@ function setupButtons() {
       // Toggle the bubble chart based on
       // the currently clicked button.
       myBubbleChart.toggleDisplay(buttonId);
+    });
+}
+
+/*
+ * Toggle between in and out stock
+ */
+function setupTypeButtons() {
+  d3.select('#type')
+    .selectAll('.button')
+    .on('click', function () {
+      // Remove active class from all buttons
+      d3.selectAll('#type .button').classed('active', false);
+      // Find the button just clicked
+      var button = d3.select(this);
+
+      // Set it as the active button
+      button.classed('active', true);
+
+      // Get the id of the button
+      var buttonId = button.attr('id');
+
+      // Toggle the bubble chart based on
+      // the currently clicked button.
+      var dataset = "";
+      if(buttonId == "out") {
+        dataset = datasetOut;
+      }
+      else {
+        dataset = datasetIn;
+      }
+      myBubbleChart('#vis', dataset);
     });
 }
 
@@ -388,7 +420,19 @@ function addCommas(nStr) {
 }
 
 // Load the data.
-d3.csv('../../fdi2014.csv', display);
+// d3.csv('data/fdi-in.csv', display);
+
+var datasetIn, datasetOut;
+
+d3.csv("data/fdi-in.csv", function(data) {
+  datasetIn = data;
+  myBubbleChart('#vis', datasetIn);
+});
+
+d3.csv("data/fdi-out.csv", function(data) {
+  datasetOut = data;
+});
 
 // setup the buttons.
 setupButtons();
+setupTypeButtons();

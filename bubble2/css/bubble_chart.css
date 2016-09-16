@@ -30,7 +30,7 @@ a, a:visited, a:active {
   margin-bottom: 10px;
 }
 
-#toolbar {
+#toolbar, #type {
   margin-top: 10px;
 }
 
