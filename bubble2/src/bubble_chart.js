@@ -21,17 +21,31 @@ function bubbleChart() {
   // on which view mode is selected.
   var center = { x: width / 2, y: height / 2 };
 
-  var yearCenters = {
-    2014: { x: width / 3, y: height / 2 }
-    // 2009: { x: width / 2, y: height / 2 },
-    // 2010: { x: 2 * width / 3, y: height / 2 }
+  var regionCenters = {
+    "Americas": { x: width / 3, y: height / 2.5 },
+    "Europe": { x: width / 2, y: height / 2.5 },
+    "Asia": { x: 2 * width / 3, y: height / 2.5 },
+    "Africa": { x: width / 3 - 40, y: height / 1.5 },
+    "Oceania": { x: 2 * width / 3 + 30, y: height / 1.5 }
   };
 
+  console.log(regionCenters);
+
   // X locations of the year titles.
-  var yearsTitleX = {
-    2014: 160
-    // 2009: width / 2,
-    // 2010: width - 160
+  var regionsTitleX = {
+    "Americas": width / 3 - 100,
+    "Europe": width / 2,
+    "Asia": 2 * width / 3 + 100,
+    "Africa": width / 3 - 100,
+    "Oceania": 2 * width / 3 + 100
+  };
+
+  var regionsTitleY = {
+    "Americas": 40,
+    "Europe": 40,
+    "Asia": 40,
+    "Africa": height / 1.4,
+    "Oceania": height / 1.4
   };
 
   // Used when setting up force and
@@ -102,6 +116,7 @@ function bubbleChart() {
         name: d.country,
         group: d.region,
         year: d.year,
+        region: d.region,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
@@ -223,7 +238,7 @@ function bubbleChart() {
     showYears();
 
     force.on('tick', function (e) {
-      bubbles.each(moveToYears(e.alpha))
+      bubbles.each(moveToRegions(e.alpha))
         .attr('cx', function (d) { return d.x; })
         .attr('cy', function (d) { return d.y; });
     });
@@ -245,9 +260,9 @@ function bubbleChart() {
    * its destination, and so allows other forces like the
    * node's charge force to also impact final location.
    */
-  function moveToYears(alpha) {
+  function moveToRegions(alpha) {
     return function (d) {
-      var target = yearCenters[d.year];
+      var target = regionCenters[d.region];
       d.x = d.x + (target.x - d.x) * damper * alpha * 1.1;
       d.y = d.y + (target.y - d.y) * damper * alpha * 1.1;
     };
@@ -266,14 +281,14 @@ function bubbleChart() {
   function showYears() {
     // Another way to do this would be to create
     // the year texts once and then just hide them.
-    var yearsData = d3.keys(yearsTitleX);
+    var yearsData = d3.keys(regionsTitleX);
     var years = svg.selectAll('.year')
       .data(yearsData);
 
     years.enter().append('text')
       .attr('class', 'year')
-      .attr('x', function (d) { return yearsTitleX[d]; })
-      .attr('y', 40)
+      .attr('x', function (d) { return regionsTitleX[d]; })
+      .attr('y', function (d) { return regionsTitleY[d]; })
       .attr('text-anchor', 'middle')
       .text(function (d) { return d; });
   }
@@ -318,7 +333,7 @@ function bubbleChart() {
    * displayName is expected to be a string and either 'year' or 'all'.
    */
   chart.toggleDisplay = function (displayName) {
-    if (displayName === 'year') {
+    if (displayName === 'region') {
       splitBubbles();
     } else {
       groupBubbles();
@@ -420,6 +435,8 @@ function setupYearButtons() {
       // Get the id of the button
       var buttonId = button.attr('id');
       console.log(dataset);
+
+      foreach()
 
       // Toggle the bubble chart based on
       // the currently clicked button.
