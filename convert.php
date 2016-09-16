@@ -7,7 +7,7 @@
 	$complete = array();
 
 	while ($row = fgetcsv($handle, 1024, ',')) {
-	    $complete[$row[2]][] = array_combine($headers, $row);
+	    $complete[$row[2]] = array_combine($headers, $row);
 	}
 
 	fclose($handle);

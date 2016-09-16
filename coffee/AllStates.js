@@ -104,10 +104,10 @@
         y: -this.height + 30
       });
       this.search = new Search(this.id, this, (function(d) {
-        return d.name;
+        return d.country;
       }), (function(data, text) {
         return $.grep(data, function(d) {
-          return d.name === text;
+          return d.country === text;
         })[0];
       }), {
         x: this.width,
@@ -132,7 +132,7 @@
       d3.select("#" + data.id).attr("stroke", "black").attr("stroke-width", 4);
       tip = this.tips[data.id];
       if (tip == null) {
-        tip = new Opentip("#" + data.id, content, data.name, {
+        tip = new Opentip("#" + data.id, content, data.country, {
           style: "glass",
           fixed: true,
           target: true,

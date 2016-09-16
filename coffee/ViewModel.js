@@ -2,7 +2,8 @@
 (function() {
   this.ViewModel = (function() {
     function ViewModel() {
-      this.violent = ["instock", "outstock"];
+      this.instock = ["instock"];
+      this.outstock = ["outstock"];
       this.crime = ko.observableArray($.bbq.getState("crimes") == null ? [] : $.bbq.getState("crimes").split(";"));
       this.capitalize = function(text) {
         return text.split('_').map(function(t) {
@@ -11,10 +12,15 @@
       };
       this.crimes = [
         {
-          crime: this.violent,
-          type: "violent"
+          crime: this.instock,
+          type: "instock"
+        },
+        {
+          crime: this.outstock,
+          type: "outstock"
         }
       ];
+      console.log(this.crimes);
       this.ofType = (function(_this) {
         return function(type) {
           var res;

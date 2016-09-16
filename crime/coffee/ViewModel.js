@@ -19,6 +19,7 @@
           type: "property"
         }
       ];
+      console.log(this.crimes);
       this.ofType = (function(_this) {
         return function(type) {
           var res;

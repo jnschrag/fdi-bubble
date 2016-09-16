@@ -1,2334 +1,1910 @@
 {
-  "Bermuda": [
-    {
-      "region": "Americas",
-      "country_id": "BMU",
-      "country": "Bermuda",
-      "instock": "2632.00",
-      "outstock": "928.33",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Norway": [
-    {
-      "region": "Europe",
-      "country_id": "NOR",
-      "country": "Norway",
-      "instock": "185620.32",
-      "outstock": "213947.51",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Qatar": [
-    {
-      "region": "Asia",
-      "country_id": "QAT",
-      "country": "Qatar",
-      "instock": "31004.06",
-      "outstock": "35182.32",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Switzerland": [
-    {
-      "region": "Europe",
-      "country_id": "CHE",
-      "country": "Switzerland",
-      "instock": "681849.16",
-      "outstock": "1130614.70",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Macao": [
-    {
-      "region": "Asia",
-      "country_id": "MAC",
-      "country": "Macao",
-      "instock": "26746.93",
-      "outstock": "2277.25",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Luxembourg": [
-    {
-      "region": "Europe",
-      "country_id": "LUX",
-      "country": "Luxembourg",
-      "instock": "161311.14",
-      "outstock": "149892.38",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Sweden": [
-    {
-      "region": "Europe",
-      "country_id": "SWE",
-      "country": "Sweden",
-      "instock": "321103.33",
-      "outstock": "379527.70",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Denmark": [
-    {
-      "region": "Europe",
-      "country_id": "DNK",
-      "country": "Denmark",
-      "instock": "82921.55",
-      "outstock": "183024.63",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "United States of America": [
-    {
-      "region": "Americas",
-      "country_id": "USA",
-      "country": "United States of America",
-      "instock": "5409884.00",
-      "outstock": "6318640.00",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Singapore": [
-    {
-      "region": "Asia",
-      "country_id": "SGP",
-      "country": "Singapore",
-      "instock": "912355.41",
-      "outstock": "576395.82",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Netherlands": [
-    {
-      "region": "Europe",
-      "country_id": "NLD",
-      "country": "Netherlands",
-      "instock": "664441.93",
-      "outstock": "985255.63",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Canada": [
-    {
-      "region": "Americas",
-      "country_id": "CAN",
-      "country": "Canada",
-      "instock": "631315.63",
-      "outstock": "714554.70",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Austria": [
-    {
-      "region": "Europe",
-      "country_id": "AUT",
-      "country": "Austria",
-      "instock": "180824.50",
-      "outstock": "223246.38",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Kuwait": [
-    {
-      "region": "Asia",
-      "country_id": "KWT",
-      "country": "Kuwait",
-      "instock": "15362.37",
-      "outstock": "36530.54",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Finland": [
-    {
-      "region": "Europe",
-      "country_id": "FIN",
-      "country": "Finland",
-      "instock": "133116.41",
-      "outstock": "164554.33",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Iceland": [
-    {
-      "region": "Europe",
-      "country_id": "ISL",
-      "country": "Iceland",
-      "instock": "7425.43",
-      "outstock": "7955.30",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Germany": [
-    {
-      "region": "Europe",
-      "country_id": "DEU",
-      "country": "Germany",
-      "instock": "743511.54",
-      "outstock": "1583279.41",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Belgium": [
-    {
-      "region": "Europe",
-      "country_id": "BEL",
-      "country": "Belgium",
-      "instock": "525612.06",
-      "outstock": "450177.56",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Ireland": [
-    {
-      "region": "Europe",
-      "country_id": "IRL",
-      "country": "Ireland",
-      "instock": "369167.92",
-      "outstock": "628026.30",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "United Arab Emirates": [
-    {
-      "region": "Asia",
-      "country_id": "ARE",
-      "country": "United Arab Emirates",
-      "instock": "115561.22",
-      "outstock": "66297.51",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "United Kingdom": [
-    {
-      "region": "Europe",
-      "country_id": "GBR",
-      "country": "United Kingdom",
-      "instock": "1662857.79",
-      "outstock": "1584146.64",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "France": [
-    {
-      "region": "Europe",
-      "country_id": "FRA",
-      "country": "France",
-      "instock": "729147.18",
-      "outstock": "1279089.35",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Japan": [
-    {
-      "region": "Asia",
-      "country_id": "JPN",
-      "country": "Japan",
-      "instock": "170615.05",
-      "outstock": "1193136.61",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "New Zealand": [
-    {
-      "region": "Oceania",
-      "country_id": "NZL",
-      "country": "New Zealand",
-      "instock": "76790.89",
-      "outstock": "18677.68",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Brunei": [
-    {
-      "region": "Asia",
-      "country_id": "BRN",
-      "country": "Brunei",
-      "instock": "6218.88",
-      "outstock": "133.83",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Hong Kong": [
-    {
-      "region": "Asia",
-      "country_id": "HKG",
-      "country": "Hong Kong",
-      "instock": "1549848.75",
-      "outstock": "1459947.39",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Israel": [
-    {
-      "region": "Asia",
-      "country_id": "ISR",
-      "country": "Israel",
-      "instock": "98697.23",
-      "outstock": "78016.17",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Italy": [
-    {
-      "region": "Europe",
-      "country_id": "ITA",
-      "country": "Italy",
-      "instock": "373737.87",
-      "outstock": "548416.34",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Spain": [
-    {
-      "region": "Europe",
-      "country_id": "ESP",
-      "country": "Spain",
-      "instock": "721879.91",
-      "outstock": "673988.50",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "South Korea": [
-    {
-      "region": "Asia",
-      "country_id": "KOR",
-      "country": "South Korea",
-      "instock": "182036.80",
-      "outstock": "258552.60",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Cyprus": [
-    {
-      "region": "Asia",
-      "country_id": "CYP",
-      "country": "Cyprus",
-      "instock": "58145.06",
-      "outstock": "41912.53",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Saudi Arabia": [
-    {
-      "region": "Asia",
-      "country_id": "SAU",
-      "country": "Saudi Arabia",
-      "instock": "215908.80",
-      "outstock": "44698.70",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Slovenia": [
-    {
-      "region": "Europe",
-      "country_id": "SVN",
-      "country": "Slovenia",
-      "instock": "12743.12",
-      "outstock": "6192.65",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Taiwan": [
-    {
-      "region": "Asia",
-      "country_id": "TWN",
-      "country": "Taiwan",
-      "instock": "68636.00",
-      "outstock": "258829.00",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Greece": [
-    {
-      "region": "Europe",
-      "country_id": "GRC",
-      "country": "Greece",
-      "instock": "20180.78",
-      "outstock": "33938.97",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Portugal": [
-    {
-      "region": "Europe",
-      "country_id": "PRT",
-      "country": "Portugal",
-      "instock": "108514.55",
-      "outstock": "58355.14",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Bahamas, The": [
-    {
-      "region": "Americas",
-      "country_id": "BHS",
-      "country": "Bahamas, The",
-      "instock": "18751.16",
-      "outstock": "3867.98",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Malta": [
-    {
-      "region": "Europe",
-      "country_id": "MLT",
-      "country": "Malta",
-      "instock": "172357.98",
-      "outstock": "44493.40",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Bahrain": [
-    {
-      "region": "Asia",
-      "country_id": "BHR",
-      "country": "Bahrain",
-      "instock": "18771.28",
-      "outstock": "10671.54",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Trinidad and Tobago": [
-    {
-      "region": "Americas",
-      "country_id": "TTO",
-      "country": "Trinidad and Tobago",
-      "instock": "26125.27",
-      "outstock": "6410.66",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Puerto Rico": [
-    {
-      "region": "Americas",
-      "country_id": "PRI",
-      "country": "Puerto Rico",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Estonia": [
-    {
-      "region": "Europe",
-      "country_id": "EST",
-      "country": "Estonia",
-      "instock": "19297.80",
-      "outstock": "6318.92",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Czech Republic": [
-    {
-      "region": "Europe",
-      "country_id": "CZE",
-      "country": "Czech Republic",
-      "instock": "121530.01",
-      "outstock": "19041.48",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Oman": [
-    {
-      "region": "Asia",
-      "country_id": "OMN",
-      "country": "Oman",
-      "instock": "19706.93",
-      "outstock": "7453.20",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Slovakia": [
-    {
-      "region": "Europe",
-      "country_id": "SVK",
-      "country": "Slovakia",
-      "instock": "53216.15",
-      "outstock": "2974.91",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Uruguay": [
-    {
-      "region": "Americas",
-      "country_id": "URY",
-      "country": "Uruguay",
-      "instock": "22318.20",
-      "outstock": "428.40",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Lithuania": [
-    {
-      "region": "Europe",
-      "country_id": "LTU",
-      "country": "Lithuania",
-      "instock": "14691.23",
-      "outstock": "2683.27",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Latvia": [
-    {
-      "region": "Europe",
-      "country_id": "LVA",
-      "country": "Latvia",
-      "instock": "14566.78",
-      "outstock": "1170.39",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Saint Kitts and Nevis": [
-    {
-      "region": "Americas",
-      "country_id": "KNA",
-      "country": "Saint Kitts and Nevis",
-      "instock": "2077.76",
-      "outstock": "59.38",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Chile": [
-    {
-      "region": "Americas",
-      "country_id": "CHL",
-      "country": "Chile",
-      "instock": "207677.99",
-      "outstock": "89732.84",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Barbados": [
-    {
-      "region": "Americas",
-      "country_id": "BB",
-      "country": "Barbados",
-      "instock": "5247.71",
-      "outstock": "3840.16",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Seychelles": [
-    {
-      "region": "Africa",
-      "country_id": "SYC",
-      "country": "Seychelles",
-      "instock": "2567.24",
-      "outstock": "279.64",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Poland": [
-    {
-      "region": "Europe",
-      "country_id": "POL",
-      "country": "Poland",
-      "instock": "245160.53",
-      "outstock": "65216.70",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Argentina": [
-    {
-      "region": "Americas",
-      "country_id": "ARG",
-      "country": "Argentina",
-      "instock": "114076.00",
-      "outstock": "35938.34",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Antigua and Barbuda": [
-    {
-      "region": "Americas",
-      "country_id": "ATG",
-      "country": "Antigua and Barbuda",
-      "instock": "2845.20",
-      "outstock": "111.87",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Hungary": [
-    {
-      "region": "Europe",
-      "country_id": "HUN",
-      "country": "Hungary",
-      "instock": "98359.90",
-      "outstock": "39640.62",
-      "year": "2014",
-      "world_bank": "5"
-    }
-  ],
-  "Russian Federation": [
-    {
-      "region": "Europe",
-      "country_id": "RUS",
-      "country": "Russian Federation",
-      "instock": "378543.00",
-      "outstock": "431865.00",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Croatia": [
-    {
-      "region": "Europe",
-      "country_id": "HRV",
-      "country": "Croatia",
-      "instock": "29760.66",
-      "outstock": "5443.74",
-      "year": "2014",
-      "world_bank": "4"
-    }
-  ],
-  "Kazakhstan": [
-    {
-      "region": "Asia",
-      "country_id": "KAZ",
-      "country": "Kazakhstan",
-      "instock": "129244.21",
-      "outstock": "27199.85",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Venezuela": [
-    {
-      "region": "Americas",
-      "country_id": "VEN",
-      "country": "Venezuela",
-      "instock": "30139.00",
-      "outstock": "27349.00",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Brazil": [
-    {
-      "region": "Americas",
-      "country_id": "BRA",
-      "country": "Brazil",
-      "instock": "754768.92",
-      "outstock": "316339.49",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Malaysia": [
-    {
-      "region": "Asia",
-      "country_id": "MYS",
-      "country": "Malaysia",
-      "instock": "133767.23",
-      "outstock": "135684.68",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Panama": [
-    {
-      "region": "Americas",
-      "country_id": "PAN",
-      "country": "Panama",
-      "instock": "35917.30",
-      "outstock": "4245.70",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Turkey": [
-    {
-      "region": "Asia",
-      "country_id": "TUR",
-      "country": "Turkey",
-      "instock": "168645.00",
-      "outstock": "40088.00",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Equatorial Guinea": [
-    {
-      "region": "Africa",
-      "country_id": "GNQ",
-      "country": "Equatorial Guinea",
-      "instock": "17249.60",
-      "outstock": "2.58",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Costa Rica": [
-    {
-      "region": "Americas",
-      "country_id": "CRI",
-      "country": "Costa Rica",
-      "instock": "24309.11",
-      "outstock": "2048.64",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Lebanon": [
-    {
-      "region": "Asia",
-      "country_id": "LBN",
-      "country": "Lebanon",
-      "instock": "56833.74",
-      "outstock": "12629.49",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Suriname": [
-    {
-      "region": "Americas",
-      "country_id": "SUR",
-      "country": "Suriname",
-      "instock": "1011.80",
-      "outstock": "..",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Mexico": [
-    {
-      "region": "Americas",
-      "country_id": "MEX",
-      "country": "Mexico",
-      "instock": "337973.63",
-      "outstock": "131245.77",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Gabon": [
-    {
-      "region": "Africa",
-      "country_id": "GAB",
-      "country": "Gabon",
-      "instock": "6339.40",
-      "outstock": "1006.00",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Romania": [
-    {
-      "region": "Europe",
-      "country_id": "ROU",
-      "country": "Romania",
-      "instock": "74731.53",
-      "outstock": "695.68",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Turkmenistan": [
-    {
-      "region": "Asia",
-      "country_id": "TKM",
-      "country": "Turkmenistan",
-      "instock": "26202.50",
-      "outstock": "..",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Colombia": [
-    {
-      "region": "Americas",
-      "country_id": "COL",
-      "country": "Colombia",
-      "instock": "141666.53",
-      "outstock": "43081.88",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Grenada": [
-    {
-      "region": "Americas",
-      "country_id": "GRD",
-      "country": "Grenada",
-      "instock": "1506.20",
-      "outstock": "51.42",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Libya": [
-    {
-      "region": "Africa",
-      "country_id": "LBY",
-      "country": "Libya",
-      "instock": "18511.00",
-      "outstock": "20375.00",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Bulgaria": [
-    {
-      "region": "Europe",
-      "country_id": "BGR",
-      "country": "Bulgaria",
-      "instock": "46539.19",
-      "outstock": "2194.73",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Azerbaijan": [
-    {
-      "region": "Asia",
-      "country_id": "AZE",
-      "country": "Azerbaijan",
-      "instock": "18180.40",
-      "outstock": "11213.80",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "China": [
-    {
-      "region": "Asia",
-      "country_id": "CHN",
-      "country": "China",
-      "instock": "1085293.00",
-      "outstock": "729584.67",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Belarus": [
-    {
-      "region": "Europe",
-      "country_id": "BLR",
-      "country": "Belarus",
-      "instock": "17730.00",
-      "outstock": "588.00",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Montenegro": [
-    {
-      "region": "Europe",
-      "country_id": "MNE",
-      "country": "Montenegro",
-      "instock": "4982.67",
-      "outstock": "421.74",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Saint Lucia": [
-    {
-      "region": "Americas",
-      "country_id": "LCA",
-      "country": "Saint Lucia",
-      "instock": "2510.00",
-      "outstock": "66.65",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Botswana": [
-    {
-      "region": "Africa",
-      "country_id": "BWA",
-      "country": "Botswana",
-      "instock": "4366.51",
-      "outstock": "794.80",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Dominica": [
-    {
-      "region": "Americas",
-      "country_id": "DMA",
-      "country": "Dominica",
-      "instock": "846.01",
-      "outstock": "37.56",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "South Africa": [
-    {
-      "region": "Africa",
-      "country_id": "ZAF",
-      "country": "South Africa",
-      "instock": "145384.38",
-      "outstock": "133936.24",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Saint Vincent and the Grenadines": [
-    {
-      "region": "Americas",
-      "country_id": "VCT",
-      "country": "Saint Vincent and the Grenadines",
-      "instock": "1814.25",
-      "outstock": "5.61",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Iran": [
-    {
-      "region": "Asia",
-      "country_id": "IRN",
-      "country": "Iran",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Iraq": [
-    {
-      "region": "Asia",
-      "country_id": "IRQ",
-      "country": "Iraq",
-      "instock": "23161.01",
-      "outstock": "1956.10",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Maldives": [
-    {
-      "region": "Asia",
-      "country_id": "MDV",
-      "country": "Maldives",
-      "instock": "2489.74",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Peru": [
-    {
-      "region": "Americas",
-      "country_id": "PER",
-      "country": "Peru",
-      "instock": "79428.79",
-      "outstock": "4205.43",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Ecuador": [
-    {
-      "region": "Americas",
-      "country_id": "ECU",
-      "country": "Ecuador",
-      "instock": "14590.96",
-      "outstock": "696.98",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Dominican Republic": [
-    {
-      "region": "Americas",
-      "country_id": "DOM",
-      "country": "Dominican Republic",
-      "instock": "28756.90",
-      "outstock": "171.18",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Cuba": [
-    {
-      "region": "Americas",
-      "country_id": "CUB",
-      "country": "Cuba",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Serbia": [
-    {
-      "region": "Europe",
-      "country_id": "SRB",
-      "country": "Serbia",
-      "instock": "33141.82",
-      "outstock": "3015.32",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Thailand": [
-    {
-      "region": "Asia",
-      "country_id": "THA",
-      "country": "Thailand",
-      "instock": "199310.85",
-      "outstock": "65768.73",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Namibia": [
-    {
-      "region": "Africa",
-      "country_id": "NAM",
-      "country": "Namibia",
-      "instock": "3721.91",
-      "outstock": "60.44",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Algeria": [
-    {
-      "region": "Africa",
-      "country_id": "DZA",
-      "country": "Algeria",
-      "instock": "26785.80",
-      "outstock": "1733.10",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Jordan": [
-    {
-      "region": "Asia",
-      "country_id": "JOR",
-      "country": "Jordan",
-      "instock": "28733.80",
-      "outstock": "608.45",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Jamaica": [
-    {
-      "region": "Americas",
-      "country_id": "JAM",
-      "country": "Jamaica",
-      "instock": "13323.72",
-      "outstock": "313.52",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Macedonia": [
-    {
-      "region": "Europe",
-      "country_id": "MKD",
-      "country": "Macedonia",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Fiji": [
-    {
-      "region": "Oceania",
-      "country_id": "FJI",
-      "country": "Fiji",
-      "instock": "3713.39",
-      "outstock": "50.85",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Angola": [
-    {
-      "region": "Africa",
-      "country_id": "AGO",
-      "country": "Angola",
-      "instock": "",
-      "outstock": "19217.91",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Bosnia and Herzegovina": [
-    {
-      "region": "Europe",
-      "country_id": "BIH",
-      "country": "Bosnia and Herzegovina",
-      "instock": "7383.38",
-      "outstock": "207.72",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Albania": [
-    {
-      "region": "Europe",
-      "country_id": "ALB",
-      "country": "Albania",
-      "instock": "4465.69",
-      "outstock": "239.07",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Belize": [
-    {
-      "region": "Americas",
-      "country_id": "BLZ",
-      "country": "Belize",
-      "instock": "1764.50",
-      "outstock": "54.35",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Paraguay": [
-    {
-      "region": "Americas",
-      "country_id": "PRY",
-      "country": "Paraguay",
-      "instock": "5380.87",
-      "outstock": "378.55",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Mongolia": [
-    {
-      "region": "Asia",
-      "country_id": "MNG",
-      "country": "Mongolia",
-      "instock": "16692.82",
-      "outstock": "354.84",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Tonga": [
-    {
-      "region": "Oceania",
-      "country_id": "TON",
-      "country": "Tonga",
-      "instock": "402.53",
-      "outstock": "100.38",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Tunisia": [
-    {
-      "region": "Africa",
-      "country_id": "TUN",
-      "country": "Tunisia",
-      "instock": "31540.40",
-      "outstock": "304.64",
-      "year": "2014",
-      "world_bank": "3"
-    }
-  ],
-  "Samoa": [
-    {
-      "region": "Oceania",
-      "country_id": "WSM",
-      "country": "Samoa",
-      "instock": "234.54",
-      "outstock": "25.19",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Guyana": [
-    {
-      "region": "Americas",
-      "country_id": "GUY",
-      "country": "Guyana",
-      "instock": "1959.94",
-      "outstock": "2.36",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Armenia": [
-    {
-      "region": "Asia",
-      "country_id": "ARM",
-      "country": "Armenia",
-      "instock": "5831.33",
-      "outstock": "205.65",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "El Salvador": [
-    {
-      "region": "Americas",
-      "country_id": "SLV",
-      "country": "El Salvador",
-      "instock": "8503.50",
-      "outstock": "3.10",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Georgia": [
-    {
-      "region": "Asia",
-      "country_id": "GEO",
-      "country": "Georgia",
-      "instock": "12241.23",
-      "outstock": "1514.17",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Indonesia": [
-    {
-      "region": "Asia",
-      "country_id": "IDN",
-      "country": "Indonesia",
-      "instock": "253081.69",
-      "outstock": "24052.32",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Ukraine": [
-    {
-      "region": "Europe",
-      "country_id": "UKR",
-      "country": "Ukraine",
-      "instock": "63825.00",
-      "outstock": "9705.00",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Swaziland": [
-    {
-      "region": "Africa",
-      "country_id": "SWZ",
-      "country": "Swaziland",
-      "instock": "759.36",
-      "outstock": "103.43",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Philippines": [
-    {
-      "region": "Asia",
-      "country_id": "PHL",
-      "country": "Philippines",
-      "instock": "57093.00",
-      "outstock": "35602.65",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Sri Lanka": [
-    {
-      "region": "Asia",
-      "country_id": "LKA",
-      "country": "Sri Lanka",
-      "instock": "10511.04",
-      "outstock": "606.98",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Cape Verde": [
-    {
-      "region": "Africa",
-      "country_id": "CPV",
-      "country": "Cape Verde",
-      "instock": "1474.22",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Guatemala": [
-    {
-      "region": "Americas",
-      "country_id": "GTM",
-      "country": "Guatemala",
-      "instock": "12102.06",
-      "outstock": "502.90",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Vanuatu": [
-    {
-      "region": "Oceania",
-      "country_id": "VUT",
-      "country": "Vanuatu",
-      "instock": "503.05",
-      "outstock": "22.70",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Morocco": [
-    {
-      "region": "Africa",
-      "country_id": "MAR",
-      "country": "Morocco",
-      "instock": "51663.95",
-      "outstock": "4194.07",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Egypt": [
-    {
-      "region": "Africa",
-      "country_id": "EGY",
-      "country": "Egypt",
-      "instock": "87882.00",
-      "outstock": "6839.00",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Nigeria": [
-    {
-      "region": "Africa",
-      "country_id": "NGA",
-      "country": "Nigeria",
-      "instock": "86671.23",
-      "outstock": "10258.94",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Kiribati": [
-    {
-      "region": "Oceania",
-      "country_id": "KIR",
-      "country": "Kiribati",
-      "instock": "14.71",
-      "outstock": "0.80",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Bolivia": [
-    {
-      "region": "Americas",
-      "country_id": "BOL",
-      "country": "Bolivia",
-      "instock": "11206.30",
-      "outstock": "51.95",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Congo": [
-    {
-      "region": "Africa",
-      "country_id": "COG",
-      "country": "Congo",
-      "instock": "22009.68",
-      "outstock": "94.08",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Timor-Leste": [
-    {
-      "region": "Asia",
-      "country_id": "TLS",
-      "country": "Timor-Leste",
-      "instock": "316.47",
-      "outstock": "86.33",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Moldova": [
-    {
-      "region": "Europe",
-      "country_id": "MDA",
-      "country": "Moldova",
-      "instock": "3646.88",
-      "outstock": "178.25",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Bhutan": [
-    {
-      "region": "Asia",
-      "country_id": "BTN",
-      "country": "Bhutan",
-      "instock": "112.18",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Honduras": [
-    {
-      "region": "Americas",
-      "country_id": "HND",
-      "country": "Honduras",
-      "instock": "11227.57",
-      "outstock": "392.55",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Papua New Guinea": [
-    {
-      "region": "Oceania",
-      "country_id": "PNG",
-      "country": "Papua New Guinea",
-      "instock": "3876.77",
-      "outstock": "315.26",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Uzbekistan": [
-    {
-      "region": "Asia",
-      "country_id": "UZB",
-      "country": "Uzbekistan",
-      "instock": "9001.60",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Vietnam": [
-    {
-      "region": "Asia",
-      "country_id": "VNM",
-      "country": "Vietnam",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Nicaragua": [
-    {
-      "region": "Americas",
-      "country_id": "NIC",
-      "country": "Nicaragua",
-      "instock": "8040.10",
-      "outstock": "374.70",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Syria": [
-    {
-      "region": "Asia",
-      "country_id": "SYR",
-      "country": "Syria",
-      "instock": "10742.91",
-      "outstock": "420.63",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Solomon Islands": [
-    {
-      "region": "Oceania",
-      "country_id": "SLB",
-      "country": "Solomon Islands",
-      "instock": "781.14",
-      "outstock": "48.21",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Sudan": [
-    {
-      "region": "Africa",
-      "country_id": "SDN",
-      "country": "Sudan",
-      "instock": "22693.30",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Zambia": [
-    {
-      "region": "Africa",
-      "country_id": "ZMB",
-      "country": "Zambia",
-      "instock": "15008.60",
-      "outstock": "2416.92",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Sao Tome and Principe": [
-    {
-      "region": "Africa",
-      "country_id": "STP",
-      "country": "Sao Tome and Principe",
-      "instock": "345.26",
-      "outstock": "22.49",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Laos": [
-    {
-      "region": "Asia",
-      "country_id": "LAO",
-      "country": "Laos",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Ghana": [
-    {
-      "region": "Africa",
-      "country_id": "GHA",
-      "country": "Ghana",
-      "instock": "23205.10",
-      "outstock": "129.90",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "India": [
-    {
-      "region": "Asia",
-      "country_id": "IND",
-      "country": "India",
-      "instock": "252331.39",
-      "outstock": "129578.07",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Cote dIvoire (IvoryCoast)": [
-    {
-      "region": "Africa",
-      "country_id": "CIV",
-      "country": "Cote dIvoire (IvoryCoast)",
-      "instock": "7711.45",
-      "outstock": "114.32",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Pakistan": [
-    {
-      "region": "Asia",
-      "country_id": "PAK",
-      "country": "Pakistan",
-      "instock": "30892.00",
-      "outstock": "1695.00",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Cameroon": [
-    {
-      "region": "Africa",
-      "country_id": "CMR",
-      "country": "Cameroon",
-      "instock": "6493.30",
-      "outstock": "43.40",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Lesotho": [
-    {
-      "region": "Africa",
-      "country_id": "LSO",
-      "country": "Lesotho",
-      "instock": "586.26",
-      "outstock": "253.00",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Yemen": [
-    {
-      "region": "Asia",
-      "country_id": "YEM",
-      "country": "Yemen",
-      "instock": "3096.94",
-      "outstock": "806.43",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Kenya": [
-    {
-      "region": "Africa",
-      "country_id": "KEN",
-      "country": "Kenya",
-      "instock": "4369.85",
-      "outstock": "321.28",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Mauritania": [
-    {
-      "region": "Africa",
-      "country_id": "MRT",
-      "country": "Mauritania",
-      "instock": "5967.70",
-      "outstock": "47.55",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Myanmar": [
-    {
-      "region": "Asia",
-      "country_id": "MMR",
-      "country": "Myanmar",
-      "instock": "17651.94",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Kyrgyzstan": [
-    {
-      "region": "Asia",
-      "country_id": "KGZ",
-      "country": "Kyrgyzstan",
-      "instock": "3520.05",
-      "outstock": "426.70",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Bangladesh": [
-    {
-      "region": "Asia",
-      "country_id": "BGD",
-      "country": "Bangladesh",
-      "instock": "9354.76",
-      "outstock": "130.02",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Tajikistan": [
-    {
-      "region": "Asia",
-      "country_id": "JK",
-      "country": "Tajikistan",
-      "instock": "1885.40",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Senegal": [
-    {
-      "region": "Africa",
-      "country_id": "SEN",
-      "country": "Senegal",
-      "instock": "2698.61",
-      "outstock": "397.20",
-      "year": "2014",
-      "world_bank": "2"
-    }
-  ],
-  "Cambodia": [
-    {
-      "region": "Asia",
-      "country_id": "KHM",
-      "country": "Cambodia",
-      "instock": "13034.97",
-      "outstock": "483.56",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Chad": [
-    {
-      "region": "Africa",
-      "country_id": "TCD",
-      "country": "Chad",
-      "instock": "5518.20",
-      "outstock": "70.26",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "South Sudan": [
-    {
-      "region": "Africa",
-      "country_id": "SSD",
-      "country": "South Sudan",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Tanzania": [
-    {
-      "region": "Africa",
-      "country_id": "TZA",
-      "country": "Tanzania",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Benin": [
-    {
-      "region": "Africa",
-      "country_id": "BEN",
-      "country": "Benin",
-      "instock": "1581.27",
-      "outstock": "171.84",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Zimbabwe": [
-    {
-      "region": "Africa",
-      "country_id": "ZWE",
-      "country": "Zimbabwe",
-      "instock": "3545.75",
-      "outstock": "487.31",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Haiti": [
-    {
-      "region": "Americas",
-      "country_id": "HTI",
-      "country": "Haiti",
-      "instock": "1209.37",
-      "outstock": "2.00",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Comoros": [
-    {
-      "region": "Africa",
-      "country_id": "COM",
-      "country": "Comoros",
-      "instock": "120.94",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Nepal": [
-    {
-      "region": "Asia",
-      "country_id": "NPL",
-      "country": "Nepal",
-      "instock": "541.00",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Burkina Faso": [
-    {
-      "region": "Africa",
-      "country_id": "BFA",
-      "country": "Burkina Faso",
-      "instock": "1679.35",
-      "outstock": "275.54",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Rwanda": [
-    {
-      "region": "Africa",
-      "country_id": "RWA",
-      "country": "Rwanda",
-      "instock": "1105.35",
-      "outstock": "12.94",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Sierra Leone": [
-    {
-      "region": "Africa",
-      "country_id": "SLE",
-      "country": "Sierra Leone",
-      "instock": "1365.40",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Afghanistan": [
-    {
-      "region": "Asia",
-      "country_id": "AFG",
-      "country": "Afghanistan",
-      "instock": "1691.70",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Uganda": [
-    {
-      "region": "Africa",
-      "country_id": "UGA",
-      "country": "Uganda",
-      "instock": "9917.48",
-      "outstock": "50.23",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Mali": [
-    {
-      "region": "Africa",
-      "country_id": "MLI",
-      "country": "Mali",
-      "instock": "3109.38",
-      "outstock": "44.67",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Mozambique": [
-    {
-      "region": "Africa",
-      "country_id": "MOZ",
-      "country": "Mozambique",
-      "instock": "25576.58",
-      "outstock": "10.20",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Togo": [
-    {
-      "region": "Africa",
-      "country_id": "TGO",
-      "country": "Togo",
-      "instock": "1684.80",
-      "outstock": "1842.86",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Ethiopia": [
-    {
-      "region": "Africa",
-      "country_id": "ETH",
-      "country": "Ethiopia",
-      "instock": "7264.30",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Guinea-Bissau": [
-    {
-      "region": "Africa",
-      "country_id": "GNB",
-      "country": "Guinea-Bissau",
-      "instock": "122.54",
-      "outstock": "5.10",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Eritrea": [
-    {
-      "region": "Africa",
-      "country_id": "ERI",
-      "country": "Eritrea",
-      "instock": "837.15",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Guinea": [
-    {
-      "region": "Africa",
-      "country_id": "GIN",
-      "country": "Guinea",
-      "instock": "2584.10",
-      "outstock": "68.20",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Gambia, The": [
-    {
-      "region": "Africa",
-      "country_id": "GMB",
-      "country": "Gambia, The",
-      "instock": "339.84",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Madagascar": [
-    {
-      "region": "Africa",
-      "country_id": "MDG",
-      "country": "Madagascar",
-      "instock": "6277.26",
-      "outstock": "6.39",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Niger": [
-    {
-      "region": "Africa",
-      "country_id": "NER",
-      "country": "Niger",
-      "instock": "5132.54",
-      "outstock": "129.76",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Democratic Republic of the Congo": [
-    {
-      "region": "Africa",
-      "country_id": "COD",
-      "country": "Democratic Republic of the Congo",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Liberia": [
-    {
-      "region": "Africa",
-      "country_id": "LBR",
-      "country": "Liberia",
-      "instock": "6569.50",
-      "outstock": "4344.90",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Central African Republic": [
-    {
-      "region": "Africa",
-      "country_id": "CAF",
-      "country": "Central African Republic",
-      "instock": "622.89",
-      "outstock": "43.00",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Burundi": [
-    {
-      "region": "Africa",
-      "country_id": "BDI",
-      "country": "Burundi",
-      "instock": "47.83",
-      "outstock": "1.30",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Malawi": [
-    {
-      "region": "Africa",
-      "country_id": "MWI",
-      "country": "Malawi",
-      "instock": "1238.79",
-      "outstock": "24.08",
-      "year": "2014",
-      "world_bank": "1"
-    }
-  ],
-  "Cook Islands": [
-    {
-      "region": "Oceania",
-      "country_id": "COK",
-      "country": "Cook Islands",
-      "instock": "835.61",
-      "outstock": "5037.27",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "North Korea": [
-    {
-      "region": "Asia",
-      "country_id": "PRK",
-      "country": "North Korea",
-      "instock": "2012.23",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Falkland Islands (Islas Malvinas)": [
-    {
-      "region": "Americas",
-      "country_id": "FLK",
-      "country": "Falkland Islands (Islas Malvinas)",
-      "instock": "75.21",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Faroe Islands": [
-    {
-      "region": "Europe",
-      "country_id": "FRO",
-      "country": "Faroe Islands",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "French Guiana": [
-    {
-      "region": "Americas",
-      "country_id": "GUF",
-      "country": "French Guiana",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Gibraltar": [
-    {
-      "region": "Europe",
-      "country_id": "GIB",
-      "country": "Gibraltar",
-      "instock": "2569.12",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Guadeloupe": [
-    {
-      "region": "Americas",
-      "country_id": "GLP",
-      "country": "Guadeloupe",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Martinique": [
-    {
-      "region": "Americas",
-      "country_id": "MTQ",
-      "country": "Martinique",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Montserrat": [
-    {
-      "region": "Americas",
-      "country_id": "MSR",
-      "country": "Montserrat",
-      "instock": "140.13",
-      "outstock": "1.36",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Nauru": [
-    {
-      "region": "Oceania",
-      "country_id": "NRU",
-      "country": "Nauru",
-      "instock": "",
-      "outstock": "22.40",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Niue": [
-    {
-      "region": "Oceania",
-      "country_id": "NIU",
-      "country": "Niue",
-      "instock": "",
-      "outstock": "21.82",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Reunion": [
-    {
-      "region": "Africa",
-      "country_id": "REU",
-      "country": "Reunion",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Saint Helena": [
-    {
-      "region": "Africa",
-      "country_id": "SHN",
-      "country": "Saint Helena",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Saint Pierre and Miquelon": [
-    {
-      "region": "Americas",
-      "country_id": "SPM",
-      "country": "Saint Pierre and Miquelon",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "State of Palestine": [
-    {
-      "region": "Asia",
-      "country_id": "PSE",
-      "country": "State of Palestine",
-      "instock": "2453.00",
-      "outstock": "167.00",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Virgin Islands, British": [
-    {
-      "region": "Americas",
-      "country_id": "VGB",
-      "country": "Virgin Islands, British",
-      "instock": "511366.72",
-      "outstock": "584235.03",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Virgin Islands, U.S.": [
-    {
-      "region": "Americas",
-      "country_id": "VIR",
-      "country": "Virgin Islands, U.S.",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Western Sahara": [
-    {
-      "region": "Africa",
-      "country_id": "ESH",
-      "country": "Western Sahara",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "American Samoa": [
-    {
-      "region": "Oceania",
-      "country_id": "ASM",
-      "country": "American Samoa",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Aruba": [
-    {
-      "region": "Americas",
-      "country_id": "ABW",
-      "country": "Aruba",
-      "instock": "3940.75",
-      "outstock": "698.00",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Cayman Islands": [
-    {
-      "region": "Americas",
-      "country_id": "CYM",
-      "country": "Cayman Islands",
-      "instock": "187094.20",
-      "outstock": "136699.87",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Djibouti": [
-    {
-      "region": "Africa",
-      "country_id": "DJI",
-      "country": "Djibouti",
-      "instock": "1505.48",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "French Polynesia": [
-    {
-      "region": "Oceania",
-      "country_id": "PYF",
-      "country": "French Polynesia",
-      "instock": "908.04",
-      "outstock": "327.26",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Greenland": [
-    {
-      "region": "Americas",
-      "country_id": "GRL",
-      "country": "Greenland",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Guam": [
-    {
-      "region": "Oceania",
-      "country_id": "GUM",
-      "country": "Guam",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "New Caledonia": [
-    {
-      "region": "Oceania",
-      "country_id": "NCL",
-      "country": "New Caledonia",
-      "instock": "15050.72",
-      "outstock": "581.61",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Somalia": [
-    {
-      "region": "Africa",
-      "country_id": "SOM",
-      "country": "Somalia",
-      "instock": "988.10",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ],
-  "Turks and Caicos Islands": [
-    {
-      "region": "Americas",
-      "country_id": "TCA",
-      "country": "Turks and Caicos Islands",
-      "instock": "",
-      "outstock": "",
-      "year": "2014",
-      "world_bank": ""
-    }
-  ]
+  "Bermuda": {
+    "region": "Americas",
+    "id": "BMU",
+    "country": "Bermuda",
+    "instock": 2632,
+    "outstock": 928.33,
+    "year": 2014,
+    "group": 4
+  },
+  "Norway": {
+    "region": "Europe",
+    "id": "NOR",
+    "country": "Norway",
+    "instock": 185620.32,
+    "outstock": 213947.51,
+    "year": 2014,
+    "group": 5
+  },
+  "Qatar": {
+    "region": "Asia",
+    "id": "QAT",
+    "country": "Qatar",
+    "instock": 31004.06,
+    "outstock": 35182.32,
+    "year": 2014,
+    "group": 4
+  },
+  "Switzerland": {
+    "region": "Europe",
+    "id": "CHE",
+    "country": "Switzerland",
+    "instock": 681849.16,
+    "outstock": 1130614.7,
+    "year": 2014,
+    "group": 5
+  },
+  "Macao": {
+    "region": "Asia",
+    "id": "MAC",
+    "country": "Macao",
+    "instock": 26746.93,
+    "outstock": 2277.25,
+    "year": 2014,
+    "group": 4
+  },
+  "Luxembourg": {
+    "region": "Europe",
+    "id": "LUX",
+    "country": "Luxembourg",
+    "instock": 161311.14,
+    "outstock": 149892.38,
+    "year": 2014,
+    "group": 5
+  },
+  "Sweden": {
+    "region": "Europe",
+    "id": "SWE",
+    "country": "Sweden",
+    "instock": 321103.33,
+    "outstock": 379527.7,
+    "year": 2014,
+    "group": 5
+  },
+  "Denmark": {
+    "region": "Europe",
+    "id": "DNK",
+    "country": "Denmark",
+    "instock": 82921.55,
+    "outstock": 183024.63,
+    "year": 2014,
+    "group": 5
+  },
+  "United States of America": {
+    "region": "Americas",
+    "id": "USA",
+    "country": "United States of America",
+    "instock": 5409884,
+    "outstock": 6318640,
+    "year": 2014,
+    "group": 5
+  },
+  "Singapore": {
+    "region": "Asia",
+    "id": "SGP",
+    "country": "Singapore",
+    "instock": 912355.41,
+    "outstock": 576395.82,
+    "year": 2014,
+    "group": 4
+  },
+  "Netherlands": {
+    "region": "Europe",
+    "id": "NLD",
+    "country": "Netherlands",
+    "instock": 664441.93,
+    "outstock": 985255.63,
+    "year": 2014,
+    "group": 5
+  },
+  "Canada": {
+    "region": "Americas",
+    "id": "CAN",
+    "country": "Canada",
+    "instock": 631315.63,
+    "outstock": 714554.7,
+    "year": 2014,
+    "group": 5
+  },
+  "Austria": {
+    "region": "Europe",
+    "id": "AUT",
+    "country": "Austria",
+    "instock": 180824.5,
+    "outstock": 223246.38,
+    "year": 2014,
+    "group": 5
+  },
+  "Kuwait": {
+    "region": "Asia",
+    "id": "KWT",
+    "country": "Kuwait",
+    "instock": 15362.37,
+    "outstock": 36530.54,
+    "year": 2014,
+    "group": 4
+  },
+  "Finland": {
+    "region": "Europe",
+    "id": "FIN",
+    "country": "Finland",
+    "instock": 133116.41,
+    "outstock": 164554.33,
+    "year": 2014,
+    "group": 5
+  },
+  "Iceland": {
+    "region": "Europe",
+    "id": "ISL",
+    "country": "Iceland",
+    "instock": 7425.43,
+    "outstock": 7955.3,
+    "year": 2014,
+    "group": 5
+  },
+  "Germany": {
+    "region": "Europe",
+    "id": "DEU",
+    "country": "Germany",
+    "instock": 743511.54,
+    "outstock": 1583279.41,
+    "year": 2014,
+    "group": 5
+  },
+  "Belgium": {
+    "region": "Europe",
+    "id": "BEL",
+    "country": "Belgium",
+    "instock": 525612.06,
+    "outstock": 450177.56,
+    "year": 2014,
+    "group": 5
+  },
+  "Ireland": {
+    "region": "Europe",
+    "id": "IRL",
+    "country": "Ireland",
+    "instock": 369167.92,
+    "outstock": 628026.3,
+    "year": 2014,
+    "group": 5
+  },
+  "United Arab Emirates": {
+    "region": "Asia",
+    "id": "ARE",
+    "country": "United Arab Emirates",
+    "instock": 115561.22,
+    "outstock": 66297.51,
+    "year": 2014,
+    "group": 4
+  },
+  "United Kingdom": {
+    "region": "Europe",
+    "id": "GBR",
+    "country": "United Kingdom",
+    "instock": 1662857.79,
+    "outstock": 1584146.64,
+    "year": 2014,
+    "group": 5
+  },
+  "France": {
+    "region": "Europe",
+    "id": "FRA",
+    "country": "France",
+    "instock": 729147.18,
+    "outstock": 1279089.35,
+    "year": 2014,
+    "group": 5
+  },
+  "Japan": {
+    "region": "Asia",
+    "id": "JPN",
+    "country": "Japan",
+    "instock": 170615.05,
+    "outstock": 1193136.61,
+    "year": 2014,
+    "group": 5
+  },
+  "New Zealand": {
+    "region": "Oceania",
+    "id": "NZL",
+    "country": "New Zealand",
+    "instock": 76790.89,
+    "outstock": 18677.68,
+    "year": 2014,
+    "group": 5
+  },
+  "Brunei": {
+    "region": "Asia",
+    "id": "BRN",
+    "country": "Brunei",
+    "instock": 6218.88,
+    "outstock": 133.83,
+    "year": 2014,
+    "group": 4
+  },
+  "Hong Kong": {
+    "region": "Asia",
+    "id": "HKG",
+    "country": "Hong Kong",
+    "instock": 1549848.75,
+    "outstock": 1459947.39,
+    "year": 2014,
+    "group": 4
+  },
+  "Israel": {
+    "region": "Asia",
+    "id": "ISR",
+    "country": "Israel",
+    "instock": 98697.23,
+    "outstock": 78016.17,
+    "year": 2014,
+    "group": 5
+  },
+  "Italy": {
+    "region": "Europe",
+    "id": "ITA",
+    "country": "Italy",
+    "instock": 373737.87,
+    "outstock": 548416.34,
+    "year": 2014,
+    "group": 5
+  },
+  "Spain": {
+    "region": "Europe",
+    "id": "ESP",
+    "country": "Spain",
+    "instock": 721879.91,
+    "outstock": 673988.5,
+    "year": 2014,
+    "group": 5
+  },
+  "South Korea": {
+    "region": "Asia",
+    "id": "KOR",
+    "country": "South Korea",
+    "instock": 182036.8,
+    "outstock": 258552.6,
+    "year": 2014,
+    "group": 5
+  },
+  "Cyprus": {
+    "region": "Asia",
+    "id": "CYP",
+    "country": "Cyprus",
+    "instock": 58145.06,
+    "outstock": 41912.53,
+    "year": 2014,
+    "group": 4
+  },
+  "Saudi Arabia": {
+    "region": "Asia",
+    "id": "SAU",
+    "country": "Saudi Arabia",
+    "instock": 215908.8,
+    "outstock": 44698.7,
+    "year": 2014,
+    "group": 4
+  },
+  "Slovenia": {
+    "region": "Europe",
+    "id": "SVN",
+    "country": "Slovenia",
+    "instock": 12743.12,
+    "outstock": 6192.65,
+    "year": 2014,
+    "group": 5
+  },
+  "Taiwan": {
+    "region": "Asia",
+    "id": "TWN",
+    "country": "Taiwan",
+    "instock": 68636,
+    "outstock": 258829,
+    "year": 2014,
+    "group": 4
+  },
+  "Greece": {
+    "region": "Europe",
+    "id": "GRC",
+    "country": "Greece",
+    "instock": 20180.78,
+    "outstock": 33938.97,
+    "year": 2014,
+    "group": 5
+  },
+  "Portugal": {
+    "region": "Europe",
+    "id": "PRT",
+    "country": "Portugal",
+    "instock": 108514.55,
+    "outstock": 58355.14,
+    "year": 2014,
+    "group": 5
+  },
+  "Bahamas, The": {
+    "region": "Americas",
+    "id": "BHS",
+    "country": "Bahamas, The",
+    "instock": 18751.16,
+    "outstock": 3867.98,
+    "year": 2014,
+    "group": 4
+  },
+  "Malta": {
+    "region": "Europe",
+    "id": "MLT",
+    "country": "Malta",
+    "instock": 172357.98,
+    "outstock": 44493.4,
+    "year": 2014,
+    "group": 4
+  },
+  "Bahrain": {
+    "region": "Asia",
+    "id": "BHR",
+    "country": "Bahrain",
+    "instock": 18771.28,
+    "outstock": 10671.54,
+    "year": 2014,
+    "group": 4
+  },
+  "Trinidad and Tobago": {
+    "region": "Americas",
+    "id": "TTO",
+    "country": "Trinidad and Tobago",
+    "instock": 26125.27,
+    "outstock": 6410.66,
+    "year": 2014,
+    "group": 4
+  },
+  "Puerto Rico": {
+    "region": "Americas",
+    "id": "PRI",
+    "country": "Puerto Rico",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 4
+  },
+  "Estonia": {
+    "region": "Europe",
+    "id": "EST",
+    "country": "Estonia",
+    "instock": 19297.8,
+    "outstock": 6318.92,
+    "year": 2014,
+    "group": 5
+  },
+  "Czech Republic": {
+    "region": "Europe",
+    "id": "CZE",
+    "country": "Czech Republic",
+    "instock": 121530.01,
+    "outstock": 19041.48,
+    "year": 2014,
+    "group": 5
+  },
+  "Oman": {
+    "region": "Asia",
+    "id": "OMN",
+    "country": "Oman",
+    "instock": 19706.93,
+    "outstock": 7453.2,
+    "year": 2014,
+    "group": 4
+  },
+  "Slovakia": {
+    "region": "Europe",
+    "id": "SVK",
+    "country": "Slovakia",
+    "instock": 53216.15,
+    "outstock": 2974.91,
+    "year": 2014,
+    "group": 4
+  },
+  "Uruguay": {
+    "region": "Americas",
+    "id": "URY",
+    "country": "Uruguay",
+    "instock": 22318.2,
+    "outstock": 428.4,
+    "year": 2014,
+    "group": 4
+  },
+  "Lithuania": {
+    "region": "Europe",
+    "id": "LTU",
+    "country": "Lithuania",
+    "instock": 14691.23,
+    "outstock": 2683.27,
+    "year": 2014,
+    "group": 4
+  },
+  "Latvia": {
+    "region": "Europe",
+    "id": "LVA",
+    "country": "Latvia",
+    "instock": 14566.78,
+    "outstock": 1170.39,
+    "year": 2014,
+    "group": 4
+  },
+  "Saint Kitts and Nevis": {
+    "region": "Americas",
+    "id": "KNA",
+    "country": "Saint Kitts and Nevis",
+    "instock": 2077.76,
+    "outstock": 59.38,
+    "year": 2014,
+    "group": 4
+  },
+  "Chile": {
+    "region": "Americas",
+    "id": "CHL",
+    "country": "Chile",
+    "instock": 207677.99,
+    "outstock": 89732.84,
+    "year": 2014,
+    "group": 5
+  },
+  "Barbados": {
+    "region": "Americas",
+    "id": "BB",
+    "country": "Barbados",
+    "instock": 5247.71,
+    "outstock": 3840.16,
+    "year": 2014,
+    "group": 4
+  },
+  "Seychelles": {
+    "region": "Africa",
+    "id": "SYC",
+    "country": "Seychelles",
+    "instock": 2567.24,
+    "outstock": 279.64,
+    "year": 2014,
+    "group": 4
+  },
+  "Poland": {
+    "region": "Europe",
+    "id": "POL",
+    "country": "Poland",
+    "instock": 245160.53,
+    "outstock": 65216.7,
+    "year": 2014,
+    "group": 5
+  },
+  "Argentina": {
+    "region": "Americas",
+    "id": "ARG",
+    "country": "Argentina",
+    "instock": 114076,
+    "outstock": 35938.34,
+    "year": 2014,
+    "group": 4
+  },
+  "Antigua and Barbuda": {
+    "region": "Americas",
+    "id": "ATG",
+    "country": "Antigua and Barbuda",
+    "instock": 2845.2,
+    "outstock": 111.87,
+    "year": 2014,
+    "group": 4
+  },
+  "Hungary": {
+    "region": "Europe",
+    "id": "HUN",
+    "country": "Hungary",
+    "instock": 98359.9,
+    "outstock": 39640.62,
+    "year": 2014,
+    "group": 5
+  },
+  "Russian Federation": {
+    "region": "Europe",
+    "id": "RUS",
+    "country": "Russian Federation",
+    "instock": 378543,
+    "outstock": 431865,
+    "year": 2014,
+    "group": 4
+  },
+  "Croatia": {
+    "region": "Europe",
+    "id": "HRV",
+    "country": "Croatia",
+    "instock": 29760.66,
+    "outstock": 5443.74,
+    "year": 2014,
+    "group": 4
+  },
+  "Kazakhstan": {
+    "region": "Asia",
+    "id": "KAZ",
+    "country": "Kazakhstan",
+    "instock": 129244.21,
+    "outstock": 27199.85,
+    "year": 2014,
+    "group": 3
+  },
+  "Venezuela": {
+    "region": "Americas",
+    "id": "VEN",
+    "country": "Venezuela",
+    "instock": 30139,
+    "outstock": 27349,
+    "year": 2014,
+    "group": 3
+  },
+  "Brazil": {
+    "region": "Americas",
+    "id": "BRA",
+    "country": "Brazil",
+    "instock": 754768.92,
+    "outstock": 316339.49,
+    "year": 2014,
+    "group": 3
+  },
+  "Malaysia": {
+    "region": "Asia",
+    "id": "MYS",
+    "country": "Malaysia",
+    "instock": 133767.23,
+    "outstock": 135684.68,
+    "year": 2014,
+    "group": 3
+  },
+  "Panama": {
+    "region": "Americas",
+    "id": "PAN",
+    "country": "Panama",
+    "instock": 35917.3,
+    "outstock": 4245.7,
+    "year": 2014,
+    "group": 3
+  },
+  "Turkey": {
+    "region": "Asia",
+    "id": "TUR",
+    "country": "Turkey",
+    "instock": 168645,
+    "outstock": 40088,
+    "year": 2014,
+    "group": 3
+  },
+  "Equatorial Guinea": {
+    "region": "Africa",
+    "id": "GNQ",
+    "country": "Equatorial Guinea",
+    "instock": 17249.6,
+    "outstock": 2.58,
+    "year": 2014,
+    "group": 3
+  },
+  "Costa Rica": {
+    "region": "Americas",
+    "id": "CRI",
+    "country": "Costa Rica",
+    "instock": 24309.11,
+    "outstock": 2048.64,
+    "year": 2014,
+    "group": 3
+  },
+  "Lebanon": {
+    "region": "Asia",
+    "id": "LBN",
+    "country": "Lebanon",
+    "instock": 56833.74,
+    "outstock": 12629.49,
+    "year": 2014,
+    "group": 3
+  },
+  "Suriname": {
+    "region": "Americas",
+    "id": "SUR",
+    "country": "Suriname",
+    "instock": 1011.8,
+    "outstock": "..",
+    "year": 2014,
+    "group": 3
+  },
+  "Mexico": {
+    "region": "Americas",
+    "id": "MEX",
+    "country": "Mexico",
+    "instock": 337973.63,
+    "outstock": 131245.77,
+    "year": 2014,
+    "group": 3
+  },
+  "Gabon": {
+    "region": "Africa",
+    "id": "GAB",
+    "country": "Gabon",
+    "instock": 6339.4,
+    "outstock": 1006,
+    "year": 2014,
+    "group": 3
+  },
+  "Romania": {
+    "region": "Europe",
+    "id": "ROU",
+    "country": "Romania",
+    "instock": 74731.53,
+    "outstock": 695.68,
+    "year": 2014,
+    "group": 3
+  },
+  "Turkmenistan": {
+    "region": "Asia",
+    "id": "TKM",
+    "country": "Turkmenistan",
+    "instock": 26202.5,
+    "outstock": "..",
+    "year": 2014,
+    "group": 3
+  },
+  "Colombia": {
+    "region": "Americas",
+    "id": "COL",
+    "country": "Colombia",
+    "instock": 141666.53,
+    "outstock": 43081.88,
+    "year": 2014,
+    "group": 3
+  },
+  "Grenada": {
+    "region": "Americas",
+    "id": "GRD",
+    "country": "Grenada",
+    "instock": 1506.2,
+    "outstock": 51.42,
+    "year": 2014,
+    "group": 3
+  },
+  "Libya": {
+    "region": "Africa",
+    "id": "LBY",
+    "country": "Libya",
+    "instock": 18511,
+    "outstock": 20375,
+    "year": 2014,
+    "group": 3
+  },
+  "Bulgaria": {
+    "region": "Europe",
+    "id": "BGR",
+    "country": "Bulgaria",
+    "instock": 46539.19,
+    "outstock": 2194.73,
+    "year": 2014,
+    "group": 3
+  },
+  "Azerbaijan": {
+    "region": "Asia",
+    "id": "AZE",
+    "country": "Azerbaijan",
+    "instock": 18180.4,
+    "outstock": 11213.8,
+    "year": 2014,
+    "group": 3
+  },
+  "China": {
+    "region": "Asia",
+    "id": "CHN",
+    "country": "China",
+    "instock": 1085293,
+    "outstock": 729584.67,
+    "year": 2014,
+    "group": 3
+  },
+  "Belarus": {
+    "region": "Europe",
+    "id": "BLR",
+    "country": "Belarus",
+    "instock": 17730,
+    "outstock": 588,
+    "year": 2014,
+    "group": 3
+  },
+  "Montenegro": {
+    "region": "Europe",
+    "id": "MNE",
+    "country": "Montenegro",
+    "instock": 4982.67,
+    "outstock": 421.74,
+    "year": 2014,
+    "group": 3
+  },
+  "Saint Lucia": {
+    "region": "Americas",
+    "id": "LCA",
+    "country": "Saint Lucia",
+    "instock": 2510,
+    "outstock": 66.65,
+    "year": 2014,
+    "group": 3
+  },
+  "Botswana": {
+    "region": "Africa",
+    "id": "BWA",
+    "country": "Botswana",
+    "instock": 4366.51,
+    "outstock": 794.8,
+    "year": 2014,
+    "group": 3
+  },
+  "Dominica": {
+    "region": "Americas",
+    "id": "DMA",
+    "country": "Dominica",
+    "instock": 846.01,
+    "outstock": 37.56,
+    "year": 2014,
+    "group": 3
+  },
+  "South Africa": {
+    "region": "Africa",
+    "id": "ZAF",
+    "country": "South Africa",
+    "instock": 145384.38,
+    "outstock": 133936.24,
+    "year": 2014,
+    "group": 3
+  },
+  "Saint Vincent and the Grenadines": {
+    "region": "Americas",
+    "id": "VCT",
+    "country": "Saint Vincent and the Grenadines",
+    "instock": 1814.25,
+    "outstock": 5.61,
+    "year": 2014,
+    "group": 3
+  },
+  "Iran": {
+    "region": "Asia",
+    "id": "IRN",
+    "country": "Iran",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 3
+  },
+  "Iraq": {
+    "region": "Asia",
+    "id": "IRQ",
+    "country": "Iraq",
+    "instock": 23161.01,
+    "outstock": 1956.1,
+    "year": 2014,
+    "group": 3
+  },
+  "Maldives": {
+    "region": "Asia",
+    "id": "MDV",
+    "country": "Maldives",
+    "instock": 2489.74,
+    "outstock": 0,
+    "year": 2014,
+    "group": 3
+  },
+  "Peru": {
+    "region": "Americas",
+    "id": "PER",
+    "country": "Peru",
+    "instock": 79428.79,
+    "outstock": 4205.43,
+    "year": 2014,
+    "group": 3
+  },
+  "Ecuador": {
+    "region": "Americas",
+    "id": "ECU",
+    "country": "Ecuador",
+    "instock": 14590.96,
+    "outstock": 696.98,
+    "year": 2014,
+    "group": 3
+  },
+  "Dominican Republic": {
+    "region": "Americas",
+    "id": "DOM",
+    "country": "Dominican Republic",
+    "instock": 28756.9,
+    "outstock": 171.18,
+    "year": 2014,
+    "group": 3
+  },
+  "Cuba": {
+    "region": "Americas",
+    "id": "CUB",
+    "country": "Cuba",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 3
+  },
+  "Serbia": {
+    "region": "Europe",
+    "id": "SRB",
+    "country": "Serbia",
+    "instock": 33141.82,
+    "outstock": 3015.32,
+    "year": 2014,
+    "group": 3
+  },
+  "Thailand": {
+    "region": "Asia",
+    "id": "THA",
+    "country": "Thailand",
+    "instock": 199310.85,
+    "outstock": 65768.73,
+    "year": 2014,
+    "group": 3
+  },
+  "Namibia": {
+    "region": "Africa",
+    "id": "NAM",
+    "country": "Namibia",
+    "instock": 3721.91,
+    "outstock": 60.44,
+    "year": 2014,
+    "group": 3
+  },
+  "Algeria": {
+    "region": "Africa",
+    "id": "DZA",
+    "country": "Algeria",
+    "instock": 26785.8,
+    "outstock": 1733.1,
+    "year": 2014,
+    "group": 3
+  },
+  "Jordan": {
+    "region": "Asia",
+    "id": "JOR",
+    "country": "Jordan",
+    "instock": 28733.8,
+    "outstock": 608.45,
+    "year": 2014,
+    "group": 3
+  },
+  "Jamaica": {
+    "region": "Americas",
+    "id": "JAM",
+    "country": "Jamaica",
+    "instock": 13323.72,
+    "outstock": 313.52,
+    "year": 2014,
+    "group": 3
+  },
+  "Macedonia": {
+    "region": "Europe",
+    "id": "MKD",
+    "country": "Macedonia",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 3
+  },
+  "Fiji": {
+    "region": "Oceania",
+    "id": "FJI",
+    "country": "Fiji",
+    "instock": 3713.39,
+    "outstock": 50.85,
+    "year": 2014,
+    "group": 3
+  },
+  "Angola": {
+    "region": "Africa",
+    "id": "AGO",
+    "country": "Angola",
+    "instock": 0,
+    "outstock": 19217.91,
+    "year": 2014,
+    "group": 3
+  },
+  "Bosnia and Herzegovina": {
+    "region": "Europe",
+    "id": "BIH",
+    "country": "Bosnia and Herzegovina",
+    "instock": 7383.38,
+    "outstock": 207.72,
+    "year": 2014,
+    "group": 3
+  },
+  "Albania": {
+    "region": "Europe",
+    "id": "ALB",
+    "country": "Albania",
+    "instock": 4465.69,
+    "outstock": 239.07,
+    "year": 2014,
+    "group": 3
+  },
+  "Belize": {
+    "region": "Americas",
+    "id": "BLZ",
+    "country": "Belize",
+    "instock": 1764.5,
+    "outstock": 54.35,
+    "year": 2014,
+    "group": 3
+  },
+  "Paraguay": {
+    "region": "Americas",
+    "id": "PRY",
+    "country": "Paraguay",
+    "instock": 5380.87,
+    "outstock": 378.55,
+    "year": 2014,
+    "group": 3
+  },
+  "Mongolia": {
+    "region": "Asia",
+    "id": "MNG",
+    "country": "Mongolia",
+    "instock": 16692.82,
+    "outstock": 354.84,
+    "year": 2014,
+    "group": 3
+  },
+  "Tonga": {
+    "region": "Oceania",
+    "id": "TON",
+    "country": "Tonga",
+    "instock": 402.53,
+    "outstock": 100.38,
+    "year": 2014,
+    "group": 3
+  },
+  "Tunisia": {
+    "region": "Africa",
+    "id": "TUN",
+    "country": "Tunisia",
+    "instock": 31540.4,
+    "outstock": 304.64,
+    "year": 2014,
+    "group": 3
+  },
+  "Samoa": {
+    "region": "Oceania",
+    "id": "WSM",
+    "country": "Samoa",
+    "instock": 234.54,
+    "outstock": 25.19,
+    "year": 2014,
+    "group": 2
+  },
+  "Guyana": {
+    "region": "Americas",
+    "id": "GUY",
+    "country": "Guyana",
+    "instock": 1959.94,
+    "outstock": 2.36,
+    "year": 2014,
+    "group": 2
+  },
+  "Armenia": {
+    "region": "Asia",
+    "id": "ARM",
+    "country": "Armenia",
+    "instock": 5831.33,
+    "outstock": 205.65,
+    "year": 2014,
+    "group": 2
+  },
+  "El Salvador": {
+    "region": "Americas",
+    "id": "SLV",
+    "country": "El Salvador",
+    "instock": 8503.5,
+    "outstock": 3.1,
+    "year": 2014,
+    "group": 2
+  },
+  "Georgia": {
+    "region": "Asia",
+    "id": "GEO",
+    "country": "Georgia",
+    "instock": 12241.23,
+    "outstock": 1514.17,
+    "year": 2014,
+    "group": 2
+  },
+  "Indonesia": {
+    "region": "Asia",
+    "id": "IDN",
+    "country": "Indonesia",
+    "instock": 253081.69,
+    "outstock": 24052.32,
+    "year": 2014,
+    "group": 2
+  },
+  "Ukraine": {
+    "region": "Europe",
+    "id": "UKR",
+    "country": "Ukraine",
+    "instock": 63825,
+    "outstock": 9705,
+    "year": 2014,
+    "group": 2
+  },
+  "Swaziland": {
+    "region": "Africa",
+    "id": "SWZ",
+    "country": "Swaziland",
+    "instock": 759.36,
+    "outstock": 103.43,
+    "year": 2014,
+    "group": 2
+  },
+  "Philippines": {
+    "region": "Asia",
+    "id": "PHL",
+    "country": "Philippines",
+    "instock": 57093,
+    "outstock": 35602.65,
+    "year": 2014,
+    "group": 2
+  },
+  "Sri Lanka": {
+    "region": "Asia",
+    "id": "LKA",
+    "country": "Sri Lanka",
+    "instock": 10511.04,
+    "outstock": 606.98,
+    "year": 2014,
+    "group": 2
+  },
+  "Cape Verde": {
+    "region": "Africa",
+    "id": "CPV",
+    "country": "Cape Verde",
+    "instock": 1474.22,
+    "outstock": 0,
+    "year": 2014,
+    "group": 2
+  },
+  "Guatemala": {
+    "region": "Americas",
+    "id": "GTM",
+    "country": "Guatemala",
+    "instock": 12102.06,
+    "outstock": 502.9,
+    "year": 2014,
+    "group": 2
+  },
+  "Vanuatu": {
+    "region": "Oceania",
+    "id": "VUT",
+    "country": "Vanuatu",
+    "instock": 503.05,
+    "outstock": 22.7,
+    "year": 2014,
+    "group": 2
+  },
+  "Morocco": {
+    "region": "Africa",
+    "id": "MAR",
+    "country": "Morocco",
+    "instock": 51663.95,
+    "outstock": 4194.07,
+    "year": 2014,
+    "group": 2
+  },
+  "Egypt": {
+    "region": "Africa",
+    "id": "EGY",
+    "country": "Egypt",
+    "instock": 87882,
+    "outstock": 6839,
+    "year": 2014,
+    "group": 2
+  },
+  "Nigeria": {
+    "region": "Africa",
+    "id": "NGA",
+    "country": "Nigeria",
+    "instock": 86671.23,
+    "outstock": 10258.94,
+    "year": 2014,
+    "group": 2
+  },
+  "Kiribati": {
+    "region": "Oceania",
+    "id": "KIR",
+    "country": "Kiribati",
+    "instock": 14.71,
+    "outstock": 0.8,
+    "year": 2014,
+    "group": 2
+  },
+  "Bolivia": {
+    "region": "Americas",
+    "id": "BOL",
+    "country": "Bolivia",
+    "instock": 11206.3,
+    "outstock": 51.95,
+    "year": 2014,
+    "group": 2
+  },
+  "Congo": {
+    "region": "Africa",
+    "id": "COG",
+    "country": "Congo",
+    "instock": 22009.68,
+    "outstock": 94.08,
+    "year": 2014,
+    "group": 2
+  },
+  "Timor-Leste": {
+    "region": "Asia",
+    "id": "TLS",
+    "country": "Timor-Leste",
+    "instock": 316.47,
+    "outstock": 86.33,
+    "year": 2014,
+    "group": 2
+  },
+  "Moldova": {
+    "region": "Europe",
+    "id": "MDA",
+    "country": "Moldova",
+    "instock": 3646.88,
+    "outstock": 178.25,
+    "year": 2014,
+    "group": 2
+  },
+  "Bhutan": {
+    "region": "Asia",
+    "id": "BTN",
+    "country": "Bhutan",
+    "instock": 112.18,
+    "outstock": 0,
+    "year": 2014,
+    "group": 2
+  },
+  "Honduras": {
+    "region": "Americas",
+    "id": "HND",
+    "country": "Honduras",
+    "instock": 11227.57,
+    "outstock": 392.55,
+    "year": 2014,
+    "group": 2
+  },
+  "Papua New Guinea": {
+    "region": "Oceania",
+    "id": "PNG",
+    "country": "Papua New Guinea",
+    "instock": 3876.77,
+    "outstock": 315.26,
+    "year": 2014,
+    "group": 2
+  },
+  "Uzbekistan": {
+    "region": "Asia",
+    "id": "UZB",
+    "country": "Uzbekistan",
+    "instock": 9001.6,
+    "outstock": 0,
+    "year": 2014,
+    "group": 2
+  },
+  "Vietnam": {
+    "region": "Asia",
+    "id": "VNM",
+    "country": "Vietnam",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 2
+  },
+  "Nicaragua": {
+    "region": "Americas",
+    "id": "NIC",
+    "country": "Nicaragua",
+    "instock": 8040.1,
+    "outstock": 374.7,
+    "year": 2014,
+    "group": 2
+  },
+  "Syria": {
+    "region": "Asia",
+    "id": "SYR",
+    "country": "Syria",
+    "instock": 10742.91,
+    "outstock": 420.63,
+    "year": 2014,
+    "group": 0
+  },
+  "Solomon Islands": {
+    "region": "Oceania",
+    "id": "SLB",
+    "country": "Solomon Islands",
+    "instock": 781.14,
+    "outstock": 48.21,
+    "year": 2014,
+    "group": 2
+  },
+  "Sudan": {
+    "region": "Africa",
+    "id": "SDN",
+    "country": "Sudan",
+    "instock": 22693.3,
+    "outstock": 0,
+    "year": 2014,
+    "group": 2
+  },
+  "Zambia": {
+    "region": "Africa",
+    "id": "ZMB",
+    "country": "Zambia",
+    "instock": 15008.6,
+    "outstock": 2416.92,
+    "year": 2014,
+    "group": 2
+  },
+  "Sao Tome and Principe": {
+    "region": "Africa",
+    "id": "STP",
+    "country": "Sao Tome and Principe",
+    "instock": 345.26,
+    "outstock": 22.49,
+    "year": 2014,
+    "group": 2
+  },
+  "Laos": {
+    "region": "Asia",
+    "id": "LAO",
+    "country": "Laos",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 2
+  },
+  "Ghana": {
+    "region": "Africa",
+    "id": "GHA",
+    "country": "Ghana",
+    "instock": 23205.1,
+    "outstock": 129.9,
+    "year": 2014,
+    "group": 2
+  },
+  "India": {
+    "region": "Asia",
+    "id": "IND",
+    "country": "India",
+    "instock": 252331.39,
+    "outstock": 129578.07,
+    "year": 2014,
+    "group": 2
+  },
+  "Cote dIvoire (IvoryCoast)": {
+    "region": "Africa",
+    "id": "CIV",
+    "country": "Cote dIvoire (IvoryCoast)",
+    "instock": 7711.45,
+    "outstock": 114.32,
+    "year": 2014,
+    "group": 2
+  },
+  "Pakistan": {
+    "region": "Asia",
+    "id": "PAK",
+    "country": "Pakistan",
+    "instock": 30892,
+    "outstock": 1695,
+    "year": 2014,
+    "group": 2
+  },
+  "Cameroon": {
+    "region": "Africa",
+    "id": "CMR",
+    "country": "Cameroon",
+    "instock": 6493.3,
+    "outstock": 43.4,
+    "year": 2014,
+    "group": 2
+  },
+  "Lesotho": {
+    "region": "Africa",
+    "id": "LSO",
+    "country": "Lesotho",
+    "instock": 586.26,
+    "outstock": 253,
+    "year": 2014,
+    "group": 2
+  },
+  "Yemen": {
+    "region": "Asia",
+    "id": "YEM",
+    "country": "Yemen",
+    "instock": 3096.94,
+    "outstock": 806.43,
+    "year": 2014,
+    "group": 2
+  },
+  "Kenya": {
+    "region": "Africa",
+    "id": "KEN",
+    "country": "Kenya",
+    "instock": 4369.85,
+    "outstock": 321.28,
+    "year": 2014,
+    "group": 2
+  },
+  "Mauritania": {
+    "region": "Africa",
+    "id": "MRT",
+    "country": "Mauritania",
+    "instock": 5967.7,
+    "outstock": 47.55,
+    "year": 2014,
+    "group": 2
+  },
+  "Myanmar": {
+    "region": "Asia",
+    "id": "MMR",
+    "country": "Myanmar",
+    "instock": 17651.94,
+    "outstock": 0,
+    "year": 2014,
+    "group": 2
+  },
+  "Kyrgyzstan": {
+    "region": "Asia",
+    "id": "KGZ",
+    "country": "Kyrgyzstan",
+    "instock": 3520.05,
+    "outstock": 426.7,
+    "year": 2014,
+    "group": 2
+  },
+  "Bangladesh": {
+    "region": "Asia",
+    "id": "BGD",
+    "country": "Bangladesh",
+    "instock": 9354.76,
+    "outstock": 130.02,
+    "year": 2014,
+    "group": 2
+  },
+  "Tajikistan": {
+    "region": "Asia",
+    "id": "JK",
+    "country": "Tajikistan",
+    "instock": 1885.4,
+    "outstock": 0,
+    "year": 2014,
+    "group": 2
+  },
+  "Senegal": {
+    "region": "Africa",
+    "id": "SEN",
+    "country": "Senegal",
+    "instock": 2698.61,
+    "outstock": 397.2,
+    "year": 2014,
+    "group": 2
+  },
+  "Cambodia": {
+    "region": "Asia",
+    "id": "KHM",
+    "country": "Cambodia",
+    "instock": 13034.97,
+    "outstock": 483.56,
+    "year": 2014,
+    "group": 1
+  },
+  "Chad": {
+    "region": "Africa",
+    "id": "TCD",
+    "country": "Chad",
+    "instock": 5518.2,
+    "outstock": 70.26,
+    "year": 2014,
+    "group": 1
+  },
+  "South Sudan": {
+    "region": "Africa",
+    "id": "SSD",
+    "country": "South Sudan",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 1
+  },
+  "Tanzania": {
+    "region": "Africa",
+    "id": "TZA",
+    "country": "Tanzania",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 1
+  },
+  "Benin": {
+    "region": "Africa",
+    "id": "BEN",
+    "country": "Benin",
+    "instock": 1581.27,
+    "outstock": 171.84,
+    "year": 2014,
+    "group": 1
+  },
+  "Zimbabwe": {
+    "region": "Africa",
+    "id": "ZWE",
+    "country": "Zimbabwe",
+    "instock": 3545.75,
+    "outstock": 487.31,
+    "year": 2014,
+    "group": 1
+  },
+  "Haiti": {
+    "region": "Americas",
+    "id": "HTI",
+    "country": "Haiti",
+    "instock": 1209.37,
+    "outstock": 2,
+    "year": 2014,
+    "group": 1
+  },
+  "Comoros": {
+    "region": "Africa",
+    "id": "COM",
+    "country": "Comoros",
+    "instock": 120.94,
+    "outstock": 0,
+    "year": 2014,
+    "group": 1
+  },
+  "Nepal": {
+    "region": "Asia",
+    "id": "NPL",
+    "country": "Nepal",
+    "instock": 541,
+    "outstock": 0,
+    "year": 2014,
+    "group": 1
+  },
+  "Burkina Faso": {
+    "region": "Africa",
+    "id": "BFA",
+    "country": "Burkina Faso",
+    "instock": 1679.35,
+    "outstock": 275.54,
+    "year": 2014,
+    "group": 1
+  },
+  "Rwanda": {
+    "region": "Africa",
+    "id": "RWA",
+    "country": "Rwanda",
+    "instock": 1105.35,
+    "outstock": 12.94,
+    "year": 2014,
+    "group": 1
+  },
+  "Sierra Leone": {
+    "region": "Africa",
+    "id": "SLE",
+    "country": "Sierra Leone",
+    "instock": 1365.4,
+    "outstock": 0,
+    "year": 2014,
+    "group": 1
+  },
+  "Afghanistan": {
+    "region": "Asia",
+    "id": "AFG",
+    "country": "Afghanistan",
+    "instock": 1691.7,
+    "outstock": 0,
+    "year": 2014,
+    "group": 1
+  },
+  "Uganda": {
+    "region": "Africa",
+    "id": "UGA",
+    "country": "Uganda",
+    "instock": 9917.48,
+    "outstock": 50.23,
+    "year": 2014,
+    "group": 1
+  },
+  "Mali": {
+    "region": "Africa",
+    "id": "MLI",
+    "country": "Mali",
+    "instock": 3109.38,
+    "outstock": 44.67,
+    "year": 2014,
+    "group": 1
+  },
+  "Mozambique": {
+    "region": "Africa",
+    "id": "MOZ",
+    "country": "Mozambique",
+    "instock": 25576.58,
+    "outstock": 10.2,
+    "year": 2014,
+    "group": 1
+  },
+  "Togo": {
+    "region": "Africa",
+    "id": "TGO",
+    "country": "Togo",
+    "instock": 1684.8,
+    "outstock": 1842.86,
+    "year": 2014,
+    "group": 1
+  },
+  "Ethiopia": {
+    "region": "Africa",
+    "id": "ETH",
+    "country": "Ethiopia",
+    "instock": 7264.3,
+    "outstock": 0,
+    "year": 2014,
+    "group": 1
+  },
+  "Guinea-Bissau": {
+    "region": "Africa",
+    "id": "GNB",
+    "country": "Guinea-Bissau",
+    "instock": 122.54,
+    "outstock": 5.1,
+    "year": 2014,
+    "group": 1
+  },
+  "Eritrea": {
+    "region": "Africa",
+    "id": "ERI",
+    "country": "Eritrea",
+    "instock": 837.15,
+    "outstock": 0,
+    "year": 2014,
+    "group": 1
+  },
+  "Guinea": {
+    "region": "Africa",
+    "id": "GIN",
+    "country": "Guinea",
+    "instock": 2584.1,
+    "outstock": 68.2,
+    "year": 2014,
+    "group": 1
+  },
+  "Gambia, The": {
+    "region": "Africa",
+    "id": "GMB",
+    "country": "Gambia, The",
+    "instock": 339.84,
+    "outstock": 0,
+    "year": 2014,
+    "group": 1
+  },
+  "Madagascar": {
+    "region": "Africa",
+    "id": "MDG",
+    "country": "Madagascar",
+    "instock": 6277.26,
+    "outstock": 6.39,
+    "year": 2014,
+    "group": 1
+  },
+  "Niger": {
+    "region": "Africa",
+    "id": "NER",
+    "country": "Niger",
+    "instock": 5132.54,
+    "outstock": 129.76,
+    "year": 2014,
+    "group": 1
+  },
+  "Democratic Republic of the Congo": {
+    "region": "Africa",
+    "id": "COD",
+    "country": "Democratic Republic of the Congo",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 1
+  },
+  "Liberia": {
+    "region": "Africa",
+    "id": "LBR",
+    "country": "Liberia",
+    "instock": 6569.5,
+    "outstock": 4344.9,
+    "year": 2014,
+    "group": 1
+  },
+  "Central African Republic": {
+    "region": "Africa",
+    "id": "CAF",
+    "country": "Central African Republic",
+    "instock": 622.89,
+    "outstock": 43,
+    "year": 2014,
+    "group": 1
+  },
+  "Burundi": {
+    "region": "Africa",
+    "id": "BDI",
+    "country": "Burundi",
+    "instock": 47.83,
+    "outstock": 1.3,
+    "year": 2014,
+    "group": 1
+  },
+  "Malawi": {
+    "region": "Africa",
+    "id": "MWI",
+    "country": "Malawi",
+    "instock": 1238.79,
+    "outstock": 24.08,
+    "year": 2014,
+    "group": 1
+  },
+  "Cook Islands": {
+    "region": "Oceania",
+    "id": "COK",
+    "country": "Cook Islands",
+    "instock": 835.61,
+    "outstock": 5037.27,
+    "year": 2014,
+    "group": 0
+  },
+  "North Korea": {
+    "region": "Asia",
+    "id": "PRK",
+    "country": "North Korea",
+    "instock": 2012.23,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "Falkland Islands (Islas Malvinas)": {
+    "region": "Americas",
+    "id": "FLK",
+    "country": "Falkland Islands (Islas Malvinas)",
+    "instock": 75.21,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "Faroe Islands": {
+    "region": "Europe",
+    "id": "FRO",
+    "country": "Faroe Islands",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "French Guiana": {
+    "region": "Americas",
+    "id": "GUF",
+    "country": "French Guiana",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "Gibraltar": {
+    "region": "Europe",
+    "id": "GIB",
+    "country": "Gibraltar",
+    "instock": 2569.12,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "Guadeloupe": {
+    "region": "Americas",
+    "id": "GLP",
+    "country": "Guadeloupe",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "Martinique": {
+    "region": "Americas",
+    "id": "MTQ",
+    "country": "Martinique",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "Montserrat": {
+    "region": "Americas",
+    "id": "MSR",
+    "country": "Montserrat",
+    "instock": 140.13,
+    "outstock": 1.36,
+    "year": 2014,
+    "group": 0
+  },
+  "Nauru": {
+    "region": "Oceania",
+    "id": "NRU",
+    "country": "Nauru",
+    "instock": 0,
+    "outstock": 22.4,
+    "year": 2014,
+    "group": 0
+  },
+  "Niue": {
+    "region": "Oceania",
+    "id": "NIU",
+    "country": "Niue",
+    "instock": 0,
+    "outstock": 21.82,
+    "year": 2014,
+    "group": 0
+  },
+  "Reunion": {
+    "region": "Africa",
+    "id": "REU",
+    "country": "Reunion",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "Saint Helena": {
+    "region": "Africa",
+    "id": "SHN",
+    "country": "Saint Helena",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "Saint Pierre and Miquelon": {
+    "region": "Americas",
+    "id": "SPM",
+    "country": "Saint Pierre and Miquelon",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "State of Palestine": {
+    "region": "Asia",
+    "id": "PSE",
+    "country": "State of Palestine",
+    "instock": 2453,
+    "outstock": 167,
+    "year": 2014,
+    "group": 0
+  },
+  "Virgin Islands, British": {
+    "region": "Americas",
+    "id": "VGB",
+    "country": "Virgin Islands, British",
+    "instock": 511366.72,
+    "outstock": 584235.03,
+    "year": 2014,
+    "group": 0
+  },
+  "Virgin Islands, U.S.": {
+    "region": "Americas",
+    "id": "VIR",
+    "country": "Virgin Islands, U.S.",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "Western Sahara": {
+    "region": "Africa",
+    "id": "ESH",
+    "country": "Western Sahara",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "American Samoa": {
+    "region": "Oceania",
+    "id": "ASM",
+    "country": "American Samoa",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "Aruba": {
+    "region": "Americas",
+    "id": "ABW",
+    "country": "Aruba",
+    "instock": 3940.75,
+    "outstock": 698,
+    "year": 2014,
+    "group": 0
+  },
+  "Cayman Islands": {
+    "region": "Americas",
+    "id": "CYM",
+    "country": "Cayman Islands",
+    "instock": 187094.2,
+    "outstock": 136699.87,
+    "year": 2014,
+    "group": 0
+  },
+  "Djibouti": {
+    "region": "Africa",
+    "id": "DJI",
+    "country": "Djibouti",
+    "instock": 1505.48,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "French Polynesia": {
+    "region": "Oceania",
+    "id": "PYF",
+    "country": "French Polynesia",
+    "instock": 908.04,
+    "outstock": 327.26,
+    "year": 2014,
+    "group": 0
+  },
+  "Greenland": {
+    "region": "Americas",
+    "id": "GRL",
+    "country": "Greenland",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "Guam": {
+    "region": "Oceania",
+    "id": "GUM",
+    "country": "Guam",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "New Caledonia": {
+    "region": "Oceania",
+    "id": "NCL",
+    "country": "New Caledonia",
+    "instock": 15050.72,
+    "outstock": 581.61,
+    "year": 2014,
+    "group": 0
+  },
+  "Somalia": {
+    "region": "Africa",
+    "id": "SOM",
+    "country": "Somalia",
+    "instock": 988.1,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  },
+  "Turks and Caicos Islands": {
+    "region": "Americas",
+    "id": "TCA",
+    "country": "Turks and Caicos Islands",
+    "instock": 0,
+    "outstock": 0,
+    "year": 2014,
+    "group": 0
+  }
 }
