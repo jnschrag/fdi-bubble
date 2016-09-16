@@ -1,213 +1,213 @@
-region,id,country,value,year,group
-Americas,BMU,Bermuda,2632,2014,4
-Europe,NOR,Norway,185620.32,2014,5
-Asia,QAT,Qatar,31004.06,2014,4
-Europe,CHE,Switzerland,681849.16,2014,5
-Asia,MAC,Macao,26746.93,2014,4
-Europe,LUX,Luxembourg,161311.14,2014,5
-Europe,SWE,Sweden,321103.33,2014,5
-Europe,DNK,Denmark,82921.55,2014,5
-Americas,USA,United States of America,5409884,2014,5
-Asia,SGP,Singapore,912355.41,2014,4
-Europe,NLD,Netherlands,664441.93,2014,5
-Americas,CAN,Canada,631315.63,2014,5
-Europe,AUT,Austria,180824.5,2014,5
-Asia,KWT,Kuwait,15362.37,2014,4
-Europe,FIN,Finland,133116.41,2014,5
-Europe,ISL,Iceland,7425.43,2014,5
-Europe,DEU,Germany,743511.54,2014,5
-Europe,BEL,Belgium,525612.06,2014,5
-Europe,IRL,Ireland,369167.92,2014,5
-Asia,ARE,United Arab Emirates,115561.22,2014,4
-Europe,GBR,United Kingdom,1662857.79,2014,5
-Europe,FRA,France,729147.18,2014,5
-Asia,JPN,Japan,170615.05,2014,5
-Oceania,NZL,New Zealand,76790.89,2014,5
-Asia,BRN,Brunei,6218.88,2014,4
-Asia,HKG,Hong Kong,1549848.75,2014,4
-Asia,ISR,Israel,98697.23,2014,5
-Europe,ITA,Italy,373737.87,2014,5
-Europe,ESP,Spain,721879.91,2014,5
-Asia,KOR,South Korea,182036.8,2014,5
-Asia,CYP,Cyprus,58145.06,2014,4
-Asia,SAU,Saudi Arabia,215908.8,2014,4
-Europe,SVN,Slovenia,12743.12,2014,5
-Asia,TWN,Taiwan,68636,2014,4
-Europe,GRC,Greece,20180.78,2014,5
-Europe,PRT,Portugal,108514.55,2014,5
-Americas,BHS,"Bahamas, The",18751.16,2014,4
-Europe,MLT,Malta,172357.98,2014,4
-Asia,BHR,Bahrain,18771.28,2014,4
-Americas,TTO,Trinidad and Tobago,26125.27,2014,4
-Americas,PRI,Puerto Rico,,2014,4
-Europe,EST,Estonia,19297.8,2014,5
-Europe,CZE,Czech Republic,121530.01,2014,5
-Asia,OMN,Oman,19706.93,2014,4
-Europe,SVK,Slovakia,53216.15,2014,4
-Americas,URY,Uruguay,22318.2,2014,4
-Europe,LTU,Lithuania,14691.23,2014,4
-Europe,LVA,Latvia,14566.78,2014,4
-Americas,KNA,Saint Kitts and Nevis,2077.76,2014,4
-Americas,CHL,Chile,207677.99,2014,5
-Americas,BB,Barbados,5247.71,2014,4
-Africa,SYC,Seychelles,2567.24,2014,4
-Europe,POL,Poland,245160.53,2014,5
-Americas,ARG,Argentina,114076,2014,4
-Americas,ATG,Antigua and Barbuda,2845.2,2014,4
-Europe,HUN,Hungary,98359.9,2014,5
-Europe,RUS,Russian Federation,378543,2014,4
-Europe,HRV,Croatia,29760.66,2014,4
-Asia,KAZ,Kazakhstan,129244.21,2014,3
-Americas,VEN,Venezuela,30139,2014,3
-Americas,BRA,Brazil,754768.92,2014,3
-Asia,MYS,Malaysia,133767.23,2014,3
-Americas,PAN,Panama,35917.3,2014,3
-Asia,TUR,Turkey,168645,2014,3
-Africa,GNQ,Equatorial Guinea,17249.6,2014,3
-Americas,CRI,Costa Rica,24309.11,2014,3
-Asia,LBN,Lebanon,56833.74,2014,3
-Americas,SUR,Suriname,1011.8,2014,3
-Americas,MEX,Mexico,337973.63,2014,3
-Africa,GAB,Gabon,6339.4,2014,3
-Europe,ROU,Romania,74731.53,2014,3
-Asia,TKM,Turkmenistan,26202.5,2014,3
-Americas,COL,Colombia,141666.53,2014,3
-Americas,GRD,Grenada,1506.2,2014,3
-Africa,LBY,Libya,18511,2014,3
-Europe,BGR,Bulgaria,46539.19,2014,3
-Asia,AZE,Azerbaijan,18180.4,2014,3
-Asia,CHN,China,1085293,2014,3
-Europe,BLR,Belarus,17730,2014,3
-Europe,MNE,Montenegro,4982.67,2014,3
-Americas,LCA,Saint Lucia,2510,2014,3
-Africa,BWA,Botswana,4366.51,2014,3
-Americas,DMA,Dominica,846.01,2014,3
-Africa,ZAF,South Africa,145384.38,2014,3
-Americas,VCT,Saint Vincent and the Grenadines,1814.25,2014,3
-Asia,IRN,Iran,,2014,3
-Asia,IRQ,Iraq,23161.01,2014,3
-Asia,MDV,Maldives,2489.74,2014,3
-Americas,PER,Peru,79428.79,2014,3
-Americas,ECU,Ecuador,14590.96,2014,3
-Americas,DOM,Dominican Republic,28756.9,2014,3
-Americas,CUB,Cuba,,2014,3
-Europe,SRB,Serbia,33141.82,2014,3
-Asia,THA,Thailand,199310.85,2014,3
-Africa,NAM,Namibia,3721.91,2014,3
-Africa,DZA,Algeria,26785.8,2014,3
-Asia,JOR,Jordan,28733.8,2014,3
-Americas,JAM,Jamaica,13323.72,2014,3
-Europe,MKD,Macedonia,,2014,3
-Oceania,FJI,Fiji,3713.39,2014,3
-Africa,AGO,Angola,,2014,3
-Europe,BIH,Bosnia and Herzegovina,7383.38,2014,3
-Europe,ALB,Albania,4465.69,2014,3
-Americas,BLZ,Belize,1764.5,2014,3
-Americas,PRY,Paraguay,5380.87,2014,3
-Asia,MNG,Mongolia,16692.82,2014,3
-Oceania,TON,Tonga,402.53,2014,3
-Africa,TUN,Tunisia,31540.4,2014,3
-Oceania,WSM,Samoa,234.54,2014,2
-Americas,GUY,Guyana,1959.94,2014,2
-Asia,ARM,Armenia,5831.33,2014,2
-Americas,SLV,El Salvador,8503.5,2014,2
-Asia,GEO,Georgia,12241.23,2014,2
-Asia,IDN,Indonesia,253081.69,2014,2
-Europe,UKR,Ukraine,63825,2014,2
-Africa,SWZ,Swaziland,759.36,2014,2
-Asia,PHL,Philippines,57093,2014,2
-Asia,LKA,Sri Lanka,10511.04,2014,2
-Africa,CPV,Cape Verde,1474.22,2014,2
-Americas,GTM,Guatemala,12102.06,2014,2
-Oceania,VUT,Vanuatu,503.05,2014,2
-Africa,MAR,Morocco,51663.95,2014,2
-Africa,EGY,Egypt,87882,2014,2
-Africa,NGA,Nigeria,86671.23,2014,2
-Oceania,KIR,Kiribati,14.71,2014,2
-Americas,BOL,Bolivia,11206.3,2014,2
-Africa,COG,Congo,22009.68,2014,2
-Asia,TLS,Timor-Leste,316.47,2014,2
-Europe,MDA,Moldova,3646.88,2014,2
-Asia,BTN,Bhutan,112.18,2014,2
-Americas,HND,Honduras,11227.57,2014,2
-Oceania,PNG,Papua New Guinea,3876.77,2014,2
-Asia,UZB,Uzbekistan,9001.6,2014,2
-Asia,VNM,Vietnam,,2014,2
-Americas,NIC,Nicaragua,8040.1,2014,2
-Asia,SYR,Syria,10742.91,2014,
-Oceania,SLB,Solomon Islands,781.14,2014,2
-Africa,SDN,Sudan,22693.3,2014,2
-Africa,ZMB,Zambia,15008.6,2014,2
-Africa,STP,Sao Tome and Principe,345.26,2014,2
-Asia,LAO,Laos,,2014,2
-Africa,GHA,Ghana,23205.1,2014,2
-Asia,IND,India,252331.39,2014,2
-Africa,CIV,Cote dIvoire (IvoryCoast),7711.45,2014,2
-Asia,PAK,Pakistan,30892,2014,2
-Africa,CMR,Cameroon,6493.3,2014,2
-Africa,LSO,Lesotho,586.26,2014,2
-Asia,YEM,Yemen,3096.94,2014,2
-Africa,KEN,Kenya,4369.85,2014,2
-Africa,MRT,Mauritania,5967.7,2014,2
-Asia,MMR,Myanmar,17651.94,2014,2
-Asia,KGZ,Kyrgyzstan,3520.05,2014,2
-Asia,BGD,Bangladesh,9354.76,2014,2
-Asia,JK,Tajikistan,1885.4,2014,2
-Africa,SEN,Senegal,2698.61,2014,2
-Asia,KHM,Cambodia,13034.97,2014,1
-Africa,TCD,Chad,5518.2,2014,1
-Africa,SSD,South Sudan,,2014,1
-Africa,TZA,Tanzania,,2014,1
-Africa,BEN,Benin,1581.27,2014,1
-Africa,ZWE,Zimbabwe,3545.75,2014,1
-Americas,HTI,Haiti,1209.37,2014,1
-Africa,COM,Comoros,120.94,2014,1
-Asia,NPL,Nepal,541,2014,1
-Africa,BFA,Burkina Faso,1679.35,2014,1
-Africa,RWA,Rwanda,1105.35,2014,1
-Africa,SLE,Sierra Leone,1365.4,2014,1
-Asia,AFG,Afghanistan,1691.7,2014,1
-Africa,UGA,Uganda,9917.48,2014,1
-Africa,MLI,Mali,3109.38,2014,1
-Africa,MOZ,Mozambique,25576.58,2014,1
-Africa,TGO,Togo,1684.8,2014,1
-Africa,ETH,Ethiopia,7264.3,2014,1
-Africa,GNB,Guinea-Bissau,122.54,2014,1
-Africa,ERI,Eritrea,837.15,2014,1
-Africa,GIN,Guinea,2584.1,2014,1
-Africa,GMB,"Gambia, The",339.84,2014,1
-Africa,MDG,Madagascar,6277.26,2014,1
-Africa,NER,Niger,5132.54,2014,1
-Africa,COD,Democratic Republic of the Congo,,2014,1
-Africa,LBR,Liberia,6569.5,2014,1
-Africa,CAF,Central African Republic,622.89,2014,1
-Africa,BDI,Burundi,47.83,2014,1
-Africa,MWI,Malawi,1238.79,2014,1
-Oceania,COK,Cook Islands,835.61,2014,
-Asia,PRK,North Korea,2012.23,2014,
-Americas,FLK,Falkland Islands (Islas Malvinas),75.21,2014,
-Europe,FRO,Faroe Islands,,2014,
-Americas,GUF,French Guiana,,2014,
-Europe,GIB,Gibraltar,2569.12,2014,
-Americas,GLP,Guadeloupe,,2014,
-Americas,MTQ,Martinique,,2014,
-Americas,MSR,Montserrat,140.13,2014,
-Oceania,NRU,Nauru,,2014,
-Oceania,NIU,Niue,,2014,
-Africa,REU,Reunion,,2014,
-Africa,SHN,Saint Helena,,2014,
-Americas,SPM,Saint Pierre and Miquelon,,2014,
-Asia,PSE,State of Palestine,2453,2014,
-Americas,VGB,"Virgin Islands, British",511366.72,2014,
-Americas,VIR,"Virgin Islands, U.S.",,2014,
-Africa,ESH,Western Sahara,,2014,
-Oceania,ASM,American Samoa,,2014,
-Americas,ABW,Aruba,3940.75,2014,
-Americas,CYM,Cayman Islands,187094.2,2014,
-Africa,DJI,Djibouti,1505.48,2014,
-Oceania,PYF,French Polynesia,908.04,2014,
-Americas,GRL,Greenland,,2014,
-Oceania,GUM,Guam,,2014,
-Oceania,NCL,New Caledonia,15050.72,2014,
-Africa,SOM,Somalia,988.1,2014,
-Americas,TCA,Turks and Caicos Islands,,2014,
+region,id,country,value,2015,year,group
+Americas,BMU,Bermuda,2632,7896,2014,4
+Europe,NOR,Norway,185620.32,556860.96,2014,5
+Asia,QAT,Qatar,31004.06,93012.18,2014,4
+Europe,CHE,Switzerland,681849.16,2045547.48,2014,5
+Asia,MAC,Macao,26746.93,80240.79,2014,4
+Europe,LUX,Luxembourg,161311.14,483933.42,2014,5
+Europe,SWE,Sweden,321103.33,963309.99,2014,5
+Europe,DNK,Denmark,82921.55,248764.65,2014,5
+Americas,USA,United States of America,5409884,16229652,2014,5
+Asia,SGP,Singapore,912355.41,2737066.23,2014,4
+Europe,NLD,Netherlands,664441.93,1993325.79,2014,5
+Americas,CAN,Canada,631315.63,1893946.89,2014,5
+Europe,AUT,Austria,180824.5,542473.5,2014,5
+Asia,KWT,Kuwait,15362.37,46087.11,2014,4
+Europe,FIN,Finland,133116.41,399349.23,2014,5
+Europe,ISL,Iceland,7425.43,22276.29,2014,5
+Europe,DEU,Germany,743511.54,2230534.62,2014,5
+Europe,BEL,Belgium,525612.06,1576836.18,2014,5
+Europe,IRL,Ireland,369167.92,1107503.76,2014,5
+Asia,ARE,United Arab Emirates,115561.22,346683.66,2014,4
+Europe,GBR,United Kingdom,1662857.79,4988573.37,2014,5
+Europe,FRA,France,729147.18,2187441.54,2014,5
+Asia,JPN,Japan,170615.05,511845.15,2014,5
+Oceania,NZL,New Zealand,76790.89,230372.67,2014,5
+Asia,BRN,Brunei,6218.88,18656.64,2014,4
+Asia,HKG,Hong Kong,1549848.75,4649546.25,2014,4
+Asia,ISR,Israel,98697.23,296091.69,2014,5
+Europe,ITA,Italy,373737.87,1121213.61,2014,5
+Europe,ESP,Spain,721879.91,2165639.73,2014,5
+Asia,KOR,South Korea,182036.8,546110.4,2014,5
+Asia,CYP,Cyprus,58145.06,174435.18,2014,4
+Asia,SAU,Saudi Arabia,215908.8,647726.4,2014,4
+Europe,SVN,Slovenia,12743.12,38229.36,2014,5
+Asia,TWN,Taiwan,68636,205908,2014,4
+Europe,GRC,Greece,20180.78,60542.34,2014,5
+Europe,PRT,Portugal,108514.55,325543.65,2014,5
+Americas,BHS,"Bahamas, The",18751.16,56253.48,2014,4
+Europe,MLT,Malta,172357.98,517073.94,2014,4
+Asia,BHR,Bahrain,18771.28,56313.84,2014,4
+Americas,TTO,Trinidad and Tobago,26125.27,78375.81,2014,4
+Americas,PRI,Puerto Rico,,0,2014,4
+Europe,EST,Estonia,19297.8,57893.4,2014,5
+Europe,CZE,Czech Republic,121530.01,364590.03,2014,5
+Asia,OMN,Oman,19706.93,59120.79,2014,4
+Europe,SVK,Slovakia,53216.15,159648.45,2014,4
+Americas,URY,Uruguay,22318.2,66954.6,2014,4
+Europe,LTU,Lithuania,14691.23,44073.69,2014,4
+Europe,LVA,Latvia,14566.78,43700.34,2014,4
+Americas,KNA,Saint Kitts and Nevis,2077.76,6233.28,2014,4
+Americas,CHL,Chile,207677.99,623033.97,2014,5
+Americas,BB,Barbados,5247.71,15743.13,2014,4
+Africa,SYC,Seychelles,2567.24,7701.72,2014,4
+Europe,POL,Poland,245160.53,735481.59,2014,5
+Americas,ARG,Argentina,114076,342228,2014,4
+Americas,ATG,Antigua and Barbuda,2845.2,8535.6,2014,4
+Europe,HUN,Hungary,98359.9,295079.7,2014,5
+Europe,RUS,Russian Federation,378543,1135629,2014,4
+Europe,HRV,Croatia,29760.66,89281.98,2014,4
+Asia,KAZ,Kazakhstan,129244.21,387732.63,2014,3
+Americas,VEN,Venezuela,30139,90417,2014,3
+Americas,BRA,Brazil,754768.92,2264306.76,2014,3
+Asia,MYS,Malaysia,133767.23,401301.69,2014,3
+Americas,PAN,Panama,35917.3,107751.9,2014,3
+Asia,TUR,Turkey,168645,505935,2014,3
+Africa,GNQ,Equatorial Guinea,17249.6,51748.8,2014,3
+Americas,CRI,Costa Rica,24309.11,72927.33,2014,3
+Asia,LBN,Lebanon,56833.74,170501.22,2014,3
+Americas,SUR,Suriname,1011.8,3035.4,2014,3
+Americas,MEX,Mexico,337973.63,1013920.89,2014,3
+Africa,GAB,Gabon,6339.4,19018.2,2014,3
+Europe,ROU,Romania,74731.53,224194.59,2014,3
+Asia,TKM,Turkmenistan,26202.5,78607.5,2014,3
+Americas,COL,Colombia,141666.53,424999.59,2014,3
+Americas,GRD,Grenada,1506.2,4518.6,2014,3
+Africa,LBY,Libya,18511,55533,2014,3
+Europe,BGR,Bulgaria,46539.19,139617.57,2014,3
+Asia,AZE,Azerbaijan,18180.4,54541.2,2014,3
+Asia,CHN,China,1085293,3255879,2014,3
+Europe,BLR,Belarus,17730,53190,2014,3
+Europe,MNE,Montenegro,4982.67,14948.01,2014,3
+Americas,LCA,Saint Lucia,2510,7530,2014,3
+Africa,BWA,Botswana,4366.51,13099.53,2014,3
+Americas,DMA,Dominica,846.01,2538.03,2014,3
+Africa,ZAF,South Africa,145384.38,436153.14,2014,3
+Americas,VCT,Saint Vincent and the Grenadines,1814.25,5442.75,2014,3
+Asia,IRN,Iran,,0,2014,3
+Asia,IRQ,Iraq,23161.01,69483.03,2014,3
+Asia,MDV,Maldives,2489.74,7469.22,2014,3
+Americas,PER,Peru,79428.79,238286.37,2014,3
+Americas,ECU,Ecuador,14590.96,43772.88,2014,3
+Americas,DOM,Dominican Republic,28756.9,86270.7,2014,3
+Americas,CUB,Cuba,,0,2014,3
+Europe,SRB,Serbia,33141.82,99425.46,2014,3
+Asia,THA,Thailand,199310.85,597932.55,2014,3
+Africa,NAM,Namibia,3721.91,11165.73,2014,3
+Africa,DZA,Algeria,26785.8,80357.4,2014,3
+Asia,JOR,Jordan,28733.8,86201.4,2014,3
+Americas,JAM,Jamaica,13323.72,39971.16,2014,3
+Europe,MKD,Macedonia,,0,2014,3
+Oceania,FJI,Fiji,3713.39,11140.17,2014,3
+Africa,AGO,Angola,,0,2014,3
+Europe,BIH,Bosnia and Herzegovina,7383.38,22150.14,2014,3
+Europe,ALB,Albania,4465.69,13397.07,2014,3
+Americas,BLZ,Belize,1764.5,5293.5,2014,3
+Americas,PRY,Paraguay,5380.87,16142.61,2014,3
+Asia,MNG,Mongolia,16692.82,50078.46,2014,3
+Oceania,TON,Tonga,402.53,1207.59,2014,3
+Africa,TUN,Tunisia,31540.4,94621.2,2014,3
+Oceania,WSM,Samoa,234.54,703.62,2014,2
+Americas,GUY,Guyana,1959.94,5879.82,2014,2
+Asia,ARM,Armenia,5831.33,17493.99,2014,2
+Americas,SLV,El Salvador,8503.5,25510.5,2014,2
+Asia,GEO,Georgia,12241.23,36723.69,2014,2
+Asia,IDN,Indonesia,253081.69,759245.07,2014,2
+Europe,UKR,Ukraine,63825,191475,2014,2
+Africa,SWZ,Swaziland,759.36,2278.08,2014,2
+Asia,PHL,Philippines,57093,171279,2014,2
+Asia,LKA,Sri Lanka,10511.04,31533.12,2014,2
+Africa,CPV,Cape Verde,1474.22,4422.66,2014,2
+Americas,GTM,Guatemala,12102.06,36306.18,2014,2
+Oceania,VUT,Vanuatu,503.05,1509.15,2014,2
+Africa,MAR,Morocco,51663.95,154991.85,2014,2
+Africa,EGY,Egypt,87882,263646,2014,2
+Africa,NGA,Nigeria,86671.23,260013.69,2014,2
+Oceania,KIR,Kiribati,14.71,44.13,2014,2
+Americas,BOL,Bolivia,11206.3,33618.9,2014,2
+Africa,COG,Congo,22009.68,66029.04,2014,2
+Asia,TLS,Timor-Leste,316.47,949.41,2014,2
+Europe,MDA,Moldova,3646.88,10940.64,2014,2
+Asia,BTN,Bhutan,112.18,336.54,2014,2
+Americas,HND,Honduras,11227.57,33682.71,2014,2
+Oceania,PNG,Papua New Guinea,3876.77,11630.31,2014,2
+Asia,UZB,Uzbekistan,9001.6,27004.8,2014,2
+Asia,VNM,Vietnam,,0,2014,2
+Americas,NIC,Nicaragua,8040.1,24120.3,2014,2
+Asia,SYR,Syria,10742.91,32228.73,2014,
+Oceania,SLB,Solomon Islands,781.14,2343.42,2014,2
+Africa,SDN,Sudan,22693.3,68079.9,2014,2
+Africa,ZMB,Zambia,15008.6,45025.8,2014,2
+Africa,STP,Sao Tome and Principe,345.26,1035.78,2014,2
+Asia,LAO,Laos,,0,2014,2
+Africa,GHA,Ghana,23205.1,69615.3,2014,2
+Asia,IND,India,252331.39,756994.17,2014,2
+Africa,CIV,Cote dIvoire (IvoryCoast),7711.45,23134.35,2014,2
+Asia,PAK,Pakistan,30892,92676,2014,2
+Africa,CMR,Cameroon,6493.3,19479.9,2014,2
+Africa,LSO,Lesotho,586.26,1758.78,2014,2
+Asia,YEM,Yemen,3096.94,9290.82,2014,2
+Africa,KEN,Kenya,4369.85,13109.55,2014,2
+Africa,MRT,Mauritania,5967.7,17903.1,2014,2
+Asia,MMR,Myanmar,17651.94,52955.82,2014,2
+Asia,KGZ,Kyrgyzstan,3520.05,10560.15,2014,2
+Asia,BGD,Bangladesh,9354.76,28064.28,2014,2
+Asia,JK,Tajikistan,1885.4,5656.2,2014,2
+Africa,SEN,Senegal,2698.61,8095.83,2014,2
+Asia,KHM,Cambodia,13034.97,39104.91,2014,1
+Africa,TCD,Chad,5518.2,16554.6,2014,1
+Africa,SSD,South Sudan,,0,2014,1
+Africa,TZA,Tanzania,,0,2014,1
+Africa,BEN,Benin,1581.27,4743.81,2014,1
+Africa,ZWE,Zimbabwe,3545.75,10637.25,2014,1
+Americas,HTI,Haiti,1209.37,3628.11,2014,1
+Africa,COM,Comoros,120.94,362.82,2014,1
+Asia,NPL,Nepal,541,1623,2014,1
+Africa,BFA,Burkina Faso,1679.35,5038.05,2014,1
+Africa,RWA,Rwanda,1105.35,3316.05,2014,1
+Africa,SLE,Sierra Leone,1365.4,4096.2,2014,1
+Asia,AFG,Afghanistan,1691.7,5075.1,2014,1
+Africa,UGA,Uganda,9917.48,29752.44,2014,1
+Africa,MLI,Mali,3109.38,9328.14,2014,1
+Africa,MOZ,Mozambique,25576.58,76729.74,2014,1
+Africa,TGO,Togo,1684.8,5054.4,2014,1
+Africa,ETH,Ethiopia,7264.3,21792.9,2014,1
+Africa,GNB,Guinea-Bissau,122.54,367.62,2014,1
+Africa,ERI,Eritrea,837.15,2511.45,2014,1
+Africa,GIN,Guinea,2584.1,7752.3,2014,1
+Africa,GMB,"Gambia, The",339.84,1019.52,2014,1
+Africa,MDG,Madagascar,6277.26,18831.78,2014,1
+Africa,NER,Niger,5132.54,15397.62,2014,1
+Africa,COD,Democratic Republic of the Congo,,0,2014,1
+Africa,LBR,Liberia,6569.5,19708.5,2014,1
+Africa,CAF,Central African Republic,622.89,1868.67,2014,1
+Africa,BDI,Burundi,47.83,143.49,2014,1
+Africa,MWI,Malawi,1238.79,3716.37,2014,1
+Oceania,COK,Cook Islands,835.61,2506.83,2014,
+Asia,PRK,North Korea,2012.23,6036.69,2014,
+Americas,FLK,Falkland Islands (Islas Malvinas),75.21,225.63,2014,
+Europe,FRO,Faroe Islands,,0,2014,
+Americas,GUF,French Guiana,,0,2014,
+Europe,GIB,Gibraltar,2569.12,7707.36,2014,
+Americas,GLP,Guadeloupe,,0,2014,
+Americas,MTQ,Martinique,,0,2014,
+Americas,MSR,Montserrat,140.13,420.39,2014,
+Oceania,NRU,Nauru,,0,2014,
+Oceania,NIU,Niue,,0,2014,
+Africa,REU,Reunion,,0,2014,
+Africa,SHN,Saint Helena,,0,2014,
+Americas,SPM,Saint Pierre and Miquelon,,0,2014,
+Asia,PSE,State of Palestine,2453,7359,2014,
+Americas,VGB,"Virgin Islands, British",511366.72,1534100.16,2014,
+Americas,VIR,"Virgin Islands, U.S.",,0,2014,
+Africa,ESH,Western Sahara,,0,2014,
+Oceania,ASM,American Samoa,,0,2014,
+Americas,ABW,Aruba,3940.75,11822.25,2014,
+Americas,CYM,Cayman Islands,187094.2,561282.6,2014,
+Africa,DJI,Djibouti,1505.48,4516.44,2014,
+Oceania,PYF,French Polynesia,908.04,2724.12,2014,
+Americas,GRL,Greenland,,0,2014,
+Oceania,GUM,Guam,,0,2014,
+Oceania,NCL,New Caledonia,15050.72,45152.16,2014,
+Africa,SOM,Somalia,988.1,2964.3,2014,
+Americas,TCA,Turks and Caicos Islands,,0,2014,

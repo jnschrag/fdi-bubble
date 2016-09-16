@@ -145,7 +145,8 @@ function bubbleChart() {
     svg = d3.select(selector)
       .append('svg')
       .attr('width', width)
-      .attr('height', height);
+      .attr('height', height)
+      .attr('preserveAspectRatio', 'xMidYMid meet');
 
     // Bind nodes data to what will become DOM elements to represent them.
     bubbles = svg.selectAll('.bubble')
@@ -355,7 +356,7 @@ function setupButtons() {
     .selectAll('.button')
     .on('click', function () {
       // Remove active class from all buttons
-      d3.selectAll('#type .button').classed('active', false);
+      d3.selectAll('#toolbar .button').classed('active', false);
       // Find the button just clicked
       var button = d3.select(this);
 
@@ -391,7 +392,6 @@ function setupTypeButtons() {
 
       // Toggle the bubble chart based on
       // the currently clicked button.
-      var dataset = "";
       if(buttonId == "out") {
         dataset = datasetOut;
       }
@@ -399,6 +399,38 @@ function setupTypeButtons() {
         dataset = datasetIn;
       }
       myBubbleChart('#vis', dataset);
+    });
+}
+
+/*
+ * Toggle between years
+ */
+function setupYearButtons() {
+  d3.select('#years')
+    .selectAll('.button')
+    .on('click', function () {
+      // Remove active class from all buttons
+      d3.selectAll('#years .button').classed('active', false);
+      // Find the button just clicked
+      var button = d3.select(this);
+
+      // Set it as the active button
+      button.classed('active', true);
+
+      // Get the id of the button
+      var buttonId = button.attr('id');
+      console.log(dataset);
+
+      // Toggle the bubble chart based on
+      // the currently clicked button.
+      // var dataset = "";
+      // if(buttonId == "out") {
+      //   dataset = datasetOut;
+      // }
+      // else {
+      //   dataset = datasetIn;
+      // }
+      // myBubbleChart('#vis', dataset);
     });
 }
 
@@ -422,10 +454,12 @@ function addCommas(nStr) {
 // Load the data.
 // d3.csv('data/fdi-in.csv', display);
 
-var datasetIn, datasetOut;
+var datasetIn, datasetOut, dataset;
 
+// Stock in is our default data set
 d3.csv("data/fdi-in.csv", function(data) {
   datasetIn = data;
+  dataset = datasetIn;
   myBubbleChart('#vis', datasetIn);
 });
 
@@ -436,3 +470,4 @@ d3.csv("data/fdi-out.csv", function(data) {
 // setup the buttons.
 setupButtons();
 setupTypeButtons();
+setupYearButtons();
