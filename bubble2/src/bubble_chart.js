@@ -29,8 +29,6 @@ function bubbleChart() {
     "Oceania": { x: 2 * width / 3 + 30, y: height / 1.5 }
   };
 
-  console.log(regionCenters);
-
   // X locations of the year titles.
   var regionsTitleX = {
     "Americas": width / 3 - 100,
@@ -108,6 +106,7 @@ function bubbleChart() {
     // Use map() to convert raw data into node data.
     // Checkout http://learnjsdata.com/ for more on
     // working with data.
+    
     var myNodes = rawData.map(function (d) {
       return {
         id: d.id,
@@ -117,6 +116,7 @@ function bubbleChart() {
         group: d.region,
         year: d.year,
         region: d.region,
+        world_bank: d.group,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
@@ -186,7 +186,12 @@ function bubbleChart() {
       .attr('r', function (d) { return d.radius; });
 
     // Set initial layout to single group.
-    groupBubbles();
+    if(currentState == "split") {
+      splitBubbles();
+    }
+    else {
+      groupBubbles();
+    }
   };
 
   /*
@@ -205,6 +210,8 @@ function bubbleChart() {
     });
 
     force.start();
+
+    currentState = "grouped";
   }
 
   /*
@@ -244,6 +251,8 @@ function bubbleChart() {
     });
 
     force.start();
+
+    currentState = "split";
   }
 
   /*
@@ -407,13 +416,18 @@ function setupTypeButtons() {
 
       // Toggle the bubble chart based on
       // the currently clicked button.
+      // 
+      
+
       if(buttonId == "out") {
         dataset = datasetOut;
       }
       else {
         dataset = datasetIn;
       }
-      myBubbleChart('#vis', dataset);
+      currentDataset = dataset;
+
+      myBubbleChart('#vis', dataset[currentYear]);
     });
 }
 
@@ -433,21 +447,12 @@ function setupYearButtons() {
       button.classed('active', true);
 
       // Get the id of the button
-      var buttonId = button.attr('id');
-      console.log(dataset);
+      var year = button.attr('id');
 
-      foreach()
+      dataset = currentDataset;
+      currentYear = year;
+      myBubbleChart('#vis', dataset[year]);
 
-      // Toggle the bubble chart based on
-      // the currently clicked button.
-      // var dataset = "";
-      // if(buttonId == "out") {
-      //   dataset = datasetOut;
-      // }
-      // else {
-      //   dataset = datasetIn;
-      // }
-      // myBubbleChart('#vis', dataset);
     });
 }
 
@@ -471,18 +476,71 @@ function addCommas(nStr) {
 // Load the data.
 // d3.csv('data/fdi-in.csv', display);
 
-var datasetIn, datasetOut, dataset;
+// var datasetIn, datasetOut, dataset;
 
 // Stock in is our default data set
-d3.csv("data/fdi-in.csv", function(data) {
-  datasetIn = data;
-  dataset = datasetIn;
-  myBubbleChart('#vis', datasetIn);
+// d3.csv("data/fdi-in.csv", function(data) {
+//   datasetIn = data;
+//   dataset = datasetIn;
+//   console.log(dataset);
+//   myBubbleChart('#vis', datasetIn);
+// });
+
+// d3.csv("data/fdi-out.csv", function(data) {
+//   datasetOut = data;
+// });
+
+
+// Define our global dataset variables.
+var dataset;
+var datasetIn = {2014:[], 2015:[]};
+var datasetOut = {2014:[], 2015:[]};
+var currentDataset = datasetIn;
+var defaultYear = 2014;
+var currentYear = 2014;
+var currentState = "grouped";
+
+// Get our google spreadsheet
+var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1pVWQNwnHbEex4ycocZ_GqvDHY77l4slytcGaTpWwraE/pubhtml?gid=1343412411&single=true';
+$(document).ready( function() {
+  Tabletop.init( { key: public_spreadsheet_url,
+                   callback: showInfo,
+                   wanted: [ "In-stock", "Out-stock" ],
+                   debug: true } )
 });
 
-d3.csv("data/fdi-out.csv", function(data) {
-  datasetOut = data;
-});
+function showInfo(data, tabletop) {
+  
+  $.each( tabletop.sheets("In-stock").all(), function(i, row) {
+    Object.keys(datasetIn).forEach(function(key){
+      datasetIn[key].push({
+        region: row.region,
+        id: row.id,
+        country: row.country,
+        value: row[key],
+        group: row.group,
+        year: key
+      });
+    });
+  });
+
+  $.each( tabletop.sheets("Out-stock").all(), function(i, row) {
+    Object.keys(datasetOut).forEach(function(key){
+      datasetOut[key].push({
+        region: row.region,
+        id: row.id,
+        country: row.country,
+        value: row[key],
+        group: row.group,
+        year: key
+      });
+    });
+  });
+
+  dataset = datasetIn;
+  myBubbleChart('#vis', dataset[defaultYear]);
+}
+
 
 // setup the buttons.
 setupButtons();
