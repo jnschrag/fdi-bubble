@@ -311,12 +311,12 @@ function bubbleChart() {
     // change outline to indicate hover state.
     d3.select(this).attr('stroke', 'black');
 
-    var content = '<span class="name">Title: </span><span class="value">' +
+    var content = '<span class="name">Country: </span><span class="value">' +
                   d.name +
                   '</span><br/>' +
                   '<span class="name">Amount: </span><span class="value">$' +
                   addCommas(d.value) +
-                  '</span><br/>' +
+                  ' million</span><br/>' +
                   '<span class="name">Year: </span><span class="value">' +
                   d.year +
                   '</span>';
@@ -493,9 +493,10 @@ function addCommas(nStr) {
 
 // Define our global dataset variables.
 var dataset;
-var datasetIn = {2014:[], 2015:[]};
-var datasetOut = {2014:[], 2015:[]};
-var currentDataset = datasetIn;
+var datasetIn = {2000:[], 2005:[], 2010:[], 2014:[]};
+var datasetOut = {2000:[], 2005:[], 2010:[], 2014:[]};
+var defaultDataset = datasetOut;
+var currentDataset = datasetOut;
 var defaultYear = 2014;
 var currentYear = 2014;
 var currentState = "grouped";
@@ -513,31 +514,37 @@ function showInfo(data, tabletop) {
   
   $.each( tabletop.sheets("In-stock").all(), function(i, row) {
     Object.keys(datasetIn).forEach(function(key){
-      datasetIn[key].push({
-        region: row.region,
-        id: row.id,
-        country: row.country,
-        value: row[key],
-        group: row.group,
-        year: key
-      });
+      if(row.value) {
+        datasetIn[key].push({
+          region: row.region,
+          id: row.id,
+          country: row.country,
+          value: row.value,
+          group: row.group,
+          year: key,
+          gni: row.gni
+        });
+      }
     });
   });
 
   $.each( tabletop.sheets("Out-stock").all(), function(i, row) {
     Object.keys(datasetOut).forEach(function(key){
-      datasetOut[key].push({
-        region: row.region,
-        id: row.id,
-        country: row.country,
-        value: row[key],
-        group: row.group,
-        year: key
-      });
+      if(row.value) {
+        datasetOut[key].push({
+          region: row.region,
+          id: row.id,
+          country: row.country,
+          value: row.value,
+          group: row.group,
+          year: key,
+          gni: row.gni
+        });
+      }
     });
   });
 
-  dataset = datasetIn;
+  dataset = defaultDataset;
   myBubbleChart('#vis', dataset[defaultYear]);
 }
 
