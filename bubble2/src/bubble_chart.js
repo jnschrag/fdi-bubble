@@ -514,7 +514,7 @@ function showInfo(data, tabletop) {
   
   $.each( tabletop.sheets("FDI Data Source").all(), function(i, row) {
     Object.keys(datasetIn).forEach(function(key){
-      if(row.in_stock) {
+      if(row.in_stock && row.year == key) {
         datasetIn[key].push({
           region: row.region,
           id: row.id,
@@ -528,7 +528,7 @@ function showInfo(data, tabletop) {
     });
 
     Object.keys(datasetOut).forEach(function(key){
-      if(row.out_stock) {
+      if(row.out_stock && row.year == key) {
         datasetOut[key].push({
           region: row.region,
           id: row.id,
