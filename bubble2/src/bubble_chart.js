@@ -11,8 +11,8 @@
 function bubbleChart() {
 
   // Constants for sizing
-  var width = 980;
-  var height = 600;
+  var width = $("#vis").width();
+  var height = $("#vis").height();
 
   // tooltip for mouseover functionality
   var tooltip = floatingTooltip('gates_tooltip', 240);
@@ -64,25 +64,6 @@ function bubbleChart() {
     "1": { x: width / 2, y: height / 1.5 },
     "0": { x: 2 * width / 3 + 30, y: height / 1.5 }
   };
-
-  // X locations of the year titles.
-  // var devLevelTitleX = {
-  //   "5": width / 3 - 100,
-  //   "4": width / 2,
-  //   "3": 2 * width / 3 + 100,
-  //   "2": width / 3 - 100,
-  //   "1": 2 * width / 3 + 100,
-  //   "0": 2 * width / 3 + 100
-  // };
-
-  // var devLevelTitleY = {
-  //   "5": 40,
-  //   "4": 40,
-  //   "3": 40,
-  //   "2": height / 1.4,
-  //   "1": height / 1.4,
-  //   "0": height / 1.4
-  // };
 
   // Used when setting up force and
   // moving around nodes
@@ -601,6 +582,13 @@ function showInfo(data, tabletop) {
   dataset = defaultDataset;
   myBubbleChart('#vis', dataset[defaultYear]);
 }
+
+function redraw() {
+  myBubbleChart('#vis', dataset[currentYear]);
+}
+
+// Redraw based on the new size whenever the browser window is resized.
+window.addEventListener("resize", redraw);
 
 
 // setup the buttons.
