@@ -506,36 +506,34 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1pVWQNwnHbE
 $(document).ready( function() {
   Tabletop.init( { key: public_spreadsheet_url,
                    callback: showInfo,
-                   wanted: [ "In-stock", "Out-stock" ],
+                   wanted: [ "FDI Data Source"],
                    debug: true } )
 });
 
 function showInfo(data, tabletop) {
   
-  $.each( tabletop.sheets("In-stock").all(), function(i, row) {
+  $.each( tabletop.sheets("FDI Data Source").all(), function(i, row) {
     Object.keys(datasetIn).forEach(function(key){
-      if(row.value) {
+      if(row.in_stock) {
         datasetIn[key].push({
           region: row.region,
           id: row.id,
           country: row.country,
-          value: row.value,
+          value: row.in_stock,
           group: row.group,
           year: key,
           gni: row.gni
         });
       }
     });
-  });
 
-  $.each( tabletop.sheets("Out-stock").all(), function(i, row) {
     Object.keys(datasetOut).forEach(function(key){
-      if(row.value) {
+      if(row.out_stock) {
         datasetOut[key].push({
           region: row.region,
           id: row.id,
           country: row.country,
-          value: row.value,
+          value: row.out_stock,
           group: row.group,
           year: key,
           gni: row.gni
