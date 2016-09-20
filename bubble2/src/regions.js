@@ -8,11 +8,7 @@
  * https://bost.ocks.org/mike/chart/
  *
  */
-function bubbleChart(options) {
-
-  if(typeof(options) === 'string') {
-    options = { key : options };
-  }
+function bubbleChart() {
 
   // Constants for sizing
   var width = $("#vis").width();
@@ -60,12 +56,15 @@ function bubbleChart(options) {
 
 
   // Nice looking colors - no reason to buck the trend
-  
-  console.log(options.region);
-  if(options.region == "Africa") {
+  if(currentRegion == "Africa") {
     var fillColor = d3.scale.ordinal()
         .domain(['Eastern Africa', 'Middle Africa', 'Northern Africa', 'Southern Africa', 'Western Africa'])
         .range(['#ffffcc','#a1dab4','#41b6c4','#2c7fb8','#253494']);
+  }
+  else if(currentRegion == "Americas") {
+    var fillColor = d3.scale.ordinal()
+        .domain(['North America', 'Central America', 'South America'])
+        .range(['#ffffcc','#a1dab4','#41b6c4']);
   }
   else {
     var fillColor = d3.scale.ordinal()
@@ -266,7 +265,7 @@ function bubbleChart(options) {
  * to create a new bubble chart instance, load the data, and display it.
  */
 
-var myBubbleChart = bubbleChart({ region: "Africa"});
+var myBubbleChart = bubbleChart();
 
 /*
  * Function called once data is loaded from CSV.
@@ -314,7 +313,7 @@ $(document).ready( function() {
 function showInfo(data, tabletop) {
   
   $.each( tabletop.sheets("FDI Regional Data Source").all(), function(i, row) {
-      if(row.value && row.region == "Africa") {
+      if(row.value && row.region == currentRegion) {
         dataset[2014].push({
           region: row.region,
           subregion: row.subregion,
