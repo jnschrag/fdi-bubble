@@ -8,7 +8,11 @@
  * https://bost.ocks.org/mike/chart/
  *
  */
-function bubbleChart() {
+function bubbleChart(options) {
+
+  if(typeof(options) === 'string') {
+    options = { key : options };
+  }
 
   // Constants for sizing
   var width = $("#vis").width();
@@ -20,50 +24,6 @@ function bubbleChart() {
   // Locations to move bubbles towards, depending
   // on which view mode is selected.
   var center = { x: width / 2, y: height / 2 };
-
-  var regionCenters = {
-    "Americas": { x: width / 3, y: height / 2.5 },
-    "Europe": { x: width / 2, y: height / 2.5 },
-    "Asia": { x: 2 * width / 3, y: height / 2.5 },
-    "Africa": { x: width / 3 - 40, y: height / 1.5 },
-    "Oceania": { x: 2 * width / 3 + 30, y: height / 1.5 }
-  };
-
-  // X locations of the year titles.
-  var regionsTitleX = {
-    "Americas": width / 3 - 100,
-    "Europe": width / 2,
-    "Asia": 2 * width / 3 + 100,
-    "Africa": width / 3 - 100,
-    "Oceania": 2 * width / 3 + 100
-  };
-
-  var regionsTitleY = {
-    "Americas": 40,
-    "Europe": 40,
-    "Asia": 40,
-    "Africa": height / 1.4,
-    "Oceania": height / 1.4
-  };
-
-  // World Bank Development Level Titles
-  var devLevelsInfo = {
-    "5": { x: width / 3, y: 40, title: "5" },
-    "4": { x: width / 2, y: 40, title: "4" },
-    "3": { x: 2 * width / 3, y: 40, title: "3" },
-    "2": { x: width / 3 - 40, y: height / 1.4, title: "2" },
-    "1": { x: width / 2, y: height / 1.4, title: "1" },
-    "0": { x: 2 * width / 3 + 30, y: height / 1.4, title: "0" }
-  }
-
-  var devLevelCenters = {
-    "5": { x: width / 3 - 50, y: height / 2.5 },
-    "4": { x: width / 2, y: height / 2.5 },
-    "3": { x: 2 * width / 3, y: height / 2.5 },
-    "2": { x: width / 3 - 40, y: height / 1.5},
-    "1": { x: width / 2, y: height / 1.5 },
-    "0": { x: 2 * width / 3 + 30, y: height / 1.5 }
-  };
 
   // Used when setting up force and
   // moving around nodes
@@ -100,9 +60,18 @@ function bubbleChart() {
 
 
   // Nice looking colors - no reason to buck the trend
-  var fillColor = d3.scale.ordinal()
-    .domain(['Americas', 'Europe', 'Asia', 'Africa', 'Oceania'])
-    .range(['#ffffcc','#a1dab4','#41b6c4','#2c7fb8','#253494']);
+  
+  console.log(options.region);
+  if(options.region == "Africa") {
+    var fillColor = d3.scale.ordinal()
+        .domain(['Eastern Africa', 'Middle Africa', 'Northern Africa', 'Southern Africa', 'Western Africa'])
+        .range(['#ffffcc','#a1dab4','#41b6c4','#2c7fb8','#253494']);
+  }
+  else {
+    var fillColor = d3.scale.ordinal()
+      .domain(['Americas', 'Europe', 'Asia', 'Africa', 'Oceania'])
+      .range(['#ffffcc','#a1dab4','#41b6c4','#2c7fb8','#253494']);
+  }
 
   // Sizes bubbles based on their area instead of raw radius
   var radiusScale = d3.scale.pow()
@@ -132,7 +101,9 @@ function bubbleChart() {
         radius: radiusScale(+d.value),
         value: d.value,
         name: d.country,
-        group: d.region,
+        region: d.region,
+        subregion: d.subregion,
+        group: d.subregion,
         year: d.year,
         region: d.region,
         world_bank: d.group,
@@ -220,8 +191,6 @@ function bubbleChart() {
    * center of the visualization.
    */
   function groupBubbles() {
-    hideLabels();
-
     force.on('tick', function (e) {
       bubbles.each(moveToCenter(e.alpha))
         .attr('cx', function (d) { return d.x; })
@@ -255,92 +224,6 @@ function bubbleChart() {
   }
 
   /*
-   * Sets visualization in "split by year mode".
-   * The year labels are shown and the force layout
-   * tick function is set to move nodes to the
-   * yearCenter of their data's year.
-   */
-  function splitBubbles() {
-    hideLabels();
-    showLabels();
-
-    force.on('tick', function (e) {
-      bubbles.each(moveToSplitView(e.alpha))
-        .attr('cx', function (d) { return d.x; })
-        .attr('cy', function (d) { return d.y; });
-    });
-
-    force.start();
-
-    currentState = "split";
-  }
-
-  /*
-   * Helper function for "split by year mode".
-   * Returns a function that takes the data for a
-   * single node and adjusts the position values
-   * of that node to move it the year center for that
-   * node.
-   *
-   * Positioning is adjusted by the force layout's
-   * alpha parameter which gets smaller and smaller as
-   * the force layout runs. This makes the impact of
-   * this moving get reduced as each node gets closer to
-   * its destination, and so allows other forces like the
-   * node's charge force to also impact final location.
-   */
-  function moveToSplitView(alpha) {
-    return function (d) {
-      if(currentView == "region") {
-        var target = regionCenters[d.region];
-      }
-      else if(currentView == "gni") {
-        var target = devLevelCenters[d.world_bank];
-      }
-      d.x = d.x + (target.x - d.x) * damper * alpha * 1.1;
-      d.y = d.y + (target.y - d.y) * damper * alpha * 1.1;
-    };
-  }
-
-  /*
-   * Hides Year title displays.
-   */
-  function hideLabels() {
-    svg.selectAll('.year').remove();
-    svg.selectAll('.devLevel').remove();
-  }
-
-  /*
-   * Shows Labels as titles in split view displays.
-   */
-  function showLabels() {
-    if(currentView == "region") {
-      var yearsData = d3.keys(regionsTitleX);
-      var years = svg.selectAll('.year')
-        .data(yearsData);
-
-      years.enter().append('text')
-        .attr('class', 'year')
-        .attr('x', function (d) { return regionsTitleX[d]; })
-        .attr('y', function (d) { return regionsTitleY[d]; })
-        .attr('text-anchor', 'middle')
-        .text(function (d) { return d; });
-    }
-    else if (currentView == "gni") {
-      var devLevelData = d3.keys(devLevelsInfo);
-      var devLevels = svg.selectAll('.devLevel')
-        .data(devLevelData);
-
-      devLevels.enter().append('text')
-        .attr('class', 'devLevel')
-        .attr('x', function (d) { return devLevelsInfo[d]['x']; })
-        .attr('y', function (d) { return devLevelsInfo[d]['y']; })
-        .attr('text-anchor', 'middle')
-        .text(function (d) { return devLevelsInfo[d]['title']; });
-    }
-  }
-
-  /*
    * Function called on mouseover to display the
    * details of a bubble in the tooltip.
    */
@@ -350,6 +233,9 @@ function bubbleChart() {
 
     var content = '<span class="name">Country: </span><span class="value">' +
                   d.name +
+                  '</span><br/>' +
+                  '<span class="name">Subregion: </span><span class="value">' +
+                  d.subregion +
                   '</span><br/>' +
                   '<span class="name">Amount: </span><span class="value">$' +
                   addCommas(d.value) +
@@ -371,22 +257,6 @@ function bubbleChart() {
     tooltip.hideTooltip();
   }
 
-  /*
-   * Externally accessible function (this is attached to the
-   * returned chart function). Allows the visualization to toggle
-   * between "single group" and "split by year" modes.
-   *
-   * displayName is expected to be a string and either 'year' or 'all'.
-   */
-  chart.toggleDisplay = function (displayName) {
-    currentView = displayName;
-    if (displayName === 'region' || displayName === 'gni') {
-      splitBubbles();
-    } else {
-      groupBubbles();
-    }
-  };
-
   // return the chart function from closure.
   return chart;
 }
@@ -396,7 +266,7 @@ function bubbleChart() {
  * to create a new bubble chart instance, load the data, and display it.
  */
 
-var myBubbleChart = bubbleChart();
+var myBubbleChart = bubbleChart({ region: "Africa"});
 
 /*
  * Function called once data is loaded from CSV.
@@ -408,88 +278,6 @@ function displayIn(error, data) {
   }
 
   myBubbleChart('#vis', data);
-}
-
-/*
- * Sets up the layout buttons to allow for toggling between view modes.
- */
-function setupButtons() {
-  d3.select('#toolbar')
-    .selectAll('.button')
-    .on('click', function () {
-      // Remove active class from all buttons
-      d3.selectAll('#toolbar .button').classed('active', false);
-      // Find the button just clicked
-      var button = d3.select(this);
-
-      // Set it as the active button
-      button.classed('active', true);
-
-      // Get the id of the button
-      var buttonId = button.attr('id');
-
-      // Toggle the bubble chart based on
-      // the currently clicked button.
-      myBubbleChart.toggleDisplay(buttonId);
-    });
-}
-
-/*
- * Toggle between in and out stock
- */
-function setupTypeButtons() {
-  d3.select('#type')
-    .selectAll('.button')
-    .on('click', function () {
-      // Remove active class from all buttons
-      d3.selectAll('#type .button').classed('active', false);
-      // Find the button just clicked
-      var button = d3.select(this);
-
-      // Set it as the active button
-      button.classed('active', true);
-
-      // Get the id of the button
-      var buttonId = button.attr('id');
-
-      // Toggle the bubble chart based on
-      // the currently clicked button.
-
-      if(buttonId == "out") {
-        dataset = datasetOut;
-      }
-      else {
-        dataset = datasetIn;
-      }
-      currentDataset = dataset;
-
-      myBubbleChart('#vis', dataset[currentYear]);
-    });
-}
-
-/*
- * Toggle between years
- */
-function setupYearButtons() {
-  d3.select('#years')
-    .selectAll('.button')
-    .on('click', function () {
-      // Remove active class from all buttons
-      d3.selectAll('#years .button').classed('active', false);
-      // Find the button just clicked
-      var button = d3.select(this);
-
-      // Set it as the active button
-      button.classed('active', true);
-
-      // Get the id of the button
-      var year = button.attr('id');
-
-      dataset = currentDataset;
-      currentYear = year;
-      myBubbleChart('#vis', dataset[year]);
-
-    });
 }
 
 /*
@@ -509,32 +297,8 @@ function addCommas(nStr) {
   return x1 + x2;
 }
 
-// Load the data.
-// d3.csv('data/fdi-in.csv', display);
-
-// var datasetIn, datasetOut, dataset;
-
-// Stock in is our default data set
-// d3.csv("data/fdi-in.csv", function(data) {
-//   datasetIn = data;
-//   dataset = datasetIn;
-//   console.log(dataset);
-//   myBubbleChart('#vis', datasetIn);
-// });
-
-// d3.csv("data/fdi-out.csv", function(data) {
-//   datasetOut = data;
-// });
-
-
 // Define our global dataset variables.
-var dataset;
-var datasetIn = {2000:[], 2005:[], 2010:[], 2014:[]};
-var datasetOut = {2000:[], 2005:[], 2010:[], 2014:[]};
-var defaultDataset = datasetOut;
-var currentDataset = datasetOut;
-var defaultYear = 2014;
-var currentYear = 2014;
+var dataset = {2014:[]};
 var currentState = "grouped";
 var currentView = "all";
 
@@ -543,56 +307,33 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1pVWQNwnHbE
 $(document).ready( function() {
   Tabletop.init( { key: public_spreadsheet_url,
                    callback: showInfo,
-                   wanted: [ "FDI Data Source"],
+                   wanted: [ "FDI Regional Data Source"],
                    debug: true } )
 });
 
 function showInfo(data, tabletop) {
   
-  $.each( tabletop.sheets("FDI Data Source").all(), function(i, row) {
-    Object.keys(datasetIn).forEach(function(key){
-      if(row.in_stock && row.year == key) {
-        datasetIn[key].push({
+  $.each( tabletop.sheets("FDI Regional Data Source").all(), function(i, row) {
+      if(row.value && row.region == "Africa") {
+        dataset[2014].push({
           region: row.region,
+          subregion: row.subregion,
           id: row.id,
           country: row.country,
-          value: row.in_stock,
+          value: row.value,
           group: row.group,
-          year: key,
+          year: row.year,
           gni: row.gni
         });
       }
-    });
-
-    Object.keys(datasetOut).forEach(function(key){
-      if(row.out_stock && row.year == key) {
-        datasetOut[key].push({
-          region: row.region,
-          id: row.id,
-          country: row.country,
-          value: row.out_stock,
-          group: row.group,
-          year: key,
-          gni: row.gni
-        });
-      }
-    });
   });
 
-  dataset = defaultDataset;
-  console.log(dataset);
-  myBubbleChart('#vis', dataset[defaultYear]);
+  myBubbleChart('#vis', dataset[2014]);
 }
 
 function redraw() {
-  myBubbleChart('#vis', dataset[currentYear]);
+  myBubbleChart('#vis', dataset[2014]);
 }
 
 // Redraw based on the new size whenever the browser window is resized.
 window.addEventListener("resize", redraw);
-
-
-// setup the buttons.
-setupButtons();
-setupTypeButtons();
-setupYearButtons();
