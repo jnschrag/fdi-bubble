@@ -11,7 +11,7 @@
 function bubbleChart() {
 
   // Constants for sizing
-  var width = 940;
+  var width = 980;
   var height = 600;
 
   // tooltip for mouseover functionality
@@ -45,6 +45,44 @@ function bubbleChart() {
     "Africa": height / 1.4,
     "Oceania": height / 1.4
   };
+
+  // World Bank Development Level Titles
+  var devLevelsInfo = {
+    "5": { x: width / 3, y: 40, title: "5" },
+    "4": { x: width / 2, y: 40, title: "4" },
+    "3": { x: 2 * width / 3, y: 40, title: "3" },
+    "2": { x: width / 3 - 40, y: height / 1.4, title: "2" },
+    "1": { x: width / 2, y: height / 1.4, title: "1" },
+    "0": { x: 2 * width / 3 + 30, y: height / 1.4, title: "0" }
+  }
+
+  var devLevelCenters = {
+    "5": { x: width / 3 - 50, y: height / 2.5 },
+    "4": { x: width / 2, y: height / 2.5 },
+    "3": { x: 2 * width / 3, y: height / 2.5 },
+    "2": { x: width / 3 - 40, y: height / 1.5},
+    "1": { x: width / 2, y: height / 1.5 },
+    "0": { x: 2 * width / 3 + 30, y: height / 1.5 }
+  };
+
+  // X locations of the year titles.
+  // var devLevelTitleX = {
+  //   "5": width / 3 - 100,
+  //   "4": width / 2,
+  //   "3": 2 * width / 3 + 100,
+  //   "2": width / 3 - 100,
+  //   "1": 2 * width / 3 + 100,
+  //   "0": 2 * width / 3 + 100
+  // };
+
+  // var devLevelTitleY = {
+  //   "5": 40,
+  //   "4": 40,
+  //   "3": 40,
+  //   "2": height / 1.4,
+  //   "1": height / 1.4,
+  //   "0": height / 1.4
+  // };
 
   // Used when setting up force and
   // moving around nodes
@@ -88,7 +126,7 @@ function bubbleChart() {
   // Sizes bubbles based on their area instead of raw radius
   var radiusScale = d3.scale.pow()
     .exponent(0.5)
-    .range([2, 85]);
+    .range([5, 90]);
 
   /*
    * This data manipulation function takes the raw data from
@@ -201,7 +239,7 @@ function bubbleChart() {
    * center of the visualization.
    */
   function groupBubbles() {
-    hideYears();
+    hideLabels();
 
     force.on('tick', function (e) {
       bubbles.each(moveToCenter(e.alpha))
@@ -242,10 +280,11 @@ function bubbleChart() {
    * yearCenter of their data's year.
    */
   function splitBubbles() {
-    showYears();
+    hideLabels();
+    showLabels();
 
     force.on('tick', function (e) {
-      bubbles.each(moveToRegions(e.alpha))
+      bubbles.each(moveToSplitView(e.alpha))
         .attr('cx', function (d) { return d.x; })
         .attr('cy', function (d) { return d.y; });
     });
@@ -269,9 +308,14 @@ function bubbleChart() {
    * its destination, and so allows other forces like the
    * node's charge force to also impact final location.
    */
-  function moveToRegions(alpha) {
+  function moveToSplitView(alpha) {
     return function (d) {
-      var target = regionCenters[d.region];
+      if(currentView == "region") {
+        var target = regionCenters[d.region];
+      }
+      else if(currentView == "gni") {
+        var target = devLevelCenters[d.world_bank];
+      }
       d.x = d.x + (target.x - d.x) * damper * alpha * 1.1;
       d.y = d.y + (target.y - d.y) * damper * alpha * 1.1;
     };
@@ -280,28 +324,40 @@ function bubbleChart() {
   /*
    * Hides Year title displays.
    */
-  function hideYears() {
+  function hideLabels() {
     svg.selectAll('.year').remove();
+    svg.selectAll('.devLevel').remove();
   }
 
   /*
-   * Shows Year title displays.
+   * Shows Labels as titles in split view displays.
    */
-  function showYears() {
-    // Another way to do this would be to create
-    // the year texts once and then just hide them.
-    var yearsData = d3.keys(regionsTitleX);
-    var years = svg.selectAll('.year')
-      .data(yearsData);
+  function showLabels() {
+    if(currentView == "region") {
+      var yearsData = d3.keys(regionsTitleX);
+      var years = svg.selectAll('.year')
+        .data(yearsData);
 
-    years.enter().append('text')
-      .attr('class', 'year')
-      .attr('x', function (d) { return regionsTitleX[d]; })
-      .attr('y', function (d) { return regionsTitleY[d]; })
-      .attr('text-anchor', 'middle')
-      .text(function (d) { return d; });
+      years.enter().append('text')
+        .attr('class', 'year')
+        .attr('x', function (d) { return regionsTitleX[d]; })
+        .attr('y', function (d) { return regionsTitleY[d]; })
+        .attr('text-anchor', 'middle')
+        .text(function (d) { return d; });
+    }
+    else if (currentView == "gni") {
+      var devLevelData = d3.keys(devLevelsInfo);
+      var devLevels = svg.selectAll('.devLevel')
+        .data(devLevelData);
+
+      devLevels.enter().append('text')
+        .attr('class', 'devLevel')
+        .attr('x', function (d) { return devLevelsInfo[d]['x']; })
+        .attr('y', function (d) { return devLevelsInfo[d]['y']; })
+        .attr('text-anchor', 'middle')
+        .text(function (d) { return devLevelsInfo[d]['title']; });
+    }
   }
-
 
   /*
    * Function called on mouseover to display the
@@ -342,7 +398,8 @@ function bubbleChart() {
    * displayName is expected to be a string and either 'year' or 'all'.
    */
   chart.toggleDisplay = function (displayName) {
-    if (displayName === 'region') {
+    currentView = displayName;
+    if (displayName === 'region' || displayName === 'gni') {
       splitBubbles();
     } else {
       groupBubbles();
@@ -416,8 +473,6 @@ function setupTypeButtons() {
 
       // Toggle the bubble chart based on
       // the currently clicked button.
-      // 
-      
 
       if(buttonId == "out") {
         dataset = datasetOut;
@@ -500,6 +555,7 @@ var currentDataset = datasetOut;
 var defaultYear = 2014;
 var currentYear = 2014;
 var currentState = "grouped";
+var currentView = "all";
 
 // Get our google spreadsheet
 var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1pVWQNwnHbEex4ycocZ_GqvDHY77l4slytcGaTpWwraE/pubhtml?gid=1343412411&single=true';

@@ -3,7 +3,7 @@ a, a:visited, a:active {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 980px;
   margin: auto;
 }
 
@@ -34,7 +34,7 @@ a, a:visited, a:active {
   margin-top: 10px;
 }
 
-.year {
+.year, .devLevel {
   font-size: 21px;
   fill: #aaa;
   cursor: default;
