@@ -8,11 +8,12 @@
  * https://bost.ocks.org/mike/chart/
  *
  */
-function bubbleChart() {
-
-  // Constants for sizing
+// Constants for sizing
+  var dim = Math.min(parseInt(d3.select("#vis").style("width")), parseInt(d3.select("#vis").style("height")));
   var width = $("#vis").width();
   var height = $("#vis").height();
+
+function bubbleChart() {
 
   // tooltip for mouseover functionality
   var tooltip = floatingTooltip('gates_tooltip', 240);
@@ -48,21 +49,21 @@ function bubbleChart() {
 
   // World Bank Development Level Titles
   var devLevelsInfo = {
-    "5": { x: width / 3, y: 40, title: "5" },
-    "4": { x: width / 2, y: 40, title: "4" },
-    "3": { x: 2 * width / 3, y: 40, title: "3" },
-    "2": { x: width / 3 - 40, y: height / 1.4, title: "2" },
-    "1": { x: width / 2, y: height / 1.4, title: "1" },
-    "0": { x: 2 * width / 3 + 30, y: height / 1.4, title: "0" }
+    "5": { x: width / 3 - 100, y: 40, title: "OECD high-income economies" },
+    "4": { x: width / 2, y: 40, title: "High-income economies" },
+    "3": { x: 2 * width / 3 + 100, y: 40, title: "Upper middle-income economies" },
+    "2": { x: width / 3 - 40, y: height / 1.4, title: "Lower middle-income economies" },
+    "1": { x: 2 * width / 3 + 30, y: height / 1.4, title: "Low-income economies" },
+    "0": { x: width + 100, y: height, title: "0" }
   }
 
   var devLevelCenters = {
     "5": { x: width / 3 - 50, y: height / 2.5 },
-    "4": { x: width / 2, y: height / 2.5 },
+    "4": { x: width / 2 - 50, y: height / 2.5 },
     "3": { x: 2 * width / 3, y: height / 2.5 },
     "2": { x: width / 3 - 40, y: height / 1.5},
-    "1": { x: width / 2, y: height / 1.5 },
-    "0": { x: 2 * width / 3 + 30, y: height / 1.5 }
+    "1": { x: 2 * width / 3 - 20, y: height / 1.35 },
+    "0": { x: width + 100, y: height }
   };
 
   // Used when setting up force and
@@ -107,7 +108,7 @@ function bubbleChart() {
   // Sizes bubbles based on their area instead of raw radius
   var radiusScale = d3.scale.pow()
     .exponent(0.5)
-    .range([5, 90]);
+    .range([5, dim / 8]);
 
   /*
    * This data manipulation function takes the raw data from
