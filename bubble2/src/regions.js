@@ -106,6 +106,7 @@ function bubbleChart() {
         year: d.year,
         region: d.region,
         world_bank: d.group,
+        gni: d.gni,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
@@ -269,6 +270,9 @@ function bubbleChart() {
                   '<span class="name">Amount: </span><span class="value">$' +
                   addCommas(d.value) +
                   ' million</span><br/>' +
+                  '<span class="name">GNI per capita: </span><span class="value">$' +
+                  addCommas(d.gni) +
+                  '</span><br />' +
                   '<span class="name">Year: </span><span class="value">' +
                   d.year +
                   '</span>';
