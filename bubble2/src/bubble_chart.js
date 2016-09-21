@@ -206,7 +206,8 @@ function bubbleChart() {
       .attr('stroke', function (d) { return d3.rgb(fillColor(d.group)).darker(); })
       .attr('stroke-width', 2)
       .on('mouseover', showDetail)
-      .on('mouseout', hideDetail);
+      .on('mouseout', hideDetail)
+      .on('touchend', hideDetail);
 
     // Fancy transition to make bubbles appear, ending with the
     // correct radius
