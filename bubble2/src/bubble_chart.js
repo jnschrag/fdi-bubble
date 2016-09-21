@@ -101,8 +101,8 @@ function bubbleChart() {
 
   // Nice looking colors - no reason to buck the trend
   var fillColor = d3.scale.ordinal()
-    .domain(['Americas', 'Europe', 'Asia', 'Africa', 'Oceania'])
-    .range(['#ffffcc','#a1dab4','#41b6c4','#2c7fb8','#253494']);
+    .domain(['Americas', 'Europe', 'Asia', 'Africa', 'Oceania', 'China'])
+    .range(['#ffffcc','#c7e9b4','#7fcdbb','#41b6c4','#2c7fb8','#253494']);
 
   // Sizes bubbles based on their area instead of raw radius
   var radiusScale = d3.scale.pow()
@@ -127,12 +127,19 @@ function bubbleChart() {
     // working with data.
     
     var myNodes = rawData.map(function (d) {
+      if(d.country == "China") {
+        var groupValue = d.country;
+      }
+      else {
+        var groupValue = d.region;
+      }
+
       return {
         id: d.id,
         radius: radiusScale(+d.value),
         value: d.value,
         name: d.country,
-        group: d.region,
+        group: groupValue,
         year: d.year,
         region: d.region,
         world_bank: d.group,
