@@ -28,6 +28,7 @@ a, a:visited, a:active {
   height: 600px;
   clear: both;
   margin-bottom: 10px;
+  margin-top:20px;
 }
 
 #toolbar, #type, #years {
@@ -129,4 +130,14 @@ a, a:visited, a:active {
 
 .tt-suggestion p {
   margin: 0;
+}
+
+/* Legend */
+.scaleCircle {
+
+}
+
+.scaleCircleLabel {
+    color: #999;
+    font-size:12px
 }

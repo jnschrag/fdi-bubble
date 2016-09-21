@@ -205,6 +205,37 @@ function bubbleChart() {
       .duration(2000)
       .attr('r', function (d) { return d.radius; });
 
+
+    // Create the legend
+    var legendRectSize = 20;
+    var legendSpacing = 15;
+    var legend = svg
+      .append("g")
+      .selectAll("g")
+      .data(fillColor.domain())
+      .enter()
+      .append('g')
+        .attr('class', 'legend')
+        .attr('transform', function(d, i) {
+          var height = legendRectSize;
+          var x = 40;
+          var y = i * height + 10;
+          return 'translate(' + x + ',' + y + ')';
+    });
+
+    // Draw rects, and color them by original_index
+    legend.append('circle')
+      .classed('scaleCircle', true)
+      .attr('r', 5)
+      .style('fill', fillColor)
+      .style('stroke', d3.rgb(fillColor).darker());
+   
+    legend.append('text')
+      .classed('scaleCircleLabel', true)
+      .attr('x', 12)
+      .attr('y', 20 - legendSpacing)
+      .text(function(d) { return d; });
+
     // Set initial layout to single group.
     if(currentState == "split") {
       splitBubbles();
