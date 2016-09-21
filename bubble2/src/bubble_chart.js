@@ -508,7 +508,7 @@ function setupTypeButtons() {
       }
       currentDataset = dataset;
 
-      myBubbleChart('#vis', dataset[currentYear]);
+      myBubbleChart('#vis', dataset[currentYear][currentRegionsState]);
     });
 }
 
@@ -532,9 +532,45 @@ function setupYearButtons() {
 
       dataset = currentDataset;
       currentYear = year;
-      myBubbleChart('#vis', dataset[year]);
+      myBubbleChart('#vis', dataset[year][currentRegionsState]);
 
     });
+}
+
+/*
+  Toggle between regions
+ */
+function setupRegionFilter() {
+  $("#regionFilter").contents().find(":checkbox").bind('change', function(){      
+      checked = this.checked;
+      value = $(this).val();
+      if(checked == true) {
+
+        currentRegionsArray.push(value);
+        currentRegionsState = "Partial";
+
+        // If currentDataset[currentYear]["Partial"] exists, merge into it, otherwise populate it
+        if(currentDataset[currentYear][currentRegionsState].length) {
+          $.merge(currentDataset[currentYear][currentRegionsState],currentDataset[currentYear][value]);
+        }
+        else {
+          currentDataset[currentYear][currentRegionsState] = currentDataset[currentYear][value];
+        }
+      }
+      else {
+        var index = currentRegionsArray.indexOf(value);
+        if (index > -1) {
+            currentRegionsArray.splice(index, 1);
+        } 
+
+        // for (var i = currentDataset[currentYear][value].length -1; i >= 0; i--)
+        //    currentDataset[currentYear][currentRegionsState].splice(currentDataset[currentYear][value],1);
+
+      }
+      console.log(currentDataset[currentYear][currentRegionsState]);
+      dataset = currentDataset;
+      myBubbleChart('#vis', dataset[currentYear][currentRegionsState]);
+  });
 }
 
 /*
@@ -574,8 +610,82 @@ function addCommas(nStr) {
 
 // Define our global dataset variables.
 var dataset;
-var datasetIn = {2000:[], 2005:[], 2010:[], 2014:[]};
-var datasetOut = {2000:[], 2005:[], 2010:[], 2014:[]};
+var datasetIn = {
+  2000:{
+    "All":[],
+    "Partial":[],
+    "Americas":[],
+    "Europe":[],
+    "Asia":[],
+    "Africa":[],
+    "Oceania":[]
+  },
+  2005:{
+    "All":[],
+    "Partial":[],
+    "Americas":[],
+    "Europe":[],
+    "Asia":[],
+    "Africa":[],
+    "Oceania":[]
+  },
+  2010:{
+    "All":[],
+    "Partial":[],
+    "Americas":[],
+    "Europe":[],
+    "Asia":[],
+    "Africa":[],
+    "Oceania":[]
+  },
+  2014:{
+    "All":[],
+    "Partial":[],
+    "Americas":[],
+    "Europe":[],
+    "Asia":[],
+    "Africa":[],
+    "Oceania":[]
+  }
+};
+var datasetOut = {
+  2000:{
+    "All":[],
+    "Partial":[],
+    "Americas":[],
+    "Europe":[],
+    "Asia":[],
+    "Africa":[],
+    "Oceania":[]
+  },
+  2005:{
+    "All":[],
+    "Partial":[],
+    "Americas":[],
+    "Europe":[],
+    "Asia":[],
+    "Africa":[],
+    "Oceania":[]
+  },
+  2010:{
+    "All":[],
+    "Partial":[],
+    "Americas":[],
+    "Europe":[],
+    "Asia":[],
+    "Africa":[],
+    "Oceania":[]
+  },
+  2014:{
+    "All":[],
+    "Partial":[],
+    "Americas":[],
+    "Europe":[],
+    "Asia":[],
+    "Africa":[],
+    "Oceania":[]
+  }
+};
 var defaultDataset = datasetOut;
 var currentDataset = datasetOut;
 var defaultYear = 2014;
@@ -583,6 +693,10 @@ var currentYear = 2014;
 var currentState = "grouped";
 var currentView = "all";
 var countriesArray = [];
+var regionsArray = {"Americas":[],"Europe":[],"Asia":[],"Africa":[],"Oceania":[]};
+var currentRegionsArray = [];
+var defaultRegionsState = "All";
+var currentRegionsState = "All";
 
 // Get our google spreadsheet
 var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1pVWQNwnHbEex4ycocZ_GqvDHY77l4slytcGaTpWwraE/pubhtml?gid=1343412411&single=true';
@@ -594,44 +708,100 @@ $(document).ready( function() {
 });
 
 function showInfo(data, tabletop) {
-  
+
   $.each( tabletop.sheets("FDI Data Source").all(), function(i, row) {
     Object.keys(datasetIn).forEach(function(key){
-      if(row.in_stock && row.year == key) {
-        datasetIn[key].push({
-          region: row.region,
-          id: row.id,
-          country: row.country,
-          value: row.in_stock,
-          group: row.group,
-          year: key,
-          gni: row.gni
-        });
-      }
+      Object.keys(datasetIn[key]).forEach(function(regionKey) {
+
+        if(regionKey == "All") {
+          if(row.in_stock && row.year == key) {
+            datasetIn[key][regionKey].push({
+              region: row.region,
+              id: row.id,
+              country: row.country,
+              value: row.in_stock,
+              group: row.group,
+              year: key,
+              gni: row.gni
+            });
+          }
+        }
+        else if(regionKey == "Partial") {
+          return;
+        }
+        else {
+          if(row.in_stock && row.year == key && row.region == regionKey) {
+            datasetIn[key][regionKey].push({
+              region: row.region,
+              id: row.id,
+              country: row.country,
+              value: row.in_stock,
+              group: row.group,
+              year: key,
+              gni: row.gni
+            });
+          }
+        }
+      });
     });
 
     Object.keys(datasetOut).forEach(function(key){
-      if(row.out_stock && row.year == key) {
-        datasetOut[key].push({
-          region: row.region,
-          id: row.id,
-          country: row.country,
-          value: row.out_stock,
-          group: row.group,
-          year: key,
-          gni: row.gni
-        });
-      }
+      Object.keys(datasetOut[key]).forEach(function(regionKey) {
+        if(regionKey == "All") {
+          if(row.out_stock && row.year == key) {
+            datasetOut[key][regionKey].push({
+              region: row.region,
+              id: row.id,
+              country: row.country,
+              value: row.out_stock,
+              group: row.group,
+              year: key,
+              gni: row.gni
+            });
+          }
+        }
+        else if(regionKey == "Partial") {
+          return;
+        }
+        else {
+          if(row.out_stock && row.year == key && row.region == regionKey) {
+            datasetOut[key][regionKey].push({
+              region: row.region,
+              id: row.id,
+              country: row.country,
+              value: row.out_stock,
+              group: row.group,
+              year: key,
+              gni: row.gni
+            });
+          }
+        }
+      });
     });
+
+
+  //   Object.keys(datasetOut).forEach(function(key){
+  //     if(row.out_stock && row.year == key) {
+  //       datasetOut[key].push({
+  //         region: row.region,
+  //         id: row.id,
+  //         country: row.country,
+  //         value: row.out_stock,
+  //         group: row.group,
+  //         year: key,
+  //         gni: row.gni
+  //       });
+  //     }
+  //   });
 
   });
 
   dataset = defaultDataset;
-  myBubbleChart('#vis', dataset[defaultYear]);
+  myBubbleChart('#vis', dataset[defaultYear][defaultRegionsState]);
 }
 
 function redraw() {
-  myBubbleChart('#vis', dataset[currentYear]);
+  myBubbleChart('#vis', dataset[currentYear][currentRegionsState]);
 }
 
 // Redraw based on the new size whenever the browser window is resized.
@@ -678,6 +848,7 @@ var countriesArray = ["Seychelles", "Sudan", "Zambia", "Kenya", "South Sudan", "
 setupButtons();
 setupTypeButtons();
 setupYearButtons();
+setupRegionFilter();
 
 $.fn.triggerSVGEvent = function(eventName) {
  var event = document.createEvent('SVGEvents');
