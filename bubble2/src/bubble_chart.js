@@ -658,14 +658,20 @@ var countriesArray = ["Seychelles", "Sudan", "Zambia", "Kenya", "South Sudan", "
 
   $('.typeahead').bind('typeahead:select typeahead:autocomplete', function(ev, suggestion) {
     var searchID = suggestion.replace(/\s+/g, '');
-    $('#'+searchID).trigger('mouseover');
-    console.log('Selection: ' + suggestion);
-    $('#'+searchID).triggerSVGEvent('mouseover').triggerSVGEvent('mousemove');
+
+    if($("#" + searchID).length) {
+      $('#'+searchID).trigger('mouseover');
+      console.log('Selection: ' + suggestion);
+      $('#'+searchID).triggerSVGEvent('mouseover').triggerSVGEvent('mousemove');
+    }
+    else {
+      $('#noData').html("There is no data available for "+suggestion+" at this time.");
+    }
   });
 
   $('.typeahead').bind('typeahead:change', function(ev, suggestion) {
-    var searchID = suggestion.replace(/\s+/g, '');
-    $('#'+searchID).triggerSVGEvent('mouseout').triggerSVGEvent('mousemove');
+    $('#noData').empty();
+    $('#gates_tooltip').css('opacity','0');
   });
 
 // setup the buttons.
