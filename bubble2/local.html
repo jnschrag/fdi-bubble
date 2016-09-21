@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bubble Chart - Local Data Source</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bubble_chart.css">
+</head>
+<body>
+  <div class="container">
+    <h1>China Power Viz Demo: FDI</h1>
+    <div id="toolbar">
+      <a href="#" id="all" class="button active">All Data</a>
+      <a href="#" id="region" class="button">Data by Region</a>
+      <a href="#" id="gni" class="button">Data by Development Level</a>
+    </div>
+    <div id="type">
+        <a href="#" id="in" class="button">In Stock</a>
+        <a href="#" id="out" class="button active">Out Stock</a>
+    </div>
+    <div id="years">
+        <a href="#" id="2000" class="button">2000</a>
+        <a href="#" id="2005" class="button">2005</a>
+        <a href="#" id="2010" class="button">2010</a>
+        <a href="#" id="2014" class="button active">2014</a>
+    </div>
+    <div id="searchContainer">
+      Find: <br />
+      <input type="text" autocomplete="off" style="width: 150px" id="findEntity" name="findEntity" class="typeahead">
+    </div>
+    <div id="vis"></div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="lib/d3.js"></script>
+  <script src="src/typeahead.js"></script>
+  <script src="src/tooltip.js"></script>
+  <script src="src/tabletop.js"></script>
+  <script src="src/bubble_chart_local.js"></script>
+
+</body>
+</html>
