@@ -565,7 +565,8 @@ function setupRegionFilter() {
 
         for (var i = 0; i < currentDataset[currentYear][currentRegionsState].length; i++){
           if(currentDataset[currentYear][currentRegionState][i].region === value){
-            delete currentDataset[currentYear][currentRegionState][i];
+            currentDataset[currentYear][currentRegionState][i].splice(i, 1);
+            i--;
           }
         }
 
