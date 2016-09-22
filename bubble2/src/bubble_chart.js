@@ -1,5 +1,3 @@
-
-
 /* bubbleChart creation function. Returns a function that will
  * instantiate a new bubble chart given a DOM element to display
  * it in and a dataset to visualize.
@@ -174,8 +172,6 @@ function bubbleChart() {
     // Use the max value in the data as the max in the scale's domain
     // note we have to ensure the value is a number by converting it
     // with `+`.
-    // 
-
     var maxAmount = d3.max(rawData, function (d) { return +d.value; });
     radiusScale.domain([0, maxAmount]);
 
@@ -209,12 +205,10 @@ function bubbleChart() {
       .on('mouseout', hideDetail)
       .on('touchend', hideDetail);
 
-    // Fancy transition to make bubbles appear, ending with the
-    // correct radius
+    // Fancy transition to make bubbles appear, ending with the correct radius
     bubbles.transition()
       .duration(2000)
       .attr('r', function (d) { return d.radius; });
-
 
     // Create the legend
     var legendRectSize = 20;
@@ -444,19 +438,7 @@ function bubbleChart() {
 var myBubbleChart = bubbleChart();
 
 /*
- * Function called once data is loaded from CSV.
- * Calls bubble chart function to display inside #vis div.
- */
-function displayIn(error, data) {
-  if (error) {
-    console.log(error);
-  }
-
-  myBubbleChart('#vis', data);
-}
-
-/*
- * Sets up the layout buttons to allow for toggling between view modes.
+ * Sets up the layout buttons to allow for toggling between view modes: grouped or split
  */
 function setupButtons() {
   d3.select('#toolbar')
@@ -493,22 +475,7 @@ function setupTypeButtons() {
 
       // Set it as the active button
       button.classed('active', true);
-
-      // Get the id of the button
-      var buttonId = button.attr('id');
-
-      // Toggle the bubble chart based on
-      // the currently clicked button.
-
-      if(buttonId == "out") {
-        dataset = datasetOut;
-      }
-      else {
-        dataset = datasetIn;
-      }
-      currentDataset = dataset;
-
-      myBubbleChart('#vis', dataset[currentYear][currentRegionsState]);
+      redraw();
     });
 }
 
@@ -526,14 +493,7 @@ function setupYearButtons() {
 
       // Set it as the active button
       button.classed('active', true);
-
-      // Get the id of the button
-      var year = button.attr('id');
-
-      dataset = currentDataset;
-      currentYear = year;
-      myBubbleChart('#vis', dataset[year][currentRegionsState]);
-
+      redraw();
     });
 }
 
@@ -541,162 +501,103 @@ function setupYearButtons() {
   Toggle between regions
  */
 function setupRegionFilter() {
-  $("#regionFilter").contents().find(":checkbox").bind('change', function(){      
-      checked = this.checked;
-      value = $(this).val();
-      if(checked == true) {
+  $("#regionFilter").contents().find(":checkbox").bind('change', function(){
+    checked = this.checked;
+    value = $(this).val();
+    
+    if(value === "All"){
 
-        currentRegionsArray.push(value);
-        currentRegionsState = "Partial";
+      $("#regionFilter").contents().find(":checkbox").each(function(index, item){
+        $(item).prop( "checked", false );
+      });
 
-        // If currentDataset[currentYear]["Partial"] exists, merge into it, otherwise populate it
-        if(currentDataset[currentYear][currentRegionsState].length) {
-          $.merge(currentDataset[currentYear][currentRegionsState],currentDataset[currentYear][value]);
+      // We know "this" is the "All" checkbox
+      $(this).prop("checked", true);
+    }
+    else {
+      var checkedCount = 0;
+      $("#regionFilter").contents().find(":checkbox").each(function(index, item){
+        if($(item).val() === "All") {
+          $(item).prop( "checked", false );  
         }
-        else {
-          currentDataset[currentYear][currentRegionsState] = currentDataset[currentYear][value];
+
+        if($(item).prop("checked") == true) {
+          checkedCount++;
         }
-      }
-      else {
-        var index = currentRegionsArray.indexOf(value);
-        if (index > -1) {
-            currentRegionsArray.splice(index, 1);
-        } 
+      });
 
-        // for (var i = currentDataset[currentYear][value].length -1; i >= 0; i--)
-        //    currentDataset[currentYear][currentRegionsState].splice(currentDataset[currentYear][value],1);
-
+      // If no regions are checked, default to All
+      if(checkedCount === 0) {
+        $("#regionFilter input:checkbox[value=All]").prop("checked", true);
       }
-      console.log(currentDataset[currentYear][currentRegionsState]);
-      dataset = currentDataset;
-      myBubbleChart('#vis', dataset[currentYear][currentRegionsState]);
+    }
+
+    redraw();
   });
 }
 
 /*
- * Helper function to convert a number into a string
- * and add commas to it to improve presentation.
+  Calculate the current state of the type, years, and regions
  */
-function addCommas(nStr) {
-  nStr += '';
-  var x = nStr.split('.');
-  var x1 = x[0];
-  var x2 = x.length > 1 ? '.' + x[1] : '';
-  var rgx = /(\d+)(\d{3})/;
-  while (rgx.test(x1)) {
-    x1 = x1.replace(rgx, '$1' + ',' + '$2');
-  }
-
-  return x1 + x2;
+function calculateType(){
+  return $('#type .active').first().prop('id');
 }
 
-// Load the data.
-// d3.csv('data/fdi-in.csv', display);
+function calculateYears(){
+  return $('#years .active').first().prop('id');
+}
 
-// var datasetIn, datasetOut, dataset;
+function calculateRegions(){
+  var regions = [];
+  $("#regionFilter input:checked").each(function(index, region){
+    regions.push($(region).val());
+  });
 
-// Stock in is our default data set
-// d3.csv("data/fdi-in.csv", function(data) {
-//   datasetIn = data;
-//   dataset = datasetIn;
-//   console.log(dataset);
-//   myBubbleChart('#vis', datasetIn);
-// });
+  return regions;
+}
 
-// d3.csv("data/fdi-out.csv", function(data) {
-//   datasetOut = data;
-// });
+/*
+  Based on the current state of type, years, and regions, build our dataset
+ */
+function calculateDataset(){
+  var fullDataset;
+  var returnDataset = [];
+  var type = calculateType();
+  var year = calculateYears();
+  var regions = calculateRegions();
 
+  if(type === 'in'){
+    fullDataset = datasetIn[year];
+  } else {
+    fullDataset = datasetOut[year];
+  }
+
+  $(regions).each(function(index, region){
+    returnDataset = $.merge(returnDataset, fullDataset[region]);
+  });
+
+  return returnDataset;
+}
+
+// Redraw function triggers chart creation
+function redraw() {
+  myBubbleChart('#vis', calculateDataset());
+}
+
+// Redraw based on the new size whenever the browser window is resized.
+window.addEventListener("resize", redraw);
+
+// setup the buttons.
+setupButtons();
+setupTypeButtons();
+setupYearButtons();
+setupRegionFilter();
 
 // Define our global dataset variables.
-var dataset;
-var datasetIn = {
-  2000:{
-    "All":[],
-    "Partial":[],
-    "Americas":[],
-    "Europe":[],
-    "Asia":[],
-    "Africa":[],
-    "Oceania":[]
-  },
-  2005:{
-    "All":[],
-    "Partial":[],
-    "Americas":[],
-    "Europe":[],
-    "Asia":[],
-    "Africa":[],
-    "Oceania":[]
-  },
-  2010:{
-    "All":[],
-    "Partial":[],
-    "Americas":[],
-    "Europe":[],
-    "Asia":[],
-    "Africa":[],
-    "Oceania":[]
-  },
-  2014:{
-    "All":[],
-    "Partial":[],
-    "Americas":[],
-    "Europe":[],
-    "Asia":[],
-    "Africa":[],
-    "Oceania":[]
-  }
-};
-var datasetOut = {
-  2000:{
-    "All":[],
-    "Partial":[],
-    "Americas":[],
-    "Europe":[],
-    "Asia":[],
-    "Africa":[],
-    "Oceania":[]
-  },
-  2005:{
-    "All":[],
-    "Partial":[],
-    "Americas":[],
-    "Europe":[],
-    "Asia":[],
-    "Africa":[],
-    "Oceania":[]
-  },
-  2010:{
-    "All":[],
-    "Partial":[],
-    "Americas":[],
-    "Europe":[],
-    "Asia":[],
-    "Africa":[],
-    "Oceania":[]
-  },
-  2014:{
-    "All":[],
-    "Partial":[],
-    "Americas":[],
-    "Europe":[],
-    "Asia":[],
-    "Africa":[],
-    "Oceania":[]
-  }
-};
-var defaultDataset = datasetOut;
-var currentDataset = datasetOut;
-var defaultYear = 2014;
-var currentYear = 2014;
+var datasetIn = {2000:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2005:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2010:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2014:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] } };
+var datasetOut = {2000:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2005:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2010:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2014:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] } };
 var currentState = "grouped";
 var currentView = "all";
-var countriesArray = [];
-var regionsArray = {"Americas":[],"Europe":[],"Asia":[],"Africa":[],"Oceania":[]};
-var currentRegionsArray = [];
-var defaultRegionsState = "All";
-var currentRegionsState = "All";
 
 // Get our google spreadsheet
 var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1pVWQNwnHbEex4ycocZ_GqvDHY77l4slytcGaTpWwraE/pubhtml?gid=1343412411&single=true';
@@ -707,8 +608,8 @@ $(document).ready( function() {
                    debug: true } )
 });
 
+// Populate our dataset variables
 function showInfo(data, tabletop) {
-
   $.each( tabletop.sheets("FDI Data Source").all(), function(i, row) {
     Object.keys(datasetIn).forEach(function(key){
       Object.keys(datasetIn[key]).forEach(function(regionKey) {
@@ -725,9 +626,6 @@ function showInfo(data, tabletop) {
               gni: row.gni
             });
           }
-        }
-        else if(regionKey == "Partial") {
-          return;
         }
         else {
           if(row.in_stock && row.year == key && row.region == regionKey) {
@@ -760,9 +658,6 @@ function showInfo(data, tabletop) {
             });
           }
         }
-        else if(regionKey == "Partial") {
-          return;
-        }
         else {
           if(row.out_stock && row.year == key && row.region == regionKey) {
             datasetOut[key][regionKey].push({
@@ -779,80 +674,7 @@ function showInfo(data, tabletop) {
       });
     });
 
-
-  //   Object.keys(datasetOut).forEach(function(key){
-  //     if(row.out_stock && row.year == key) {
-  //       datasetOut[key].push({
-  //         region: row.region,
-  //         id: row.id,
-  //         country: row.country,
-  //         value: row.out_stock,
-  //         group: row.group,
-  //         year: key,
-  //         gni: row.gni
-  //       });
-  //     }
-  //   });
-
   });
 
-  dataset = defaultDataset;
-  myBubbleChart('#vis', dataset[defaultYear][defaultRegionsState]);
+  redraw();
 }
-
-function redraw() {
-  myBubbleChart('#vis', dataset[currentYear][currentRegionsState]);
-}
-
-// Redraw based on the new size whenever the browser window is resized.
-window.addEventListener("resize", redraw);
-
-var countriesArray = ["Seychelles", "Sudan", "Zambia", "Kenya", "South Sudan", "Tanzania", "Zimbabwe", "Comoros", "Rwanda", "Uganda", "Mozambique", "Ethiopia", "Eritrea", "Madagascar", "Burundi", "Malawi", "Reunion", "Djibouti", "Somalia", "Equatorial Guinea", "Gabon", "Angola", "Congo", "Sao Tome and Principe", "Cameroon", "Chad", "Democratic Republic of the Congo", "Central African Republic", "Libya", "Algeria", "Tunisia", "Morocco", "Egypt", "Western Sahara", "Botswana", "South Africa", "Namibia", "Swaziland", "Lesotho", "Cape Verde", "Nigeria", "Ghana", "Cote dIvoire (IvoryCoast)", "Mauritania", "Senegal", "Benin", "Burkina Faso", "Sierra Leone", "Mali", "Togo", "Guinea-Bissau", "Guinea", "Gambia, The", "Niger", "Liberia", "Saint Helena", "Panama", "Costa Rica", "Mexico", "Belize", "El Salvador", "Guatemala", "Honduras", "Nicaragua", "Bermuda", "United States of America", "Canada", "Bahamas, The", "Trinidad and Tobago", "Puerto Rico", "Saint Kitts and Nevis", "Barbados", "Antigua and Barbuda", "Grenada", "Saint Lucia", "Dominica", "Saint Vincent and the Grenadines", "Dominican Republic", "Cuba", "Jamaica", "Haiti", "Guadeloupe", "Martinique", "Montserrat", "Saint Pierre and Miquelon", "Virgin Islands, British", "Virgin Islands, U.S.", "Aruba", "Cayman Islands", "Greenland", "Turks and Caicos Islands", "Uruguay", "Chile", "Argentina", "Venezuela", "Brazil", "Suriname", "Colombia", "Peru", "Ecuador", "Paraguay", "Guyana", "Bolivia", "Falkland Islands (Islas Malvinas)", "French Guiana", "Kazakhstan", "Turkmenistan", "Uzbekistan", "Kyrgyzstan", "Tajikistan", "Macao", "Japan", "Hong Kong", "South Korea", "Taiwan", "China", "Mongolia", "North Korea", "Singapore", "Brunei", "Malaysia", "Thailand", "Indonesia", "Philippines", "Timor-Leste", "Vietnam", "Laos", "Myanmar", "Cambodia", "Iran", "Maldives", "Sri Lanka", "Bhutan", "India", "Pakistan", "Bangladesh", "Nepal", "Afghanistan", "Qatar", "Kuwait", "United Arab Emirates", "Israel", "Cyprus", "Saudi Arabia", "Bahrain", "Oman", "Turkey", "Lebanon", "Azerbaijan", "Iraq", "Jordan", "Armenia", "Georgia", "Syria", "Yemen", "State of Palestine", "Czech Republic", "Slovakia", "Poland", "Hungary", "Russian Federation", "Romania", "Bulgaria", "Belarus", "Ukraine", "Moldova", "Norway", "Sweden", "Denmark", "Finland", "Iceland", "Ireland", "United Kingdom", "Estonia", "Lithuania", "Latvia", "Faroe Islands", "Italy", "Spain", "Slovenia", "Greece", "Portugal", "Malta", "Croatia", "Montenegro", "Serbia", "Macedonia", "Bosnia and Herzegovina", "Albania", "Gibraltar", "Switzerland", "Luxembourg", "Netherlands", "Austria", "Germany", "Belgium", "France", "New Zealand", "Fiji", "Vanuatu", "Papua New Guinea", "Solomon Islands", "New Caledonia", "Kiribati", "Nauru", "Guam", "Tonga", "Samoa", "Cook Islands", "Niue", "American Samoa", "French Polynesia"];
-
-  // constructs the suggestion engine
-  var countries = new Bloodhound({
-    datumTokenizer: Bloodhound.tokenizers.whitespace,
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    local: countriesArray
-  });
-
-  $('#searchContainer .typeahead').typeahead({
-    hint: true,
-    highlight: true,
-    minLength: 1
-  },
-  {
-    name: 'countries',
-    source: countries
-  });
-
-  $('.typeahead').bind('typeahead:select typeahead:autocomplete', function(ev, suggestion) {
-    var searchID = suggestion.replace(/\s+/g, '');
-
-    if($("#" + searchID).length) {
-      $('#'+searchID).trigger('mouseover');
-      console.log('Selection: ' + suggestion);
-      $('#'+searchID).triggerSVGEvent('mouseover').triggerSVGEvent('mousemove');
-    }
-    else {
-      $('#noData').html("There is no data available for "+suggestion+" at this time.");
-    }
-  });
-
-  $('.typeahead').bind('typeahead:change', function(ev, suggestion) {
-    $('#noData').empty();
-    $('#gates_tooltip').css('opacity','0');
-  });
-
-// setup the buttons.
-setupButtons();
-setupTypeButtons();
-setupYearButtons();
-setupRegionFilter();
-
-$.fn.triggerSVGEvent = function(eventName) {
- var event = document.createEvent('SVGEvents');
- event.initEvent(eventName,true,true);
- this[0].dispatchEvent(event);
- return $(this);
-};
