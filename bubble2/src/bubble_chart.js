@@ -390,9 +390,6 @@ function bubbleChart() {
                   '<span class="name">Amount: </span><span class="value">$' +
                   addCommas(d.value) +
                   ' million</span><br/>' +
-                  '<span class="name">GNI per capita: </span><span class="value">$' +
-                  addCommas(d.gni) +
-                  '</span><br />' +
                   '<span class="name">Year: </span><span class="value">' +
                   d.year +
                   '</span>';
