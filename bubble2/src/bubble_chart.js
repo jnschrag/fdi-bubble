@@ -99,9 +99,16 @@ function bubbleChart() {
 
 
   // Nice looking colors - no reason to buck the trend
-  var fillColor = d3.scale.ordinal()
+  if(currentViz == "China") {
+    var fillColor = d3.scale.ordinal()
+      .domain(['Americas', 'Europe', 'Asia', 'Africa', 'Oceania'])
+      .range(['#ffffcc','#c7e9b4','#7fcdbb','#41b6c4','#2c7fb8']);
+  }
+  else {
+    var fillColor = d3.scale.ordinal()
     .domain(['Americas', 'Europe', 'Asia', 'Africa', 'Oceania', 'China'])
     .range(['#ffffcc','#c7e9b4','#7fcdbb','#41b6c4','#2c7fb8','#253494']);
+  }
 
   // Sizes bubbles based on their area instead of raw radius
   var radiusScale = d3.scale.pow()
@@ -578,6 +585,7 @@ function calculateDataset(){
 
 // Redraw function triggers chart creation
 function redraw() {
+  $("#loading").hide();
   myBubbleChart('#vis', calculateDataset());
 }
 
@@ -596,14 +604,25 @@ var datasetOut = {2000:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asi
 var currentState = "grouped";
 var currentView = "all";
 
-// Get our google spreadsheet
-var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1pVWQNwnHbEex4ycocZ_GqvDHY77l4slytcGaTpWwraE/pubhtml?gid=1343412411&single=true';
-$(document).ready( function() {
-  Tabletop.init( { key: public_spreadsheet_url,
-                   callback: showInfo,
-                   wanted: [ "FDI Data Source"],
-                   debug: true } )
-});
+// Get our google spreadsheet based on currentViz data
+if(currentViz == "China") {
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1pJZMDODjjqg1MDD5sGJ7QwgNAkx5uFuW7a92AN-yEsI/pubhtml';
+  $(document).ready( function() {
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: showInfoChina,
+                     wanted: [ "China Bilateral Outflows"],
+                     debug: true } )
+  });
+}
+else {
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1pVWQNwnHbEex4ycocZ_GqvDHY77l4slytcGaTpWwraE/pubhtml?gid=1343412411&single=true';
+  $(document).ready( function() {
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: showInfo,
+                     wanted: [ "FDI Data Source"],
+                     debug: true } )
+  });
+}
 
 // Populate our dataset variables
 function showInfo(data, tabletop) {
@@ -665,6 +684,46 @@ function showInfo(data, tabletop) {
               group: row.group,
               year: key,
               gni: row.gni
+            });
+          }
+        }
+      });
+    });
+
+  });
+
+  console.log(datasetOut);
+
+  redraw();
+}
+
+// Populate our dataset variables
+function showInfoChina(data, tabletop) {
+  $.each( tabletop.sheets("China Bilateral Outflows").all(), function(i, row) {
+
+    Object.keys(datasetOut).forEach(function(key){
+      Object.keys(datasetOut[key]).forEach(function(regionKey) {
+        if(regionKey == "All") {
+          if(row.value && row.year == key) {
+            datasetOut[key][regionKey].push({
+              region: row.region,
+              id: row.id,
+              country: row.country,
+              value: row.value,
+              group: row.group,
+              year: key
+            });
+          }
+        }
+        else {
+          if(row.value && row.year == key && row.region == regionKey) {
+            datasetOut[key][regionKey].push({
+              region: row.region,
+              id: row.id,
+              country: row.country,
+              value: row.value,
+              group: row.group,
+              year: key
             });
           }
         }
