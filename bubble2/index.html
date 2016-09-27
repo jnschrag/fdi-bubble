@@ -12,6 +12,7 @@
 <body>
   <div class="container">
     <h1>China Power Viz Demo: FDI</h1>
+    <div id="sizeLegend"><p>Each bubble represents a country and the size of the bubble is determined FDI stock values relative to other countries. Bubbles automatically resize on a relative scale based upon user-specified filtering.</p></div>
     <div id="toolbar">
       <a href="#" id="all" class="button active">All Data</a>
       <a href="#" id="region" class="button hiddenMobile">Data by Region</a>
@@ -20,14 +21,14 @@
     <div id="type">
         <a href="#" id="in" class="button">In Stock</a>
         <a href="#" id="out" class="button active">Out Stock</a>
-    </div>
-    <div id="years">
-        <select class="form-control" id="yearsSelect">
-          <option value="2000">2000</option>
-          <option value="2005">2005</option>
-          <option value="2010">2010</option>
-          <option value="2014" selected>2014</option>
-        </select>
+        <div id="years">
+          <select class="dropdown" id="yearsSelect">
+            <option value="2000">2000</option>
+            <option value="2005">2005</option>
+            <option value="2010">2010</option>
+            <option value="2014" selected>2014</option>
+          </select>
+        </div>
     </div>
     <div id="regionFilter">
       <div class="checkbox">
@@ -67,7 +68,8 @@
         </label>
       </div>
     </div>
-    <div id="searchContainer">
+
+    <div id="searchContainer" style="clear:left;">
       Find: <br />
       <input type="text" autocomplete="off" style="width: 150px" id="findEntity" name="findEntity" class="typeahead"><br />
       <span id="noData"></span>
@@ -78,7 +80,6 @@
         <span>Loading...</span>
       </div>
     </div>
-    <div id="sizeLegend"><p>Each bubble represents a country and the size of the bubble is determined FDI stock values relative to other countries. Bubbles automatically resize on a relative scale based upon user-specified filtering.</p></div>
 
   </div>
   <script type="text/javascript">

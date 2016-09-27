@@ -1,5 +1,15 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700';
+
 a, a:visited, a:active {
   color: #444;
+}
+
+h1 {
+  font-size:30px;
+  letter-spacing: .025em;
+  color: #444;
+  text-align:center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -7,21 +17,93 @@ a, a:visited, a:active {
   margin: auto;
 }
 
+#toolbar .button {
+  border-color:#f2efef;
+}
+
+#toolbar .button:hover, #toolbar .button.active {
+  background-color:#f2efef;
+  color:#444;
+}
+
 .button {
-  min-width: 130px;
-  padding: 4px 5px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 13px;
-  border: 1px solid #e0e0e0;
+  display:inline-block;
+  padding:14px 15px;
+  border: 2px solid #ED392A;
+  background-color: #fff;
+  line-height: 1em;
+  font-size: 12px;
+  color: #444;
+  text-transform: uppercase;
   text-decoration: none;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  border-radius:2px;
+  margin:0px 5px;
 }
 
-.button.active {
-  background: #000;
-  color: #fff;
+.button:hover, .button.active {
+  background-color:#772132;
+  color:#fff;
+  border-color:#772132;
 }
 
+#years {
+  border:1px solid #e3e3e3;    
+    border-radius:3px;
+    color:#444;
+    overflow: hidden; 
+    position: relative;
+    display: inline-block;
+}
+
+#years:after {
+  font-family:FontAwesome;
+  content: '\f078';
+}
+
+select.dropdown {
+    padding: 5px;
+    background-color:#ececec;
+    border: 0;
+    outline: none;
+    font-size: 16px;       
+   -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.dropdown {
+  padding:14px 15px;
+  border: 2px solid #ED392A;
+  background-color: #fff;
+  line-height: 1em;
+  font-size: 12px;
+  color: #444;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  border-radius:2px;
+  margin:0px 5px;
+}
+
+.dropdown option {
+  padding: 3px 20px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+
+#regionFilter {
+  text-align:center;
+}
+
+.checkbox {
+  display:inline-block;
+  margin-right:10px;
+}
 
 #vis {
   width: 100%;
@@ -31,14 +113,19 @@ a, a:visited, a:active {
   margin-top:20px;
 }
 
-#toolbar, #type, #years {
+.bubble {
+  /*stroke:#bfbfbf;*/
+}
+
+#toolbar, #type {
   margin-bottom: 10px;
+  text-align:center;
 }
 
 .year, .devLevel {
-  font-size: 21px;
-  fill: #aaa;
-  cursor: default;
+  font-size:20px;
+  fill:#ED392A;
+  font-family: 'Roboto Slab', serif;
 }
 
 .tooltip {

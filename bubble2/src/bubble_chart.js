@@ -102,12 +102,12 @@ function bubbleChart() {
   if(currentViz == "China") {
     var fillColor = d3.scale.ordinal()
       .domain(['Americas', 'Europe', 'Asia', 'Africa', 'Oceania'])
-      .range(['#ffffcc','#c7e9b4','#7fcdbb','#41b6c4','#2c7fb8']);
+      .range(['#ed3a2a','#887395','#6b874d','#caac4c','#534a6e']);
   }
   else {
     var fillColor = d3.scale.ordinal()
     .domain(['Americas', 'Europe', 'Asia', 'Africa', 'Oceania', 'China'])
-    .range(['#ffffcc','#c7e9b4','#7fcdbb','#41b6c4','#2c7fb8','#253494']);
+    .range(['#772132','#afadbc','#907562','#4D6E79','#58a992','#4D6E79']);
   }
 
   // Sizes bubbles based on their area instead of raw radius
@@ -206,8 +206,8 @@ function bubbleChart() {
       .attr('id', function (d) { return d.name.replace(/\s+/g, ''); })
       .attr('r', 0)
       .attr('fill', function (d) { return fillColor(d.group); })
-      .attr('stroke', function (d) { return d3.rgb(fillColor(d.group)).darker(); })
-      .attr('stroke-width', 2)
+      .attr('stroke', d3.rgb('#f2efef'))
+      .attr('stroke-width', 1.5)
       .on('mouseover', showDetail)
       .on('mouseout', hideDetail)
       .on('touchend', hideDetail);
@@ -389,7 +389,7 @@ function bubbleChart() {
    */
   function showDetail(d) {
     // change outline to indicate hover state.
-    d3.select(this).attr('stroke', 'black');
+    d3.select(this).attr('stroke', d3.rgb(fillColor(d.group)).darker());
 
     var content = '<span class="name">Country: </span><span class="value">' +
                   d.name +
@@ -409,7 +409,7 @@ function bubbleChart() {
   function hideDetail(d) {
     // reset outline
     d3.select(this)
-      .attr('stroke', d3.rgb(fillColor(d.group)).darker());
+      .attr('stroke', d3.rgb('#f2efef'));
 
     tooltip.hideTooltip();
   }
