@@ -228,9 +228,9 @@ function bubbleChart() {
       .append('g')
         .attr('class', 'legend')
         .attr('transform', function(d, i) {
-          var height = legendRectSize;
-          var x = 40;
-          var y = i * height + 10;
+          // var height = legendRectSize;
+          var x = i * 100 + (width / 4);
+          var y = height - 15;
           return 'translate(' + x + ',' + y + ')';
     });
 
