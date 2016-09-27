@@ -22,10 +22,12 @@
         <a href="#" id="out" class="button active">Out Stock</a>
     </div>
     <div id="years">
-        <a href="#" id="2000" class="button">2000</a>
-        <a href="#" id="2005" class="button">2005</a>
-        <a href="#" id="2010" class="button">2010</a>
-        <a href="#" id="2014" class="button active">2014</a>
+        <select class="form-control" id="yearsSelect">
+          <option value="2000">2000</option>
+          <option value="2005">2005</option>
+          <option value="2010">2010</option>
+          <option value="2014" selected>2014</option>
+        </select>
     </div>
     <div id="regionFilter">
       <div class="checkbox">
@@ -73,7 +75,8 @@
     <div id="vis">
       <div id="loading">
         <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><br /><br />
-        <span>Loading...</span></div>
+        <span>Loading...</span>
+      </div>
     </div>
     <div id="sizeLegend"><p>Each bubble represents a country and the size of the bubble is determined FDI stock values relative to other countries. Bubbles automatically resize on a relative scale based upon user-specified filtering.</p></div>
 

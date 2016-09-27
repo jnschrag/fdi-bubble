@@ -487,16 +487,20 @@ function setupTypeButtons() {
  * Toggle between years
  */
 function setupYearButtons() {
-  d3.select('#years')
-    .selectAll('.button')
-    .on('click', function () {
-      // Remove active class from all buttons
-      d3.selectAll('#years .button').classed('active', false);
-      // Find the button just clicked
-      var button = d3.select(this);
+  d3.select('#yearsSelect')
+    .on('change', function () {
 
-      // Set it as the active button
-      button.classed('active', true);
+      // Remove "selected" from options that are not our new selection
+      var newYear = d3.select(this).property('value');
+      $("#yearsSelect option").each(function(index, item){
+        if($(item).val() == newYear) {
+          $(item).attr("selected",true);
+        }
+        else {
+          $(item).attr("selected",false);
+        }
+      });
+
       redraw();
     });
 }
@@ -548,7 +552,8 @@ function calculateType(){
 }
 
 function calculateYears(){
-  return $('#years .active').first().prop('id');
+  // return $('#years .active').first().prop('id');
+  return $('#yearsSelect').val();
 }
 
 function calculateRegions(){
@@ -570,10 +575,15 @@ function calculateDataset(){
   var year = calculateYears();
   var regions = calculateRegions();
 
-  if(type === 'in'){
-    fullDataset = datasetIn[year];
-  } else {
-    fullDataset = datasetOut[year];
+  if(currentViz == "China") {
+    fullDataset = datasetChina[year];
+  }
+  else {
+    if(type === 'in'){
+      fullDataset = datasetIn[year];
+    } else {
+      fullDataset = datasetOut[year];
+    }
   }
 
   $(regions).each(function(index, region){
@@ -601,6 +611,7 @@ setupRegionFilter();
 // Define our global dataset variables.
 var datasetIn = {2000:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2005:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2010:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2014:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] } };
 var datasetOut = {2000:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2005:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2010:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2014:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] } };
+var datasetChina = {2010:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2011:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2012:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2013:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2014:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] }, 2015:{"All":[], "Partial":[], "Americas":[], "Europe":[], "Asia":[], "Africa":[], "Oceania":[] } };
 var currentState = "grouped";
 var currentView = "all";
 
@@ -611,7 +622,7 @@ if(currentViz == "China") {
     Tabletop.init( { key: public_spreadsheet_url,
                      callback: showInfoChina,
                      wanted: [ "China Bilateral Outflows"],
-                     debug: true } )
+                     debug: false } )
   });
 }
 else {
@@ -620,7 +631,7 @@ else {
     Tabletop.init( { key: public_spreadsheet_url,
                      callback: showInfo,
                      wanted: [ "FDI Data Source"],
-                     debug: true } )
+                     debug: false } )
   });
 }
 
@@ -692,8 +703,6 @@ function showInfo(data, tabletop) {
 
   });
 
-  console.log(datasetOut);
-
   redraw();
 }
 
@@ -701,11 +710,11 @@ function showInfo(data, tabletop) {
 function showInfoChina(data, tabletop) {
   $.each( tabletop.sheets("China Bilateral Outflows").all(), function(i, row) {
 
-    Object.keys(datasetOut).forEach(function(key){
-      Object.keys(datasetOut[key]).forEach(function(regionKey) {
+    Object.keys(datasetChina).forEach(function(key){
+      Object.keys(datasetChina[key]).forEach(function(regionKey) {
         if(regionKey == "All") {
           if(row.value && row.year == key) {
-            datasetOut[key][regionKey].push({
+            datasetChina[key][regionKey].push({
               region: row.region,
               id: row.id,
               country: row.country,
@@ -717,7 +726,7 @@ function showInfoChina(data, tabletop) {
         }
         else {
           if(row.value && row.year == key && row.region == regionKey) {
-            datasetOut[key][regionKey].push({
+            datasetChina[key][regionKey].push({
               region: row.region,
               id: row.id,
               country: row.country,
