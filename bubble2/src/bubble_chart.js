@@ -11,6 +11,31 @@
   var width = $("#vis").width();
   var height = $("#vis").height();
 
+// Set position of tooltip manually
+d3.selection.prototype.position = function() {
+
+    var el = this.node();
+    var elPos = el.getBoundingClientRect();
+    var vpPos = getVpPos(el);
+
+    function getVpPos(el) {
+        if(el.parentNode.nodeName === 'svg') {
+            return el.parentNode.getBoundingClientRect();
+        }
+        return getVpPos(el.parentNode);
+    }
+
+    return {
+        top: elPos.top + $(document).scrollTop(),
+        left: elPos.left,
+        width: elPos.width,
+        bottom: elPos.bottom - vpPos.top,
+        height: elPos.height,
+        right: elPos.right
+    };
+
+};
+
 function bubbleChart() {
 
   // tooltip for mouseover functionality
@@ -397,7 +422,9 @@ function bubbleChart() {
    * details of a bubble in the tooltip.
    */
   function showDetail(d) {
-    // change fill to indicate hover state.
+    var elementCoords = d3.select(this).position();
+
+    // change outline to indicate hover state.
     d3.select(this).attr('fill', d3.rgb(fillColor(d.group)).darker());
 
     var content = '<span class="name">Country: </span><span class="value">' +
@@ -409,7 +436,13 @@ function bubbleChart() {
                   '<span class="name">Year: </span><span class="value">' +
                   d.year +
                   '</span>';
-    tooltip.showTooltip(content, d3.event);
+
+    var coords = {
+      pageX: elementCoords.right - 20,
+      pageY: elementCoords.top - 20
+    };
+
+    tooltip.showTooltip(content, coords);
   }
 
   /*
