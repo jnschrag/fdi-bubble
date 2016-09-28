@@ -53,8 +53,6 @@ function bubbleChart() {
     "Oceania": { x: 5 * width / 6 + 25, y: height / 2 }
   };
 
-  console.log(regionCenters);
-
   // X locations of the year titles.
   var regionsTitleX = {
     "Americas": width / 6 - 50,
@@ -267,11 +265,21 @@ function bubbleChart() {
       .append('g')
         .attr('class', 'legend')
         .attr('transform', function(d, i) {
-          // var height = legendRectSize;
-          var x = i * 100 + (width / legendWidth);
-          var y = height - 15;
-          return 'translate(' + x + ',' + y + ')';
-    });
+
+              // Switch to vertical if on mobile
+              if(width < (767 * .9)) {
+                var legendXCalc = 5;
+                var legendYCalc = i * 10 + 245;
+              }
+              else {
+                var legendXCalc = i * 100 + (width / legendWidth);
+                var legendYCalc = height - 15;
+              }
+
+            var x = legendXCalc;
+            var y = legendYCalc;
+            return 'translate(' + x + ',' + y + ')';
+      });
 
     // Draw rects, and color them by original_index
     legend.append('circle')

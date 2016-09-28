@@ -257,6 +257,9 @@ select.dropdown {
 }
 
 @media only screen and (max-width: 767px) {
+  #vis {
+    height:300px;
+  }
   .hiddenMobile {
     display:none;
   }
