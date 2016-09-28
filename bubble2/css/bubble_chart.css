@@ -28,14 +28,14 @@ p {
   margin: auto;
 }
 
-#toolbar .button {
+/*#toolbar .button {
   border-color:#f2efef;
 }
 
 #toolbar .button:hover, #toolbar .button.active {
   background-color:#f2efef;
   color:#444;
-}
+}*/
 
 .button {
   display:inline-block;
@@ -73,7 +73,7 @@ p {
 #years:after {
   font-family:FontAwesome;
   content: '\f078';
-  padding:13px 15px;
+  padding:11px 15px;
   position: absolute;
   right: -5px;
   top: 0;    
@@ -130,10 +130,17 @@ select.dropdown {
   text-align:center;
 }
 
-.year, .devLevel {
+.year, .devLevelTitle {
   font-size:20px;
   fill:#ED392A;
   font-family: 'Roboto Slab', serif;
+}
+
+.devLevel {
+  font-size:16px;
+  fill:#444;
+  font-family: 'Roboto Slab', serif;
+  font-weight:bold;
 }
 
 .tooltip {
@@ -156,7 +163,10 @@ select.dropdown {
   font-weight:bold;
 }
 
-
+#searchContainer {
+  text-align:center;
+  margin-top:10px;
+}
 
 #searchContainer label {
   line-height: 1.6;

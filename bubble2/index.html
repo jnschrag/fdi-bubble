@@ -14,7 +14,7 @@
     <h1>China Power Viz Demo: FDI</h1>
     <div id="sizeLegend"><p>Each bubble represents a country and the size of the bubble is determined FDI stock values relative to other countries. Bubbles automatically resize on a relative scale based upon user-specified filtering.</p></div>
     <div id="toolbar">
-      <a href="#" id="all" class="button active">All Data</a>
+      <a href="#" id="all" class="button active hiddenMobile">All Data</a>
       <a href="#" id="region" class="button hiddenMobile">Data by Region</a>
       <a href="#" id="gni" class="button hiddenMobile">Data by Development Level</a>
     </div>
@@ -69,7 +69,7 @@
       </div>
     </div>
 
-    <div id="searchContainer" style="clear:left;">
+    <div id="searchContainer">
       <label for="findEntity">Search by Country</label>
       <input type="text" autocomplete="off" style="width: 150px" id="findEntity" name="findEntity" class="typeahead"><br />
       <span id="noData"></span>

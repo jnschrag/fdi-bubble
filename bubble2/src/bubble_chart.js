@@ -47,11 +47,11 @@ function bubbleChart() {
 
   // World Bank Development Level Titles
   var devLevelsInfo = {
-    "5": { x: width / 3 - 100, y: 40, title: "OECD high-income economies" },
-    "4": { x: width / 2, y: 40, title: "High-income economies" },
-    "3": { x: 2 * width / 3 + 100, y: 40, title: "Upper middle-income economies" },
-    "2": { x: width / 3 - 40, y: height / 1.4, title: "Lower middle-income economies" },
-    "1": { x: 2 * width / 3 + 30, y: height / 1.4, title: "Low-income economies" },
+    "5": { x: width / 3 - 100, y: 40, title: "OECD high-income" },
+    "4": { x: width / 2, y: 40, title: "High-income" },
+    "3": { x: 2 * width / 3 + 100, y: 40, title: "Upper middle-income" },
+    "2": { x: width / 3 - 40, y: height / 1.4, title: "Lower middle-income" },
+    "1": { x: 2 * width / 3 + 30, y: height / 1.4, title: "Low-income" },
     "0": { x: width + 100, y: height, title: "0" }
   }
 
@@ -102,12 +102,12 @@ function bubbleChart() {
   if(currentViz == "China") {
     var fillColor = d3.scale.ordinal()
       .domain(['Americas', 'Europe', 'Asia', 'Africa', 'Oceania'])
-      .range(['#ed3a2a','#887395','#6b874d','#caac4c','#534a6e']);
+      .range(['#3b75bb','#887395','#6b874d','#caac4c','#534a6e']);
   }
   else {
     var fillColor = d3.scale.ordinal()
     .domain(['Americas', 'Europe', 'Asia', 'Africa', 'Oceania', 'China'])
-    .range(['#772132','#afadbc','#907562','#4D6E79','#58a992','#4D6E79']);
+    .range(['#772132','#58a992','#907562','#4D6E79','#afadbc','#303D43']);
   }
 
   // Sizes bubbles based on their area instead of raw radius
@@ -239,7 +239,7 @@ function bubbleChart() {
       .classed('scaleCircle', true)
       .attr('r', 5)
       .style('fill', fillColor)
-      .style('stroke', d3.rgb(fillColor).darker());
+      .style('stroke', d3.rgb('#f2efef'));
    
     legend.append('text')
       .classed('scaleCircleLabel', true)
@@ -351,6 +351,7 @@ function bubbleChart() {
   function hideLabels() {
     svg.selectAll('.year').remove();
     svg.selectAll('.devLevel').remove();
+    svg.selectAll('.devLevelTitle').remove();
   }
 
   /*
@@ -370,6 +371,14 @@ function bubbleChart() {
         .text(function (d) { return d; });
     }
     else if (currentView == "gni") {
+
+      svg.append('text')
+        .classed('devLevelTitle', true)
+        .attr('x', width / 2)
+        .attr('y', height / 40)
+        .attr('text-anchor', 'middle')
+        .text("Economic Levels");
+
       var devLevelData = d3.keys(devLevelsInfo);
       var devLevels = svg.selectAll('.devLevel')
         .data(devLevelData);
@@ -388,8 +397,8 @@ function bubbleChart() {
    * details of a bubble in the tooltip.
    */
   function showDetail(d) {
-    // change outline to indicate hover state.
-    d3.select(this).attr('stroke', d3.rgb(fillColor(d.group)).darker());
+    // change fill to indicate hover state.
+    d3.select(this).attr('fill', d3.rgb(fillColor(d.group)).darker());
 
     var content = '<span class="name">Country: </span><span class="value">' +
                   d.name +
@@ -407,9 +416,8 @@ function bubbleChart() {
    * Hides tooltip
    */
   function hideDetail(d) {
-    // reset outline
-    d3.select(this)
-      .attr('stroke', d3.rgb('#f2efef'));
+    // reset fill
+    d3.select(this).attr('fill', d3.rgb(fillColor(d.group)));
 
     tooltip.hideTooltip();
   }
