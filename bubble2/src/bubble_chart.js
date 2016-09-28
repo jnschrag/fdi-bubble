@@ -46,46 +46,48 @@ function bubbleChart() {
   var center = { x: width / 2, y: height / 2 };
 
   var regionCenters = {
-    "Americas": { x: width / 3, y: height / 2.5 },
-    "Europe": { x: width / 2, y: height / 2.5 },
-    "Asia": { x: 2 * width / 3, y: height / 2.5 },
-    "Africa": { x: width / 3 - 40, y: height / 1.5 },
-    "Oceania": { x: 2 * width / 3 + 30, y: height / 1.5 }
+    "Americas": { x: width / 6 + 50, y: height / 2 },
+    "Europe": { x: 2 * width / 6 + 50, y: height / 2 },
+    "Asia": { x: 3 * width / 6 + 50, y: height / 2 },
+    "Africa": { x: 4 * width / 6 + 50, y: height / 2 },
+    "Oceania": { x: 5 * width / 6 + 25, y: height / 2 }
   };
+
+  console.log(regionCenters);
 
   // X locations of the year titles.
   var regionsTitleX = {
-    "Americas": width / 3 - 100,
-    "Europe": width / 2,
-    "Asia": 2 * width / 3 + 100,
-    "Africa": width / 3 - 100,
-    "Oceania": 2 * width / 3 + 100
+    "Americas": width / 6 - 50,
+    "Europe": 2 * width / 6 + 30,
+    "Asia": 3 * width / 6 + 100,
+    "Africa": 4 * width / 6 + 135,
+    "Oceania": 5 * width / 6 + 115
   };
 
   var regionsTitleY = {
     "Americas": 40,
     "Europe": 40,
     "Asia": 40,
-    "Africa": height / 1.4,
-    "Oceania": height / 1.4
+    "Africa": 40,
+    "Oceania": 40
   };
 
   // World Bank Development Level Titles
   var devLevelsInfo = {
-    "5": { x: width / 3 - 100, y: 40, title: "OECD high-income" },
-    "4": { x: width / 2, y: 40, title: "High-income" },
-    "3": { x: 2 * width / 3 + 100, y: 40, title: "Upper middle-income" },
-    "2": { x: width / 3 - 40, y: height / 1.4, title: "Lower middle-income" },
-    "1": { x: 2 * width / 3 + 30, y: height / 1.4, title: "Low-income" },
+    "5": { x: width / 6, y: 70, title: "OECD high-income" },
+    "4": { x: 2 * width / 6 + 85, y: 70, title: "High-income" },
+    "3": { x: 3 * width / 6 + 100, y: 70, title: "Upper middle-income" },
+    "2": { x: 4 * width / 6 + 135, y: 70, title: "Lower middle-income" },
+    "1": { x: 5 * width / 6 + 115, y: 70, title: "Low-income" },
     "0": { x: width + 100, y: height, title: "0" }
   }
 
   var devLevelCenters = {
-    "5": { x: width / 3 - 50, y: height / 2.5 },
-    "4": { x: width / 2 - 50, y: height / 2.5 },
-    "3": { x: 2 * width / 3, y: height / 2.5 },
-    "2": { x: width / 3 - 40, y: height / 1.5},
-    "1": { x: 2 * width / 3 - 20, y: height / 1.35 },
+    "5": { x: width / 6 + 50, y: height / 2 },
+    "4": { x: 2 * width / 6 + 50, y: height / 2 },
+    "3": { x: 3 * width / 6 + 30, y: height / 2 },
+    "2": { x: 4 * width / 6 + 50, y: height / 2},
+    "1": { x: 5 * width / 6 + 35, y: height / 2 },
     "0": { x: width + 100, y: height }
   };
 
@@ -228,6 +230,9 @@ function bubbleChart() {
     // Initially, their radius (r attribute) will be 0.
     bubbles.enter().append('circle')
       .classed('bubble', true)
+      .classed({
+        'Americas': function (d) { return d.region === 'Americas'; },
+        'Europe': function (d) { return d.region === 'Europe'; } })
       .attr('id', function (d) { return d.name.replace(/\s+/g, ''); })
       .attr('r', 0)
       .attr('fill', function (d) { return fillColor(d.group); })
@@ -243,10 +248,19 @@ function bubbleChart() {
       .attr('r', function (d) { return d.radius; });
 
     // Create the legend
+    
+    if(currentViz == "China") {
+      var legendWidth = 3.2;
+    }
+    else {
+      var legendWidth = 3.7;
+    }
+
     var legendRectSize = 20;
     var legendSpacing = 15;
     var legend = svg
       .append("g")
+        .attr("id","legendContainer")
       .selectAll("g")
       .data(fillColor.domain())
       .enter()
@@ -254,7 +268,7 @@ function bubbleChart() {
         .attr('class', 'legend')
         .attr('transform', function(d, i) {
           // var height = legendRectSize;
-          var x = i * 100 + (width / 4);
+          var x = i * 100 + (width / legendWidth);
           var y = height - 15;
           return 'translate(' + x + ',' + y + ')';
     });
@@ -367,6 +381,7 @@ function bubbleChart() {
       }
       d.x = d.x + (target.x - d.x) * damper * alpha * 1.1;
       d.y = d.y + (target.y - d.y) * damper * alpha * 1.1;
+
     };
   }
 
@@ -400,7 +415,7 @@ function bubbleChart() {
       svg.append('text')
         .classed('devLevelTitle', true)
         .attr('x', width / 2)
-        .attr('y', height / 40)
+        .attr('y', 20)
         .attr('text-anchor', 'middle')
         .text("Economic Levels");
 

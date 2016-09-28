@@ -80,7 +80,8 @@ p {
   z-index: 1;
   text-align: center;     
   pointer-events: none;
-  box-sizing: border-box;  
+  box-sizing: border-box;
+  color:#772132; 
 }
 
 select.dropdown {
@@ -119,7 +120,7 @@ select.dropdown {
 
 #vis {
   width: 100%;
-  height: 600px;
+  height: 500px;
   clear: both;
   margin-bottom: 10px;
   margin-top:20px;
@@ -166,6 +167,7 @@ select.dropdown {
 #searchContainer {
   text-align:center;
   margin-top:10px;
+  margin-bottom:40px;
 }
 
 #searchContainer label {
